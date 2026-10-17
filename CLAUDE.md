@@ -9,6 +9,10 @@ A Drupal CMS 2.x demo and sandbox site, owned by a designer who doesn't write co
 - Custom DDEV commands: `.ddev/commands/web/reset` (reinstall from a template) and `.ddev/commands/host/login` (one-time login link).
 - Codespaces: `.devcontainer/` runs DDEV on port 8080. settings.php trusts the Codespaces proxy headers when `CODESPACES=true`.
 
+## Next up
+
+Building a fictional academic medical center demo on top of this site. The plan, examples and open questions are in `docs/amc-demo-brief.md`. Read it before starting that work.
+
 ## Claude Code cloud sessions
 
 DDEV isn't installed by default and Docker containers can't reach the internet through the session proxy. For a quick preview without DDEV:
