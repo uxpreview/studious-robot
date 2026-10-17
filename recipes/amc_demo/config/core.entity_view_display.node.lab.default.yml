@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.lab.field_body
+    - field.field.node.lab.field_departments
+    - field.field.node.lab.field_image
+    - field.field.node.lab.field_lead
+    - field.field.node.lab.field_members
+    - field.field.node.lab.field_other_members
+    - field.field.node.lab.field_recent_work
+    - field.field.node.lab.field_research_focus
+    - field.field.node.lab.field_summary
+    - node.type.lab
+  module:
+    - user
+id: node.lab.default
+targetEntityType: node
+bundle: lab
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_body: true
+  field_departments: true
+  field_image: true
+  field_lead: true
+  field_members: true
+  field_other_members: true
+  field_recent_work: true
+  field_research_focus: true
+  field_summary: true

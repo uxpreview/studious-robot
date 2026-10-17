@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.program
+  module:
+    - node
+id: program_content
+label: 'Education program'
+type: 'canonical_entities:node'
+pattern: '/programs/[node:title]'
+selection_criteria:
+  1e7e3ec9-a417-4f09-ba54-a2f3fe77fcbc:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      program: program
+selection_logic: and
+weight: 0
+relationships: {  }

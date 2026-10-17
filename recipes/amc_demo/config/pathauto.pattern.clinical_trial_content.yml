@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.clinical_trial
+  module:
+    - node
+id: clinical_trial_content
+label: 'Clinical trial'
+type: 'canonical_entities:node'
+pattern: '/clinical-trials/[node:field_protocol_id]'
+selection_criteria:
+  d68becc1-b06d-4ddb-b715-6e8686a3398a:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      clinical_trial: clinical_trial
+selection_logic: and
+weight: 0
+relationships: {  }

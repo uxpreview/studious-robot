@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.department
+  module:
+    - node
+id: department_content
+label: Department
+type: 'canonical_entities:node'
+pattern: '/departments/[node:title]'
+selection_criteria:
+  4fe6c383-3b65-49af-9dbe-3bd1b58a6565:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      department: department
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_label
+    - node.type.event
+id: node.event.field_registration_label
+field_name: field_registration_label
+entity_type: node
+bundle: event
+label: 'Registration button label'
+description: 'Leave empty if no registration is needed.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

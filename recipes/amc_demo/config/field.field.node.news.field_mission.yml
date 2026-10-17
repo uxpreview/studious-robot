@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mission
+    - node.type.news
+    - taxonomy.vocabulary.mission
+id: node.news.field_mission
+field_name: field_mission
+entity_type: node
+bundle: news
+label: Mission
+description: 'Sets the story color: patient care, education or research.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      mission: mission
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+field_type: entity_reference

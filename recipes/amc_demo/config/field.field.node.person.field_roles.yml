@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_roles
+    - node.type.person
+  module:
+    - options
+id: node.person.field_roles
+field_name: field_roles
+entity_type: node
+bundle: person
+label: Roles
+description: 'Clinicians appear in Find a Doctor. Faculty and researchers appear in the faculty directory.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

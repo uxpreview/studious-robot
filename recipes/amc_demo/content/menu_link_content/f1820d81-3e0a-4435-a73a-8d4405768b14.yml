@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: f1820d81-3e0a-4435-a73a-8d4405768b14
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    485efd91-9368-49c8-b96a-a196967d5915: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Patients & Visitors'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 485efd91-9368-49c8-b96a-a196967d5915
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true

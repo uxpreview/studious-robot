@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pull_quote
+    - node.type.person
+id: node.person.field_pull_quote
+field_name: field_pull_quote
+entity_type: node
+bundle: person
+label: 'Care philosophy'
+description: 'A short first-person quote shown on the profile.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - views
+active_version: a68ffb300667f80b
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:events-block'
+        label: 'Calder: Upcoming events'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Calder: Upcoming events'
+id: block.views_block.events-block
+provider: views
+source: block
+source_local_id: 'views_block:events-block'

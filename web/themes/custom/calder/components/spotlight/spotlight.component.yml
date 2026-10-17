@@ -1,0 +1,16 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Person spotlight
+description: One person shown as a mobile, with each of their roles (care, learn, discover) hanging from them. Rendered by the "Person spotlight" block.
+group: Calder
+status: stable
+noUi: true
+props:
+  type: object
+  properties:
+    eyebrow: { type: string }
+    heading: { type: string }
+    text: { type: string }
+    person: { type: object }
+    roles:
+      type: array
+      description: '[{mission, label, text, url}]'

@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import "../components/hero-blog/hero-blog.tailwind.css";
-@import "../components/navbar/navbar.tailwind.css";
 @import "../components/anchor/anchor.tailwind.css";
 
 @theme inline {
@@ -535,6 +533,35 @@
   /* "Clear filters" is a quiet secondary action. */
   .views-exposed-form .form-actions [data-drupal-selector="edit-reset"] {
     @apply w-auto min-h-0 bg-transparent p-0 font-bold text-ink underline underline-offset-4 hover:bg-transparent hover:text-learn;
+  }
+
+  /* Site search results (a Search API view from Drupal CMS). */
+  .view-id-search .view-content > div {
+    @apply flex flex-col gap-4;
+  }
+
+  .view-id-search .views-row {
+    @apply rounded-2xl border border-line bg-white p-6 md:p-7;
+  }
+
+  .view-id-search .views-row h2 {
+    @apply font-serif text-2xl leading-tight;
+  }
+
+  .view-id-search .views-row h2 a {
+    @apply no-underline hover:underline;
+  }
+
+  .view-id-search .views-row .views-field-search-api-excerpt {
+    @apply mt-2 text-base text-ink-soft;
+  }
+
+  .view-id-search .views-row strong {
+    @apply bg-discover-tint font-bold text-ink;
+  }
+
+  .view-id-search .view-header {
+    @apply mb-5 text-base font-bold text-ink-soft;
   }
 
   .calder-result-count {

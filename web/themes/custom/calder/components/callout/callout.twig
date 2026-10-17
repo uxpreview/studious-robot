@@ -1,0 +1,12 @@
+{% set tones = {
+  care: ['bg-care-tint', 'text-care-deep', 'first-aid'],
+  learn: ['bg-learn-tint', 'text-learn', 'info'],
+  discover: ['bg-discover-tint', 'text-discover-deep', 'lightbulb'],
+} %}
+{% set t = tones[tone|default('care')] %}
+<div class="{{ t[0] }}">
+  <div class="container mx-auto flex gap-4 px-4 py-6" role="note"{% if heading %} aria-label="{{ heading }}"{% endif %}>
+    <span class="mt-0.5 shrink-0 {{ t[1] }}">{{ icon('phosphor', t[2], { size: 28 }) }}</span>
+    <p class="m-0 max-w-4xl text-lg text-ink">{% if heading %}<strong class="{{ t[1] }}">{{ heading }}</strong> {% endif %}{{ text }}</p>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - calder_demo
+active_version: e178d5d707e35e34
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: calder_person_spotlight
+        label: 'Person spotlight'
+        label_display: '0'
+        provider: calder_demo
+        person: ''
+        eyebrow: 'One person, many roles'
+        heading: 'Care, teaching and research meet in one person'
+        text: 'The doctor you see on Monday may be teaching residents on Tuesday and leading a clinical trial on Wednesday.'
+    fallback_metadata:
+      slot_definitions: null
+label: 'Person spotlight'
+id: block.calder_person_spotlight
+provider: calder_demo
+source: block
+source_local_id: calder_person_spotlight

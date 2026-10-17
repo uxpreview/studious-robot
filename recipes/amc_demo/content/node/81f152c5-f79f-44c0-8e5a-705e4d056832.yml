@@ -1,0 +1,74 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 81f152c5-f79f-44c0-8e5a-705e4d056832
+  bundle: program
+  default_langcode: en
+  depends:
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    46d057ff-7a59-45df-8265-f2d7fc0c7028: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Cardiovascular Disease Fellowship'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /programs/cardiovascular-disease-fellowship
+      langcode: en
+  field_body:
+    -
+      value: '<p>The Cardiovascular Disease Fellowship accepts four fellows each year. Over three years, fellows rotate through every part of the Heart &amp; Vascular Institute: the cardiac intensive care unit, the catheterization and heart rhythm labs, echocardiography and cardiac MRI, heart failure, preventive cardiology and congenital heart disease. Each fellow also runs a weekly continuity clinic at the Riverside Outpatient Center and follows the same patients for all three years.</p><p>Fellows have six months of protected research time. Many join the Arrhythmia Research Lab or work with investigators running clinical trials across the Institute, and every fellow presents at Cardiology Grand Rounds at least once before graduating.</p><p>Program director Dr. Priya Patel meets with each fellow every quarter to review goals, wellness and career plans. Graduates go on to advanced fellowships in electrophysiology, interventional cardiology, imaging and heart failure, or directly into practice.</p>'
+      format: content_format
+  field_credential:
+    -
+      value: 'Fellowship certificate'
+  field_deadline:
+    -
+      value: 'August 15'
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_director:
+    -
+      entity: 46d057ff-7a59-45df-8265-f2d7fc0c7028
+  field_duration:
+    -
+      value: '3 years'
+  field_highlights:
+    -
+      value: '4|fellows accepted each year'
+    -
+      value: '6 months|of protected research time'
+    -
+      value: '100%|first-time board pass rate over the past 5 years'
+  field_how_to_apply:
+    -
+      value: '<ol><li>Confirm that you will complete an accredited internal medicine residency by July 1 of the year you start.</li><li>Apply through the national electronic residency application service. We begin reviewing applications in July.</li><li>Include a personal statement, your CV and three letters of recommendation, one of them from your residency program director.</li><li>Submit your complete application by August 15.</li><li>If invited, interview with us online in September or October.</li><li>Rank programs through the national fellowship match. Results are released in early December.</li></ol><p>Questions? Email cardiology-fellowship@calder.example.</p>'
+      format: content_format
+  field_program_type:
+    -
+      value: residency_fellowship
+  field_summary:
+    -
+      value: 'A three-year fellowship that trains internal medicine physicians to become cardiologists who can manage any heart condition, with six months of protected research time.'

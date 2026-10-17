@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_audience
+    - field.field.node.event.field_body
+    - field.field.node.event.field_cost
+    - field.field.node.event.field_credit
+    - field.field.node.event.field_departments
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_format
+    - field.field.node.event.field_locations
+    - field.field.node.event.field_registration_label
+    - field.field.node.event.field_speakers
+    - field.field.node.event.field_summary
+    - field.field.node.event.field_venue
+    - node.type.event
+  module:
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_audience: true
+  field_body: true
+  field_cost: true
+  field_credit: true
+  field_departments: true
+  field_event_date: true
+  field_event_format: true
+  field_locations: true
+  field_registration_label: true
+  field_speakers: true
+  field_summary: true
+  field_venue: true

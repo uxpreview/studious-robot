@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: fade6e56-36ac-4d2a-bce9-5708b098e440
+  bundle: image
+  default_langcode: en
+  depends:
+    0e81b7e7-b220-42e8-84bb-5e9fc6890ed3: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  name:
+    -
+      value: 'Illustration: child-sand'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Illustration: a small hanging mobile in ochre, red and blue'
+      title: ''
+      width: 1200
+      height: 900
+      entity: 0e81b7e7-b220-42e8-84bb-5e9fc6890ed3

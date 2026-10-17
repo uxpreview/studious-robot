@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Missions
+vid: mission
+description: 'Patient care, education and research. Drives color coding.'
+weight: 0
+new_revision: false

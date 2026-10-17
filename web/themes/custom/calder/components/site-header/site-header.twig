@@ -18,7 +18,7 @@
 </div>
 
 <header class="calder-header sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85" data-calder-header>
-  <div class="container mx-auto flex items-center gap-6 px-4 py-3 lg:py-0">
+  <div class="container mx-auto flex items-center gap-4 px-4 py-3 lg:py-0 xl:gap-6">
     <div class="lg:py-5">
       {{ include('calder:logo', { url: front_url|default('/') }, with_context = false) }}
     </div>
@@ -26,7 +26,7 @@
     <div class="ms-auto flex flex-col items-end max-lg:hidden">
       {% if utility %}
         <nav aria-label="Utility" class="pt-3">
-          <ul class="m-0 flex list-none gap-6 p-0 text-sm">
+          <ul class="m-0 flex list-none gap-5 p-0 text-sm whitespace-nowrap xl:gap-6">
             {% for item in utility %}
               <li class="m-0"><a href="{{ item.url }}" class="text-ink-soft no-underline hover:text-ink hover:underline">{{ item.title }}</a></li>
             {% endfor %}
@@ -39,13 +39,13 @@
             {% for item in main %}
               <li class="m-0">
                 <a href="{{ item.url }}"{% if item.active %} aria-current="page"{% endif %}
-                   class="relative block px-3.5 py-5 text-[1.0625rem] font-bold text-ink no-underline after:absolute after:inset-x-3.5 after:bottom-3 after:h-[3px] after:origin-left after:scale-x-0 after:rounded-full after:transition-transform after:duration-300 hover:after:scale-x-100 aria-[current=page]:after:scale-x-100 {{ mission_bars[loop.index0] ?? 'after:bg-ink' }}">{{ item.title }}</a>
+                   class="relative block px-2.5 py-5 text-base font-bold whitespace-nowrap text-ink no-underline after:absolute after:inset-x-2.5 xl:px-3.5 xl:text-[1.0625rem] xl:after:inset-x-3.5 after:bottom-3 after:h-[3px] after:origin-left after:scale-x-0 after:rounded-full after:transition-transform after:duration-300 hover:after:scale-x-100 aria-[current=page]:after:scale-x-100 {{ mission_bars[loop.index0] ?? 'after:bg-ink' }}">{{ item.title }}</a>
               </li>
             {% endfor %}
           </ul>
         </nav>
         <a href="/search" class="flex size-11 items-center justify-center rounded-full text-ink no-underline hover:bg-sand" aria-label="Search">{{ icon('phosphor', 'magnifying-glass', { size: 22 }) }}</a>
-        <a href="/find-a-doctor" class="button ms-2">{{ icon('phosphor', 'stethoscope', { size: 20 }) }}Find a doctor</a>
+        <a href="/find-a-doctor" class="button ms-1 whitespace-nowrap xl:ms-2">{{ icon('phosphor', 'stethoscope', { size: 20 }) }}Find a doctor</a>
       </div>
     </div>
 

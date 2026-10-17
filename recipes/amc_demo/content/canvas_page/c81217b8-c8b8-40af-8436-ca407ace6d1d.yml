@@ -1,0 +1,136 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: c81217b8-c8b8-40af-8436-ca407ace6d1d
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 0
+  title:
+    -
+      value: Education
+  description:
+    -
+      value: 'Degree, residency, fellowship and PhD programs at the Calder University School of Medicine.'
+  components:
+    -
+      uuid: 2f3f9eeb-eb0e-4e40-a73f-9f111ac51f5a
+      component_id: sdc.calder.hero
+      inputs:
+        eyebrow: 'Calder University School of Medicine'
+        headline: "Learn medicine where it's practiced."
+        intro: 'Our students, residents, fellows and graduate students learn beside the clinicians and scientists who care for patients and run studies across Calder University Health.'
+        mission: learn
+        primary_label: 'Explore programs'
+        primary_url: /programs
+        secondary_label: 'Meet our faculty'
+        secondary_url: /faculty
+        illustration: learn
+        size: compact
+    -
+      uuid: 5258fb3d-7dfc-4f1f-a692-2a433d8f92d8
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: Programs
+        mission: learn
+        heading: 'Train with us'
+        columns: '2'
+        link_label: 'All programs'
+        link_url: /programs
+        background: paper
+    -
+      parent_uuid: 5258fb3d-7dfc-4f1f-a692-2a433d8f92d8
+      slot: content
+      uuid: 3c3cb28e-ee12-46de-b330-d3acb28a45e9
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: learn
+        eyebrow: Degree
+        title: 'Doctor of Medicine (MD)'
+        text: 'A four-year program with patient contact from the first week and a required scholarly concentration in research, education, policy or community health.'
+        url: /programs/doctor-medicine-md
+    -
+      parent_uuid: 5258fb3d-7dfc-4f1f-a692-2a433d8f92d8
+      slot: content
+      uuid: 6ee68743-add2-49c7-8e15-dd82818688ef
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: learn
+        eyebrow: 'Graduate medical education'
+        title: 'Residency and fellowship'
+        text: 'Graduate medical training in more than 40 specialties, including a three-year Cardiovascular Disease Fellowship with six months of protected research time.'
+        url: /programs/cardiovascular-disease-fellowship
+    -
+      parent_uuid: 5258fb3d-7dfc-4f1f-a692-2a433d8f92d8
+      slot: content
+      uuid: fea3bdca-baf4-4c4c-92c3-933227deb6fc
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: learn
+        eyebrow: 'Graduate school'
+        title: 'PhD in Neuroscience'
+        text: 'A fully funded program with 38 faculty labs, three first-year rotations and a chance to see how lab questions play out in the clinic.'
+        url: /programs/phd-neuroscience
+    -
+      parent_uuid: 5258fb3d-7dfc-4f1f-a692-2a433d8f92d8
+      slot: content
+      uuid: e0d39b2c-f65f-480b-874b-c1beaa17e1bf
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: learn
+        eyebrow: 'For clinicians'
+        title: 'Continuing education'
+        text: 'Weekly Grand Rounds and CME events help practicing clinicians stay current. Most sessions can be joined online.'
+        url: /events
+    -
+      uuid: abd1c7a5-c7c2-4bd0-9fc3-03a8c3e926ba
+      component_id: block.calder_person_spotlight
+      inputs:
+        label: 'Person spotlight'
+        label_display: '0'
+        person: fab8dd60-eeed-44ec-80c5-b654376c912b
+        eyebrow: 'Meet our faculty'
+        heading: 'Scientists who teach'
+        text: 'Dr. Laila Haddad directs the PhD in Neuroscience and leads a lab studying the brain circuits behind migraine pain.'
+    -
+      uuid: 843de151-0d2f-48e3-a3b2-364d81163533
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: Upcoming
+        heading: 'Open houses, Grand Rounds and more'
+        link_label: 'All events'
+        link_url: /events
+        mission: learn
+        columns: '1'
+        background: paper
+    -
+      parent_uuid: 843de151-0d2f-48e3-a3b2-364d81163533
+      slot: content
+      uuid: 25137f86-e1d0-4aec-a288-1a005504fb65
+      component_id: block.views_block.events-block
+      inputs:
+        label: 'Upcoming events'
+        label_display: '0'
+    -
+      uuid: 30f0598a-5570-45a7-b3a5-b169bda31be3
+      component_id: sdc.calder.cta-band
+      inputs:
+        heading: 'Meet the people who teach here'
+        text: 'Browse the faculty directory by department or field.'
+        button_label: 'Faculty directory'
+        button_url: /faculty
+        mission: learn
+  path:
+    -
+      alias: /education
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]"}'

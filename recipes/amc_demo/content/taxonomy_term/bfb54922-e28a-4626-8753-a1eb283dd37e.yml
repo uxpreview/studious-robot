@@ -1,0 +1,23 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: bfb54922-e28a-4626-8753-a1eb283dd37e
+  bundle: specialty
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Pediatrics
+  weight:
+    -
+      value: 6
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null

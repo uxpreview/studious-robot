@@ -1,5 +1,7 @@
 # Dependencies managed by Composer.
-/recipes
+/recipes/*
+# The Calder demo template lives in this repo; other recipes come from Composer.
+!/recipes/amc_demo/
 /vendor
 /web/core
 /web/libraries

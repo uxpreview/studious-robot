@@ -1,0 +1,47 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Hero
+description: Page-opening headline with an introduction, up to two buttons and a mobile illustration.
+group: Calder
+status: stable
+props:
+  type: object
+  required: [headline]
+  properties:
+    eyebrow:
+      type: string
+      title: Eyebrow
+      examples: ["Calder University Health"]
+    headline:
+      type: string
+      title: Headline
+      examples: ["Close to home. Connected to discovery."]
+    intro:
+      type: string
+      title: Introduction
+      pattern: "(.|\\r?\\n)*"
+      examples: ["A teaching hospital, neighborhood clinics, a medical school and research labs, working as one."]
+    mission:
+      type: string
+      title: Mission color
+      enum: [care, learn, discover, neutral]
+      meta:enum: { care: Care (red), learn: Learn (blue), discover: Discover (ochre), neutral: All missions }
+      default: neutral
+      examples: [neutral]
+    primary_label: { type: string, title: Primary button label, examples: ["Find a doctor"] }
+    primary_url: { type: string, title: Primary button link, format: uri-reference, examples: ["/find-a-doctor"] }
+    secondary_label: { type: string, title: Secondary button label, examples: ["Find a location"] }
+    secondary_url: { type: string, title: Secondary button link, format: uri-reference, examples: ["/locations"] }
+    illustration:
+      type: string
+      title: Illustration
+      enum: [home, care, learn, discover, heart, brain, child]
+      meta:enum: { home: All three missions, care: Care, learn: Learn, discover: Discover, heart: Heart, brain: Brain, child: Children }
+      default: home
+      examples: [home]
+    size:
+      type: string
+      title: Size
+      enum: [large, compact]
+      meta:enum: { large: Large (homepage), compact: Compact (section pages) }
+      default: large
+      examples: [large]

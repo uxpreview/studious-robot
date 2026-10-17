@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - calder
+active_version: 1b86bb029293e06e
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        value:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '1,400'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'heart rhythm procedures each year'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        mission:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: care
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Statistic
+id: sdc.calder.stat
+provider: calder
+source: sdc
+source_local_id: 'calder:stat'

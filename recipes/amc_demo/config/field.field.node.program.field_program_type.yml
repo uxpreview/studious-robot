@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_type
+    - node.type.program
+  module:
+    - options
+id: node.program.field_program_type
+field_name: field_program_type
+entity_type: node
+bundle: program
+label: 'Program type'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

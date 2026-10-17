@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_amenities
+    - node.type.location
+id: node.location.field_amenities
+field_name: field_amenities
+entity_type: node
+bundle: location
+label: Amenities
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

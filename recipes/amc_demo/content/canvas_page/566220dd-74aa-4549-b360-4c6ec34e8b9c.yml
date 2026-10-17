@@ -1,0 +1,96 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 566220dd-74aa-4549-b360-4c6ec34e8b9c
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Billing and insurance'
+  description:
+    -
+      value: 'Learn which insurance plans we accept, how to get a price estimate, how to read your bill and how to get help paying for care.'
+  components:
+    -
+      uuid: c6c7ea8a-9bc7-4d63-8b2c-7633d214fda3
+      component_id: sdc.calder.hero
+      inputs:
+        eyebrow: 'Patients & Visitors'
+        mission: care
+        headline: 'Billing and insurance'
+        intro: 'Learn which insurance plans we accept, how to get a price estimate, how to read your bill and how to get help paying for care.'
+        illustration: care
+        size: compact
+    -
+      uuid: 860f3dfd-e571-4ca8-b7b0-6859ff82c54f
+      component_id: sdc.calder.section
+      inputs:
+        columns: '1'
+        background: paper
+        mission: neutral
+    -
+      parent_uuid: 860f3dfd-e571-4ca8-b7b0-6859ff82c54f
+      slot: content
+      uuid: 38dbbca3-4132-4aba-a06d-c15355705918
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Insurance we accept'
+        text:
+          value: '<p>Calder University Health accepts most major health insurance plans, as well as Medicare and Medicaid. Because plans change often, call the number on your insurance card before your visit to confirm that Calder doctors and locations are in your network.</p><p>Some tests and procedures need approval from your insurance company ahead of time. Our team will request approval for you, but it is a good idea to check with your plan as well.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 860f3dfd-e571-4ca8-b7b0-6859ff82c54f
+      slot: content
+      uuid: 30499803-9941-490b-9049-c0533e26489b
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Getting a price estimate'
+        text:
+          value: '<p>You can ask for an estimate before any scheduled visit, test or procedure. Call (555) 555-0190 at least three business days ahead. If you do not have insurance or choose not to use it, you can ask for a written estimate of expected charges before your care.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 860f3dfd-e571-4ca8-b7b0-6859ff82c54f
+      slot: content
+      uuid: fcd4512f-a4c5-441d-8e8b-ef9dc8d306ad
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Understanding your bill'
+        text:
+          value: "<p>You may get more than one bill for a single visit. Calder University Hospital bills for the use of rooms, equipment and supplies, and Calder Physicians bills for your doctor's time. Lab and imaging services may also bill separately.</p><p>Before you pay, compare your bill with the explanation of benefits from your insurance company. If something looks wrong, call us. We are glad to go through it with you line by line.</p>"
+          format: canvas_html_block
+    -
+      parent_uuid: 860f3dfd-e571-4ca8-b7b0-6859ff82c54f
+      slot: content
+      uuid: 24d852ce-c054-4104-8622-4a461fc0bb09
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Financial assistance'
+        text:
+          value: '<p>If you are uninsured, underinsured or worried about paying, you may qualify for free or reduced-cost care based on your household income and size. Financial assistance covers care at every Calder hospital and clinic.</p><ul><li>Apply at any time, before or after you receive care</li><li>Apply online, by mail or in person with a financial counselor</li><li>Bring recent pay stubs or a tax return if you have them</li></ul><p>Financial counselors can also help you apply for public insurance programs.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 860f3dfd-e571-4ca8-b7b0-6859ff82c54f
+      slot: content
+      uuid: 6b4b02a9-3b95-4d3f-8323-728e147947a7
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Payment plans and questions'
+        text:
+          value: '<p>We offer interest-free payment plans for balances of any size. To set one up, ask a billing question or pay by phone, call Patient Financial Services at (555) 555-0190, Monday–Friday, 8 a.m.–6 p.m., or email billing@calder.example.</p>'
+          format: canvas_html_block
+  path:
+    -
+      alias: /billing-insurance
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]"}'

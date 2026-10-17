@@ -1,0 +1,82 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: bc511c44-7447-4f97-bf38-dc5ed528d0b2
+  bundle: location
+  default_langcode: en
+  depends:
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Riverside Outpatient Center'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /locations/riverside-outpatient-center
+      langcode: en
+  field_address:
+    -
+      value: '45 Millrace Road, Calder'
+  field_amenities:
+    -
+      value: 'Free interpreters'
+    -
+      value: 'Wheelchair access throughout'
+    -
+      value: 'Retail pharmacy'
+    -
+      value: 'Coffee bar in the lobby'
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_hours:
+    -
+      value: 'Monday–Friday: 7 a.m.–7 p.m.'
+    -
+      value: 'Saturday: 8 a.m.–noon'
+    -
+      value: 'Sunday: Closed'
+  field_location_type:
+    -
+      value: outpatient
+  field_parking:
+    -
+      value: 'Free parking in the lot in front of the building, with accessible spaces closest to the entrance. City bus routes 4 and 11 stop at the Millrace Road shelter.'
+  field_phone:
+    -
+      value: '(555) 555-0120'
+  field_services:
+    -
+      value: 'Cardiology and heart rhythm clinics'
+    -
+      value: 'Heart Failure Clinic'
+    -
+      value: 'Echocardiograms and stress tests'
+    -
+      value: 'Cardiac rehabilitation'
+    -
+      value: 'Lab draws and ECGs'
+  field_summary:
+    -
+      value: 'The Riverside Outpatient Center brings heart specialists, heart testing and cardiac rehab together in one easy-to-reach building with free parking.'

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_what_to_expect
+    - filter.format.content_format
+    - node.type.clinical_trial
+  module:
+    - text
+id: node.clinical_trial.field_what_to_expect
+field_name: field_what_to_expect
+entity_type: node
+bundle: clinical_trial
+label: 'What to expect'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - content_format
+field_type: text_long

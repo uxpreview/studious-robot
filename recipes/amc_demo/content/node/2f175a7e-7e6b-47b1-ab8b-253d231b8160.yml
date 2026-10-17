@@ -1,0 +1,89 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 2f175a7e-7e6b-47b1-ab8b-253d231b8160
+  bundle: location
+  default_langcode: en
+  depends:
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: "Children's Pavilion"
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /locations/childrens-pavilion
+      langcode: en
+  field_address:
+    -
+      value: '1250 University Avenue, Calder'
+  field_amenities:
+    -
+      value: 'Free interpreters'
+    -
+      value: 'Family lounge and nursing room'
+    -
+      value: 'Stroller and wheelchair access throughout'
+    -
+      value: 'Indoor play area'
+  field_departments:
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_hours:
+    -
+      value: 'Clinics, Monday–Friday: 7:30 a.m.–7 p.m.'
+    -
+      value: 'Saturday: 8 a.m.–1 p.m. for same-day sick visits'
+    -
+      value: 'Inpatient unit: Open 24 hours, 7 days a week'
+    -
+      value: 'Nurse advice line: 24/7 at (555) 555-0131'
+  field_location_type:
+    -
+      value: childrens
+  field_parking:
+    -
+      value: 'Free parking for patients and families in the Pavilion Garage on Linden Street. Strollers fit in all garage elevators, and a skybridge on level 2 connects to Calder University Hospital.'
+  field_phone:
+    -
+      value: '(555) 555-0130'
+  field_services:
+    -
+      value: 'Well-child visits and vaccines'
+    -
+      value: 'Same-day sick visits'
+    -
+      value: 'Pediatric Heart Clinic'
+    -
+      value: 'Pediatric echocardiograms and cardiac MRI'
+    -
+      value: 'Inpatient pediatric unit'
+    -
+      value: 'Child life services'
+  field_summary:
+    -
+      value: "The Children's Pavilion is home to Calder's pediatric clinics, specialists and inpatient unit, built for kids and connected to Calder University Hospital by a skybridge."

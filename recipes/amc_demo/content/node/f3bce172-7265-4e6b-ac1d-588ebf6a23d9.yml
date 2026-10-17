@@ -1,0 +1,55 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+  bundle: department
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Neurology & Neurosurgery'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /departments/neurology-neurosurgery
+      langcode: en
+  field_body:
+    -
+      value: '<p>Our neurologists and neurosurgeons see patients at Calder University Hospital, where specialists, imaging and operating rooms are all under one roof. Many people come to us after other treatments have not helped. Others come for a second opinion before surgery. Either way, your first visit starts with a long conversation and a careful exam.</p><p>The Headache Medicine Program is one of the few in the region devoted only to migraine and other headache disorders. Neurologists, a headache nurse, a psychologist and a physical therapist work as one team, so you can get a full plan without collecting referrals. Our stroke team is in the hospital around the clock, and our neurosurgeons treat brain tumors, spine conditions and hydrocephalus using the least invasive approach that will safely do the job.</p><p>Researchers in our department study how the brain processes pain, how to prevent migraine and how to speed recovery after surgery. Taking part in a study is always your choice. <a href="/conditions/migraine">Learn more about migraine</a>.</p>'
+      format: content_format
+  field_highlights:
+    -
+      value: '3,200|headache clinic visits each year'
+    -
+      value: '24/7|stroke team in the hospital'
+    -
+      value: '9|neurology studies enrolling patients'
+  field_motif:
+    -
+      value: brain
+  field_phone:
+    -
+      value: '(555) 555-0156'
+  field_summary:
+    -
+      value: 'Neurology & Neurosurgery cares for people with conditions of the brain, spine and nerves, including migraine, stroke, epilepsy, brain tumors and back and neck problems.'

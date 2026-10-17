@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: ff5dc27f-5941-45e0-81b4-e871faaca3a1
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    f44325ce-6559-4a68-a963-b2c4c70a075b: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Events
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'internal:/events'
+      title: null
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 2
+  expanded:
+    -
+      value: true
+  parent:
+    -
+      value: 'menu_link_content:f44325ce-6559-4a68-a963-b2c4c70a075b'
+  revision_translation_affected:
+    -
+      value: true

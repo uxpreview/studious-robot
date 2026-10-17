@@ -133,4 +133,18 @@ final class CalderDemoHooks {
     }
   }
 
+
+  /**
+   * Shows the site search box on the search page itself.
+   *
+   * Drupal CMS's search view expects its form to be placed as a separate
+   * block. The Calder theme doesn't place blocks, so render it with the view.
+   */
+  #[Hook('views_pre_view')]
+  public function viewsPreView($view, string $display_id, array &$args): void {
+    if ($view->id() === 'search') {
+      $view->display_handler->setOption('exposed_block', FALSE);
+    }
+  }
+
 }

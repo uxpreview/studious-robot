@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - calder
+active_version: 6851675d6099fe47
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        variant:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: home
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        sway:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Mobile illustration'
+id: sdc.calder.illustration
+provider: calder
+source: sdc
+source_local_id: 'calder:illustration'

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Specialties
+vid: specialty
+description: 'Medical specialties used in Find a Doctor.'
+weight: 0
+new_revision: false

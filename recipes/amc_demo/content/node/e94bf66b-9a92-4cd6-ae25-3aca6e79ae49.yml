@@ -1,0 +1,78 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e94bf66b-9a92-4cd6-ae25-3aca6e79ae49
+  bundle: lab
+  default_langcode: en
+  depends:
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    5e89c6a2-b127-4729-bdee-d9218a6156c7: media
+    46d057ff-7a59-45df-8265-f2d7fc0c7028: node
+    d7ee3471-8b7d-4ddc-a2d7-711370a8136b: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Arrhythmia Research Lab'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /research/arrhythmia-research-lab
+      langcode: en
+  field_body:
+    -
+      value: "<p>Led by cardiac electrophysiologist Dr. Priya Patel, the Arrhythmia Research Lab connects what happens in the heart rhythm lab to what happens in patients' lives afterward. The team studies ablation methods, stroke prevention and the large amounts of heart rhythm data collected by wearable monitors and implanted devices.</p><p>Much of the lab's work happens through clinical trials, including a current study comparing two approved ablation methods for atrial fibrillation. The lab also keeps a registry of more than 5,000 Calder patients treated for AFib, which researchers use to track long-term results and spot patterns a single study might miss.</p><p>Interventional cardiologist Dr. Marcus Reed leads the lab's work on left atrial appendage closure. Cardiology fellows spend research time in the lab, and the team welcomes medical students and data science trainees for summer projects.</p>"
+      format: content_format
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_image:
+    -
+      entity: 5e89c6a2-b127-4729-bdee-d9218a6156c7
+  field_lead:
+    -
+      entity: 46d057ff-7a59-45df-8265-f2d7fc0c7028
+  field_members:
+    -
+      entity: d7ee3471-8b7d-4ddc-a2d7-711370a8136b
+  field_other_members:
+    -
+      value: '2 postdoctoral fellows, 3 cardiology fellows, a data scientist and 2 research nurse coordinators'
+  field_recent_work:
+    -
+      value: 'Found that wearing a patch monitor for two weeks after ablation caught returning AFib earlier and more often than a single ECG at a follow-up visit.'
+    -
+      value: 'Launched a randomized study comparing pulsed field and radiofrequency ablation for AFib, now enrolling at Calder University Hospital.'
+    -
+      value: 'Reported five-year stroke and bleeding rates for more than 600 Calder patients who had left atrial appendage closure.'
+  field_research_focus:
+    -
+      value: 'Faster, longer-lasting catheter ablation'
+    -
+      value: 'Wearable rhythm monitoring after treatment'
+    -
+      value: 'Stroke prevention without long-term blood thinners'
+    -
+      value: 'Early rhythm control in newly diagnosed AFib'
+  field_summary:
+    -
+      value: 'The Arrhythmia Research Lab studies how to treat atrial fibrillation and other heart rhythm problems more safely, more quickly and with longer-lasting results.'

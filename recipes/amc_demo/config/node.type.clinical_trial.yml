@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_exclude
+third_party_settings:
+  search_api_exclude:
+    enabled: true
+name: 'Clinical trial'
+type: clinical_trial
+description: 'A research study that may be looking for participants.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

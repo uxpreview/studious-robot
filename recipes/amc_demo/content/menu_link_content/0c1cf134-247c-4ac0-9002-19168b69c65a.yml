@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 0c1cf134-247c-4ac0-9002-19168b69c65a
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    1dad125d-f42b-4f83-9d82-9c7aab7045f0: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Locations
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'internal:/locations'
+      title: null
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 2
+  expanded:
+    -
+      value: true
+  parent:
+    -
+      value: 'menu_link_content:1dad125d-f42b-4f83-9d82-9c7aab7045f0'
+  revision_translation_affected:
+    -
+      value: true

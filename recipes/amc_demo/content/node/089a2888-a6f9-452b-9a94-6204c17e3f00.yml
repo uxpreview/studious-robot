@@ -1,0 +1,81 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 089a2888-a6f9-452b-9a94-6204c17e3f00
+  bundle: event
+  default_langcode: en
+  depends:
+    f93ddeee-212d-4c39-883f-e39a5417f475: taxonomy_term
+    a761772c-ac86-4400-867e-1802822b62c6: taxonomy_term
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9: node
+    46d057ff-7a59-45df-8265-f2d7fc0c7028: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Cardiology Grand Rounds: Rethinking Ablation for Atrial Fibrillation'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /events/cardiology-grand-rounds-rethinking-ablation-atrial-fibrillation
+      langcode: en
+  field_audience:
+    -
+      entity: f93ddeee-212d-4c39-883f-e39a5417f475
+    -
+      entity: a761772c-ac86-4400-867e-1802822b62c6
+  field_body:
+    -
+      value: '<p>Pulsed field ablation has changed the AFib procedure room in just a few years. In this session, Dr. Priya Patel, director of the Cardiovascular Disease Fellowship and leader of the Arrhythmia Research Lab, reviews the current evidence, shares early experience from Calder and describes the design of the randomized study now enrolling at Calder University Hospital.</p><p><strong>After this session, participants should be able to:</strong></p><ul><li>Compare how pulsed field and radiofrequency energy create lesions in heart tissue</li><li>Describe current evidence on safety, procedure time and rhythm outcomes for each method</li><li>Identify patients who may benefit from earlier referral for ablation</li><li>Explain how wearable monitoring can detect AFib recurrence after ablation</li></ul><p>Lunch is provided for in-person attendees. The session will be recorded for registered participants.</p>'
+      format: content_format
+  field_cost:
+    -
+      value: Free
+  field_credit:
+    -
+      value: '1.0 CME credit'
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_event_date:
+    -
+      value: '2026-10-26T16:00:00'
+      end_value: '2026-10-26T17:00:00'
+  field_event_format:
+    -
+      value: hybrid
+  field_locations:
+    -
+      entity: d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9
+  field_registration_label:
+    -
+      value: Register
+  field_speakers:
+    -
+      entity: 46d057ff-7a59-45df-8265-f2d7fc0c7028
+  field_summary:
+    -
+      value: 'Dr. Priya Patel reviews the evidence on pulsed field and radiofrequency ablation for AFib and how to choose the right approach for each patient.'
+  field_venue:
+    -
+      value: 'Hollis Auditorium, 2nd floor, Calder University Hospital, and online via video'

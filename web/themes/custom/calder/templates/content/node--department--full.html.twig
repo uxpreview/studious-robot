@@ -28,14 +28,14 @@
 
   {% if d.highlights %}
     <div class="bg-night text-paper">
-      <dl class="container mx-auto m-0 grid gap-8 px-4 py-12 sm:grid-cols-3">
+      <ul class="container mx-auto m-0 grid list-none gap-8 px-4 py-12 sm:grid-cols-3">
         {% for h in d.highlights %}
-          <div class="flex flex-col-reverse gap-2 border-l-2 {{ ['border-care', 'border-learn', 'border-discover'][loop.index0] }} ps-5">
-            <dt class="text-base text-paper/80">{{ h.label }}</dt>
-            <dd class="m-0 font-serif text-[3.25rem] leading-none" style="font-variation-settings: 'opsz' 60">{{ h.value }}</dd>
-          </div>
+          <li class="m-0 flex flex-col gap-2 border-l-2 {{ ['border-care', 'border-learn', 'border-discover'][loop.index0] }} ps-5">
+            <span class="block font-serif text-[3.25rem] leading-none" style="font-variation-settings: 'opsz' 60">{{ h.value }}</span>
+            <span class="text-base text-paper/80">{{ h.label }}</span>
+          </li>
         {% endfor %}
-      </dl>
+      </ul>
     </div>
   {% endif %}
 

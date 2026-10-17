@@ -1,0 +1,18 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Statistic
+description: A large number with a short label. Works on light and dark sections.
+group: Calder
+status: stable
+props:
+  type: object
+  required: [value, label]
+  properties:
+    value: { type: string, title: Number, examples: ["1,400"] }
+    label: { type: string, title: Label, examples: ["heart rhythm procedures each year"] }
+    mission:
+      type: string
+      title: Accent
+      enum: [care, learn, discover, neutral]
+      meta:enum: { care: Care (red), learn: Learn (blue), discover: Discover (ochre), neutral: None }
+      default: neutral
+      examples: [care]

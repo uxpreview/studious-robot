@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Call to action band. Text colors are chosen per background to keep 4.5:1
+ * contrast: white on red, blue and night; ink on ochre.
+ */
+#}
+{% set themes = {
+  care: ['bg-care text-white', 'bg-white text-ink hover:bg-paper hover:text-ink', 'text-white', 'care'],
+  learn: ['bg-learn text-white', 'bg-white text-ink hover:bg-paper hover:text-ink', 'text-white', 'learn'],
+  discover: ['bg-discover text-ink', 'bg-ink text-paper hover:bg-ink/85', 'text-ink', 'discover'],
+  night: ['dark bg-night text-paper', 'bg-paper text-ink hover:bg-white hover:text-ink', 'text-paper', 'home'],
+} %}
+{% set t = themes[mission|default('night')] %}
+{# Pick shapes that stand out from the band: ochre on red and blue, blue on ochre. #}
+{% set art = { care: 'story-ochre', learn: 'story-ochre', discover: 'story-blue', night: 'home' } %}
+<section class="{{ t[0] }} overflow-hidden">
+  <div class="container mx-auto grid items-center gap-8 px-4 py-16 md:grid-cols-12 md:py-20">
+    <div class="md:col-span-8">
+      <h2 class="text-headline {{ t[2] }}">{{ heading }}</h2>
+      {% if text %}<p class="mt-4 mb-0 max-w-2xl text-xl opacity-90">{{ text }}</p>{% endif %}
+      {% if button_label and button_url %}<a href="{{ button_url }}" class="button mt-8 {{ t[1] }}">{{ button_label }}{{ icon('phosphor', 'arrow-right', { size: 20 }) }}</a>{% endif %}
+    </div>
+    <div class="max-w-60 justify-self-end max-md:hidden md:col-span-4 {{ t[2] }}">
+      {{ include('calder:illustration', { variant: art[mission|default('night')], sway: true }, with_context = false) }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: f5dd3e06-5a5c-4055-a6e1-7a890934215f
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    f44325ce-6559-4a68-a963-b2c4c70a075b: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Programs
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'internal:/programs'
+      title: null
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: true
+  parent:
+    -
+      value: 'menu_link_content:f44325ce-6559-4a68-a963-b2c4c70a075b'
+  revision_translation_affected:
+    -
+      value: true

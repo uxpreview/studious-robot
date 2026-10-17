@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: f2e88b1f-bffe-491b-af8b-7bd6c84d74eb
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    1dad125d-f42b-4f83-9d82-9c7aab7045f0: menu_link_content
+    fe4889ce-a3c4-4006-8721-778d81f1d0e9: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Visitor information'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: fe4889ce-a3c4-4006-8721-778d81f1d0e9
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 3
+  expanded:
+    -
+      value: true
+  parent:
+    -
+      value: 'menu_link_content:1dad125d-f42b-4f83-9d82-9c7aab7045f0'
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 0e81b7e7-b220-42e8-84bb-5e9fc6890ed3
+  default_langcode: en
+default:
+  filename:
+    -
+      value: child-sand.png
+  uri:
+    -
+      value: 'public://calder/child-sand.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 25938
+  status:
+    -
+      value: true

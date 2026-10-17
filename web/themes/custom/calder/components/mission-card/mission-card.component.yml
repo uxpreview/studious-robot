@@ -1,0 +1,23 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Mission card
+description: One of the three missions (Care, Learn, Discover), with its color shape and a link.
+group: Calder
+status: stable
+props:
+  type: object
+  required: [mission, title]
+  properties:
+    mission:
+      type: string
+      title: Mission
+      enum: [care, learn, discover]
+      meta:enum: { care: Care (red), learn: Learn (blue), discover: Discover (ochre) }
+      examples: [care]
+    title: { type: string, title: Title, examples: ["Care"] }
+    text:
+      type: string
+      title: Text
+      pattern: "(.|\\r?\\n)*"
+      examples: ["Primary and specialty care at three locations."]
+    link_label: { type: string, title: Link label, examples: ["For patients and visitors"] }
+    url: { type: string, title: Link, format: uri-reference, examples: ["/patients"] }

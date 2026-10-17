@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_members
+    - node.type.lab
+id: node.lab.field_other_members
+field_name: field_other_members
+entity_type: node
+bundle: lab
+label: 'Other members'
+description: 'For example: 3 postdoctoral fellows and 5 PhD students'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

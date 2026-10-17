@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Mission card: a large color shape hanging from a short wire, as in the logo.
+ */
+#}
+{% set shapes = {
+  care: 'bg-care rounded-[55%_45%_50%_50%/60%_55%_45%_40%]',
+  learn: 'bg-learn rounded-full',
+  discover: 'bg-discover rounded-[40%_60%_55%_45%/50%_45%_55%_50%]',
+} %}
+<article class="group relative flex h-full flex-col rounded-2xl border border-line bg-white p-8">
+  <div class="flex h-20 flex-col items-start" aria-hidden="true">
+    <span class="ms-6 block h-8 w-[1.5px] bg-ink"></span>
+    <span class="block size-12 transition-transform duration-500 ease-[var(--ease-calder)] group-hover:rotate-12 {{ shapes[mission] }}"></span>
+  </div>
+  <h3 class="mt-6 text-[2rem] leading-none">
+    {% if url %}<a href="{{ url }}" class="no-underline after:absolute after:inset-0 after:rounded-2xl group-hover:underline">{{ title }}</a>{% else %}{{ title }}{% endif %}
+  </h3>
+  {% if text %}<p class="mt-4 mb-0 text-lg text-ink-soft">{{ text }}</p>{% endif %}
+  {% if link_label and url %}<p class="mt-auto mb-0 flex items-center gap-2 pt-6 font-bold">{{ link_label }}{{ icon('phosphor', 'arrow-right', { size: 18 }) }}</p>{% endif %}
+</article>

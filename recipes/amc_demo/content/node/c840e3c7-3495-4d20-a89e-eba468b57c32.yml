@@ -1,0 +1,55 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c840e3c7-3495-4d20-a89e-eba468b57c32
+  bundle: department
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Heart & Vascular Institute'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /departments/heart-vascular-institute
+      langcode: en
+  field_body:
+    -
+      value: '<p>The Heart &amp; Vascular Institute cares for people with atrial fibrillation and other heart rhythm problems, coronary artery disease, heart failure and congenital heart disease. Most visits happen at the Riverside Outpatient Center, where you can see a specialist, get an echocardiogram and start cardiac rehab in the same building. Procedures and hospital stays take place at Calder University Hospital, a short drive away.</p><p>Our specialists meet every week to review complex cases together. A patient with both heart failure and AFib, for example, may have a plan shaped by a heart failure cardiologist, a heart rhythm specialist and the nurse practitioner who will follow them between visits. Children and teens with heart conditions are cared for by pediatric cardiologists at the Children''s Pavilion, who work closely with our adult teams as patients grow up.</p><p>Because we are part of an academic health system, many patients can choose to join a clinical trial as part of their care. Ask your cardiologist about studies that may fit you, or <a href="/clinical-trials">browse studies that are enrolling now</a>.</p>'
+      format: content_format
+  field_highlights:
+    -
+      value: '1,400|heart rhythm procedures each year'
+    -
+      value: '24/7|heart attack team at Calder University Hospital'
+    -
+      value: '12|heart and vascular studies enrolling patients'
+  field_motif:
+    -
+      value: heart
+  field_phone:
+    -
+      value: '(555) 555-0142'
+  field_summary:
+    -
+      value: 'The Heart & Vascular Institute brings cardiologists, surgeons, nurse practitioners and researchers together to care for adults and children with conditions of the heart and blood vessels.'

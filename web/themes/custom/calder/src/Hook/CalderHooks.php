@@ -85,6 +85,7 @@ final class CalderHooks {
     'events' => ['learn', 'News & Events', 'Talks, open houses, screenings and support groups for patients, students and clinicians.'],
     'news' => ['neutral', 'News & Events', 'Patient stories, research findings and news from across Calder University Health.'],
     'labs' => ['discover', 'Research', 'The research groups behind Calder’s clinical trials and teaching.'],
+    'search' => ['neutral', 'Search', 'Search doctors, conditions, clinical trials, programs, events and news.'],
   ];
 
   private const STATUS_TONES = [

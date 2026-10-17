@@ -1,0 +1,94 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: fba1fc0c-53c6-42ab-880d-88688977bc94
+  bundle: clinical_trial
+  default_langcode: en
+  depends:
+    8936edf8-d293-416f-b534-4e70b9835f5c: node
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    9e4af940-c31b-4bf3-80ac-2fe7b9664c23: node
+    2f175a7e-7e6b-47b1-ab8b-253d231b8160: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Can faster heart MRI scans help more children skip sedation?'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /clinical-trials/cuh-2022-019
+      langcode: en
+  field_age_range:
+    -
+      value: 4–12
+  field_body:
+    -
+      value: "<p><strong>This study is complete and no longer enrolling.</strong></p><p>Children with congenital heart disease often need cardiac MRI scans to check how their heart is working. A standard scan can take close to an hour and asks children to hold their breath many times, so many young children need sedation to lie still. This study tested a faster scan that works while children breathe normally.</p><h3>What we found</h3><ul><li>118 children ages 4 to 12 took part.</li><li>101 of them (86 percent) finished the faster scan without sedation.</li><li>Average time in the scanner dropped from about 55 minutes to about 20 minutes.</li><li>Doctors rated the images good enough to guide care decisions in 112 of 118 scans.</li></ul><p>Based on these results, the faster scan is now the standard first choice for children ages 4 and up at the Children's Pavilion. Thank you to every family who took part.</p>"
+      format: content_format
+  field_conditions:
+    -
+      entity: 8936edf8-d293-416f-b534-4e70b9835f5c
+  field_contact_email:
+    -
+      value: kids-heart-imaging@calder.example
+  field_contact_name:
+    -
+      value: 'Renée Fontaine, research coordinator'
+  field_departments:
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_eligibility:
+    -
+      value: '<p>These were the requirements while the study was enrolling.</p><p><strong>You may be able to join if your child:</strong></p><ul><li>Was 4–12 years old</li><li>Had congenital heart disease and needed a cardiac MRI as part of regular care</li><li>Could lie still for about 20 minutes while watching a movie, with a parent in the room</li></ul><p><strong>You may not be able to join if your child:</strong></p><ul><li>Had a pacemaker or other implant that is not safe for MRI</li><li>Needed sedation for another procedure on the same day</li><li>Had a medical condition that made it unsafe to be scanned without sedation</li></ul>'
+      format: content_format
+  field_investigator:
+    -
+      entity: 9e4af940-c31b-4bf3-80ac-2fe7b9664c23
+  field_keywords:
+    -
+      value: 'Can faster heart MRI scans help more children skip sedation? | Free-Breathing Accelerated Cardiac Magnetic Resonance Imaging Without Sedation in Children Ages 4 to 12 With Congenital Heart Disease: A Single-Center Feasibility Study | CUH-2022-019 | Congenital heart disease | Congenital heart defect | CHD | Heart condition present at birth | Samuel Brooks'
+  field_locations:
+    -
+      entity: 2f175a7e-7e6b-47b1-ab8b-253d231b8160
+  field_official_title:
+    -
+      value: 'Free-Breathing Accelerated Cardiac Magnetic Resonance Imaging Without Sedation in Children Ages 4 to 12 With Congenital Heart Disease: A Single-Center Feasibility Study'
+  field_phase:
+    -
+      value: na
+  field_phone:
+    -
+      value: '(555) 555-0174'
+  field_protocol_id:
+    -
+      value: CUH-2022-019
+  field_summary:
+    -
+      value: 'This completed study tested a faster heart MRI that lets children breathe normally during the scan. Most children finished their scan awake, watching a movie, without needing sedation.'
+  field_trial_status:
+    -
+      value: completed
+  field_what_to_expect:
+    -
+      value: '<p>For families who took part, the study added about 15 minutes to a regularly scheduled MRI visit.</p><ul><li>A child life specialist helped each child practice in a play scanner first.</li><li>Children watched a movie through special goggles during the scan, and a parent could stay in the room.</li><li>If the faster scan did not work, the care team used the usual approach, including sedation if needed.</li></ul><p>All participating families have received a letter summarizing the results. If you took part and have questions, contact the study team.</p>'
+      format: content_format

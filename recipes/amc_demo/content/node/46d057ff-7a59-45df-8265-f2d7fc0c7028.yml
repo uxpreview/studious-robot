@@ -1,0 +1,132 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 46d057ff-7a59-45df-8265-f2d7fc0c7028
+  bundle: person
+  default_langcode: en
+  depends:
+    65175c88-9eb1-45ab-b56d-a1f484daf9a0: node
+    4a09ed4c-4b05-4a7a-bf0c-7a33950be1dc: node
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    58808d28-7cd7-4873-8412-3911d2ffc376: taxonomy_term
+    49c05ce6-02ee-4de8-9123-41a80dd5195b: taxonomy_term
+    dccf68c9-460c-47bb-9fc5-ec808d34cc3b: taxonomy_term
+    d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9: node
+    bc511c44-7447-4f97-bf38-dc5ed528d0b2: node
+    1b432a6b-8c3e-461f-86f1-93ef31296f14: taxonomy_term
+    480a6cd4-6301-475a-97fc-9a1dbb130b21: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Priya Patel'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /people/priya-patel
+      langcode: en
+  field_academic_rank:
+    -
+      value: associate_professor
+  field_academic_title:
+    -
+      value: 'Associate Professor of Medicine (Cardiology)'
+  field_accepting_new:
+    -
+      value: true
+  field_body:
+    -
+      value: '<p>Dr. Priya Patel is a cardiac electrophysiologist, a cardiologist who specializes in the heart''s electrical system. She treats <a href="/conditions/atrial-fibrillation">atrial fibrillation</a>, atrial flutter, supraventricular tachycardia and other heart rhythm problems. She performs catheter ablation, including pulsed field ablation, and implants pacemakers, defibrillators and devices that help a weakened heart pump in sync for people with <a href="/conditions/heart-failure">heart failure</a>. She sees patients at Calder University Hospital and the Riverside Outpatient Center.</p><p>Dr. Patel leads the Arrhythmia Research Lab, which studies how to make ablation faster and longer lasting, and how data from wearable monitors can show whether a treatment is working. She is the principal investigator of a randomized study comparing two approved ablation methods for AFib, and she speaks regularly at Cardiology Grand Rounds about what that research means for everyday practice.</p><p>As director of the Cardiovascular Disease Fellowship, Dr. Patel oversees the training of 12 cardiology fellows. She joined Calder in 2015 after completing her fellowship training at Lakemont University Medical Center. She sees patients in English, Gujarati and Hindi, and she often books longer first visits for patients who want family members to join the conversation.</p>'
+      format: content_format
+  field_conditions:
+    -
+      entity: 65175c88-9eb1-45ab-b56d-a1f484daf9a0
+    -
+      entity: 4a09ed4c-4b05-4a7a-bf0c-7a33950be1dc
+  field_credentials:
+    -
+      value: MD
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_education:
+    -
+      value: 'Medical school|Westmoor University School of Medicine'
+    -
+      value: 'Residency|Internal Medicine, Calder University Hospital'
+    -
+      value: 'Fellowship|Cardiovascular Disease, Lakemont University Medical Center'
+    -
+      value: 'Fellowship|Clinical Cardiac Electrophysiology, Lakemont University Medical Center'
+    -
+      value: 'Board certification|Cardiovascular Disease; Clinical Cardiac Electrophysiology'
+  field_first_name:
+    -
+      value: Priya
+  field_job_title:
+    -
+      value: 'Cardiac Electrophysiologist and Director, Cardiovascular Disease Fellowship'
+  field_keywords:
+    -
+      value: 'Priya Patel | Cardiac Electrophysiologist and Director, Cardiovascular Disease Fellowship | MD | Cardiology | Cardiac electrophysiology | Atrial fibrillation | AFib | AF | Irregular heartbeat | Heart failure | Congestive heart failure | CHF | HFrEF | HFpEF | Heart & Vascular Institute'
+  field_languages:
+    -
+      entity: 58808d28-7cd7-4873-8412-3911d2ffc376
+    -
+      entity: 49c05ce6-02ee-4de8-9123-41a80dd5195b
+    -
+      entity: dccf68c9-460c-47bb-9fc5-ec808d34cc3b
+  field_last_name:
+    -
+      value: Patel
+  field_locations:
+    -
+      entity: d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9
+    -
+      entity: bc511c44-7447-4f97-bf38-dc5ed528d0b2
+  field_pronouns:
+    -
+      value: she/her
+  field_pull_quote:
+    -
+      value: 'A heart rhythm problem can make people afraid to do the things they love. My job is to explain what is going on in plain terms, lay out every option and help each patient choose the one that fits their life.'
+  field_research_interests:
+    -
+      value: 'Catheter ablation for atrial fibrillation'
+    -
+      value: 'Pulsed field ablation'
+    -
+      value: 'Wearable heart rhythm monitoring'
+    -
+      value: 'Stroke prevention in AFib'
+  field_roles:
+    -
+      value: clinician
+    -
+      value: faculty
+    -
+      value: researcher
+  field_specialties:
+    -
+      entity: 1b432a6b-8c3e-461f-86f1-93ef31296f14
+    -
+      entity: 480a6cd4-6301-475a-97fc-9a1dbb130b21
+  field_summary:
+    -
+      value: 'Heart rhythm specialist who treats atrial fibrillation with medicines and catheter ablation, leads the Arrhythmia Research Lab and directs the cardiology fellowship.'

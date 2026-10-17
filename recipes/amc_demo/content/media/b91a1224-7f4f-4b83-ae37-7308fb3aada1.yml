@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b91a1224-7f4f-4b83-ae37-7308fb3aada1
+  bundle: image
+  default_langcode: en
+  depends:
+    ba0855d1-27fe-4868-bb9d-5027d41f5648: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  name:
+    -
+      value: 'Illustration: story-blue-sand'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Illustration: a blue and black hanging mobile'
+      title: ''
+      width: 1200
+      height: 900
+      entity: ba0855d1-27fe-4868-bb9d-5027d41f5648

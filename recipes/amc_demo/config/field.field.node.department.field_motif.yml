@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_motif
+    - node.type.department
+  module:
+    - options
+id: node.department.field_motif
+field_name: field_motif
+entity_type: node
+bundle: department
+label: 'Illustration motif'
+description: 'Chooses the illustration used when there is no image.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

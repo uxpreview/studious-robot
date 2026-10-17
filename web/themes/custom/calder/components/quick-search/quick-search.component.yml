@@ -1,0 +1,21 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Doctor search and quick links
+description: A Find a Doctor search box, with a row of quick links for top tasks.
+group: Calder
+status: stable
+props:
+  type: object
+  required: [heading]
+  properties:
+    heading:
+      type: string
+      title: Heading
+      examples: ["Find the right doctor"]
+    placeholder:
+      type: string
+      title: Search box hint
+      examples: ["Name, specialty or condition, like AFib"]
+slots:
+  links:
+    title: Quick links
+    description: Add "Quick link" components here.

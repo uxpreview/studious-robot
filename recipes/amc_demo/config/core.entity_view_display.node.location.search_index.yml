@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.location.field_address
+    - field.field.node.location.field_amenities
+    - field.field.node.location.field_departments
+    - field.field.node.location.field_hours
+    - field.field.node.location.field_image
+    - field.field.node.location.field_location_type
+    - field.field.node.location.field_parking
+    - field.field.node.location.field_phone
+    - field.field.node.location.field_services
+    - field.field.node.location.field_summary
+    - node.type.location
+  module:
+    - user
+id: node.location.search_index
+targetEntityType: node
+bundle: location
+mode: search_index
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_amenities: true
+  field_departments: true
+  field_hours: true
+  field_image: true
+  field_location_type: true
+  field_parking: true
+  field_phone: true
+  field_services: true
+  field_summary: true
+  search_api_excerpt: true

@@ -1,0 +1,74 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 4437942f-bb3d-4be8-ac82-b24c3471135a
+  bundle: news
+  default_langcode: en
+  depends:
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    b91a1224-7f4f-4b83-ae37-7308fb3aada1: media
+    26a135fb-c536-4704-8c2e-d4130a6b6cb1: taxonomy_term
+    5fcb2b09-1de2-434d-9375-cc452e65d7de: node
+    fab8dd60-eeed-44ec-80c5-b654376c912b: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Migraine prevention study opens enrollment, with a bilingual team to guide participants'
+  created:
+    -
+      value: 1791063868
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/migraine-prevention-study-opens-enrollment-bilingual-team-guide-participants
+      langcode: en
+  field_body:
+    -
+      value: '<p>Calder University Health has opened enrollment for a clinical trial testing whether an investigational medicine, given as a monthly shot, can reduce the number of days people spend with migraine. The study is led by Dr. Elena Ruiz, director of the Headache Medicine Program.</p><p>The medicine blocks PACAP, a signaling protein that rises during migraine attacks. Much of what scientists know about PACAP''s role in head pain comes from basic research, including work in the lab of Calder neuroscientist Dr. Laila Haddad. "We spent years watching what PACAP does in pain circuits," Dr. Haddad says. "Seeing that work reach a clinical trial in our own hospital is rare, and it is exciting."</p><p>From the start, Dr. Ruiz wanted the study to be easy to join for Spanish-speaking patients, who are often underrepresented in migraine research. Two bilingual research coordinators will guide participants through every step, and all forms, headache diaries and surveys are available in English and Spanish. "If you can''t fully understand a consent form, you can''t truly consent," Dr. Ruiz says. "Language should never be the reason someone can''t take part."</p><p>The study will enroll about 90 adults ages 18 to 65 at Calder. For the first 12 weeks, participants receive either the study medicine or a placebo. After that, everyone who continues can receive the study medicine for up to 40 more weeks. Study visits take place at Calder University Hospital.</p><p>Taking part in a clinical trial is always voluntary and does not affect your regular care. To learn more, call the study team at (555) 555-0158 or email migraine-study@calder.example.</p>'
+      format: content_format
+  field_departments:
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+  field_image:
+    -
+      entity: b91a1224-7f4f-4b83-ae37-7308fb3aada1
+  field_mission:
+    -
+      entity: 26a135fb-c536-4704-8c2e-d4130a6b6cb1
+  field_people:
+    -
+      entity: 5fcb2b09-1de2-434d-9375-cc452e65d7de
+    -
+      entity: fab8dd60-eeed-44ec-80c5-b654376c912b
+  field_pull_quote:
+    -
+      value: "Language should never be the reason someone can't take part."
+  field_quote_attribution:
+    -
+      value: 'Dr. Elena Ruiz, neurologist and study lead'
+  field_story_type:
+    -
+      value: research
+  field_summary:
+    -
+      value: 'Adults who have four or more migraine days a month may be able to join a new Calder study of an investigational preventive medicine. Every study visit is available in English or Spanish.'

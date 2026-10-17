@@ -1,0 +1,228 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 485efd91-9368-49c8-b96a-a196967d5915
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 0
+  title:
+    -
+      value: 'Patients & Visitors'
+  description:
+    -
+      value: 'Find a doctor, explore conditions and plan your visit.'
+  components:
+    -
+      uuid: 4d8e9dbc-0a4c-43c0-9147-5765b30dd42d
+      component_id: sdc.calder.hero
+      inputs:
+        eyebrow: 'Patients & families'
+        headline: 'Clear answers and a plan you understand.'
+        intro: 'Find a doctor, learn about a condition or plan your visit. If you are not sure where to start, call (555) 555-0110 and a care coordinator will help you.'
+        mission: care
+        primary_label: 'Find a doctor'
+        primary_url: /find-a-doctor
+        secondary_label: 'Explore conditions'
+        secondary_url: /conditions
+        illustration: care
+        size: compact
+    -
+      uuid: 60eaa2ab-2586-4ef2-b446-db640499adf6
+      component_id: sdc.calder.quick-search
+      inputs:
+        heading: 'Find the right doctor'
+        placeholder: 'Name, specialty or condition, like AFib'
+    -
+      parent_uuid: 60eaa2ab-2586-4ef2-b446-db640499adf6
+      slot: links
+      uuid: 09fa42f3-223d-4be1-af9d-64d4c6e882fc
+      component_id: sdc.calder.quick-link
+      inputs:
+        label: Locations
+        url: /locations
+        icon: map-pin
+    -
+      parent_uuid: 60eaa2ab-2586-4ef2-b446-db640499adf6
+      slot: links
+      uuid: 82f42a98-3bb9-4929-a88a-e26876ed278e
+      component_id: sdc.calder.quick-link
+      inputs:
+        label: Conditions
+        url: /conditions
+        icon: first-aid
+    -
+      parent_uuid: 60eaa2ab-2586-4ef2-b446-db640499adf6
+      slot: links
+      uuid: 7efee1fc-6bc6-4a6e-8e15-8959d41f294b
+      component_id: sdc.calder.quick-link
+      inputs:
+        label: 'Clinical trials'
+        url: /clinical-trials
+        icon: flask
+    -
+      parent_uuid: 60eaa2ab-2586-4ef2-b446-db640499adf6
+      slot: links
+      uuid: 82d6a11e-0d2c-4edb-93b9-53238a7c5b3d
+      component_id: sdc.calder.quick-link
+      inputs:
+        label: 'Pay a bill'
+        url: /billing-insurance
+        icon: credit-card
+    -
+      uuid: 8a4a6fb3-95ed-4808-9337-0bea445c2cb1
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: 'Patient care'
+        mission: care
+        heading: 'Get the care you need'
+        columns: '3'
+        background: paper
+    -
+      parent_uuid: 8a4a6fb3-95ed-4808-9337-0bea445c2cb1
+      slot: content
+      uuid: 1aa0d8f8-1db2-43c5-a643-f5c66321634a
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: 'Find a doctor'
+        title: 'Doctors and providers'
+        text: 'Search by name, specialty, condition, location or language.'
+        url: /find-a-doctor
+    -
+      parent_uuid: 8a4a6fb3-95ed-4808-9337-0bea445c2cb1
+      slot: content
+      uuid: 5238d595-3f3a-42bb-858f-a4c6d2249d99
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: Conditions
+        title: 'Conditions we treat'
+        text: 'Plain-language guides, connected to the specialists who treat each one.'
+        url: /conditions
+    -
+      parent_uuid: 8a4a6fb3-95ed-4808-9337-0bea445c2cb1
+      slot: content
+      uuid: 6bee8aec-6470-4912-b713-4f00f2881706
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: Locations
+        title: 'Hospitals and clinics'
+        text: 'Hours, parking and services at each Calder location.'
+        url: /locations
+    -
+      parent_uuid: 8a4a6fb3-95ed-4808-9337-0bea445c2cb1
+      slot: content
+      uuid: 6b2c6be3-56ca-48d2-bbf5-730321e2759d
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: 'Plan your visit'
+        title: 'Plan your visit'
+        text: 'Directions, parking, visiting hours and what to bring, for all three Calder locations.'
+        url: /visitor-information
+    -
+      parent_uuid: 8a4a6fb3-95ed-4808-9337-0bea445c2cb1
+      slot: content
+      uuid: f7f1ff25-0f69-44b1-bc52-51b9cc32ae0e
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: Billing
+        title: 'Billing and insurance'
+        text: 'See which plans we accept, get a price estimate before your visit and learn about financial assistance.'
+        url: /billing-insurance
+    -
+      parent_uuid: 8a4a6fb3-95ed-4808-9337-0bea445c2cb1
+      slot: content
+      uuid: 62339ff5-001d-4495-a60d-ba2ce2af021f
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: discover
+        eyebrow: Research
+        title: 'Clinical trials'
+        text: 'Some patients choose to join a study as part of their treatment. Your doctor can tell you about studies that may fit, and taking part is always your choice.'
+        url: /clinical-trials
+    -
+      uuid: 266fc279-3f1a-4c2a-8bf7-6200d3c879a5
+      component_id: sdc.calder.callout
+      inputs:
+        heading: 'Interpreters at no cost.'
+        text: 'Free interpreters are available in person, by video or by phone in more than 200 languages, including American Sign Language. Just ask when you call or check in.'
+        tone: learn
+    -
+      uuid: 894e96c6-616e-4951-a71a-dfccabdaff7f
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: Departments
+        mission: care
+        heading: 'Our institutes and departments'
+        columns: '3'
+        background: white
+    -
+      parent_uuid: 894e96c6-616e-4951-a71a-dfccabdaff7f
+      slot: content
+      uuid: 3e4ecd16-278d-42ce-9c11-647ef6dea96c
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: Department
+        title: 'Heart & Vascular Institute'
+        text: 'The Heart & Vascular Institute brings cardiologists, surgeons, nurse practitioners and researchers together to care for adults and children with conditions of the heart and blood vessels.'
+        url: /departments/heart-vascular-institute
+    -
+      parent_uuid: 894e96c6-616e-4951-a71a-dfccabdaff7f
+      slot: content
+      uuid: aeb6be69-3890-4d2f-8d5f-2cd561b201c9
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: Department
+        title: 'Neurology & Neurosurgery'
+        text: 'Neurology & Neurosurgery cares for people with conditions of the brain, spine and nerves, including migraine, stroke, epilepsy, brain tumors and back and neck problems.'
+        url: /departments/neurology-neurosurgery
+    -
+      parent_uuid: 894e96c6-616e-4951-a71a-dfccabdaff7f
+      slot: content
+      uuid: af9bb385-4bb1-435e-a5d4-afc910576993
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: Department
+        title: "Children's Health"
+        text: "Children's Health offers primary and specialty care for kids from birth through age 18 at the Children's Pavilion, a building designed around children and the adults who love them."
+        url: /departments/childrens-health
+    -
+      uuid: 57a9bcc2-5701-4cba-8cce-21b49871354b
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: Upcoming
+        heading: 'Events for patients and families'
+        link_label: 'All events'
+        link_url: /events
+        mission: care
+        columns: '1'
+        background: paper
+    -
+      parent_uuid: 57a9bcc2-5701-4cba-8cce-21b49871354b
+      slot: content
+      uuid: c6dc7d52-6b72-4d4d-b0fb-88840df16064
+      component_id: block.views_block.events-block
+      inputs:
+        label: 'Upcoming events'
+        label_display: '0'
+  path:
+    -
+      alias: /patients
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]"}'

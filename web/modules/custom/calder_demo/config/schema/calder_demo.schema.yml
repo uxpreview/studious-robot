@@ -1,0 +1,23 @@
+# Canvas only offers blocks whose settings are strictly validated.
+block.settings.calder_person_spotlight:
+  type: block_settings
+  label: 'Person spotlight block'
+  constraints:
+    FullyValidatable: ~
+  mapping:
+    person:
+      type: string
+      label: 'Person (UUID)'
+      constraints:
+        Regex:
+          pattern: '/^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})?$/'
+          message: 'Choose a person.'
+    eyebrow:
+      type: label
+      label: 'Eyebrow'
+    heading:
+      type: label
+      label: 'Heading'
+    text:
+      type: text
+      label: 'Text'

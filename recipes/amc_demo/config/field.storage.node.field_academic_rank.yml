@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_academic_rank
+field_name: field_academic_rank
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: professor
+      label: Professor
+    -
+      value: associate_professor
+      label: 'Associate Professor'
+    -
+      value: assistant_professor
+      label: 'Assistant Professor'
+    -
+      value: instructor
+      label: Instructor
+    -
+      value: none
+      label: None
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

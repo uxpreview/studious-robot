@@ -1,0 +1,72 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ff03e0ff-d94f-4395-b819-2c852b52f5fd
+  bundle: condition
+  default_langcode: en
+  depends:
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Migraine
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /conditions/migraine
+      langcode: en
+  field_also_called:
+    -
+      value: 'Migraine headache'
+    -
+      value: 'Migraine with aura'
+    -
+      value: 'Chronic migraine'
+  field_body:
+    -
+      value: "<p>Migraine is more than a bad headache. It is a condition of the brain and nerves that causes repeated attacks, often with throbbing head pain, nausea and sensitivity to light and sound. It often runs in families and is about three times more common in women than in men.</p><p>Attacks can have up to four phases. Some people notice warning signs a day or two before, such as yawning, food cravings or a stiff neck. About 1 in 4 people have an aura, a short period of visual changes or tingling. Then comes the headache itself, followed by a day or so of feeling drained.</p><p>Common triggers include missed sleep, skipped meals, stress, hormonal changes, strong smells and alcohol. When attacks happen on 15 or more days a month for more than three months, it is called chronic migraine. Children can have migraine too, and our pediatricians at the Children's Pavilion care for kids with headaches.</p>"
+      format: content_format
+  field_departments:
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+  field_diagnosis:
+    -
+      value: '<p>There is no blood test or scan that confirms migraine. Your doctor will diagnose it based on your symptoms, your medical and family history and a neurological exam. Keeping a headache diary for a few weeks, noting when attacks happen, how long they last and what you took, is one of the most useful things you can bring to your visit.</p><p>Most people with migraine do not need a brain scan. Your doctor may order an MRI or CT scan if your headaches have unusual features, have changed recently or come with other symptoms such as weakness or confusion.</p>'
+      format: content_format
+  field_seek_care:
+    -
+      value: 'Call 911 if you have a sudden, severe headache that reaches full strength within a minute, a headache with weakness, numbness, confusion, trouble speaking or vision loss, a headache with fever and a stiff neck, a seizure, or a headache after a head injury. Call your care team soon if your headaches change pattern, wake you from sleep, start after age 50 or happen more often than before.'
+  field_summary:
+    -
+      value: 'Migraine is a common neurological condition that causes repeated attacks of moderate to severe headache, often with nausea and sensitivity to light and sound. Treatment can make attacks less frequent and less disabling.'
+  field_symptoms:
+    -
+      value: '<p>A migraine attack can last from 4 hours to 3 days. Not everyone has every symptom.</p><ul><li>Throbbing or pulsing pain, often on one side of the head</li><li>Pain that gets worse with routine activity, like climbing stairs</li><li>Nausea or vomiting</li><li>Sensitivity to light, sound or smells</li><li>Aura: zigzag lines, flashing lights, blind spots, or tingling on one side of the body, usually before the headache starts</li><li>Feeling tired, foggy or irritable before or after an attack</li></ul>'
+      format: content_format
+  field_treatment:
+    -
+      value: '<p>Migraine treatment has two parts: stopping attacks when they start and preventing them from happening as often. Most people need some trial and error to find what works.</p><h3>Treating an attack</h3><ul><li><strong>Over-the-counter pain relievers</strong>, such as NSAIDs or acetaminophen, work best when taken early</li><li><strong>Triptans</strong>, a group of migraine-specific medicines, available as pills, nasal sprays or shots</li><li><strong>Gepants</strong>, pills that block CGRP, a protein involved in migraine pain</li><li><strong>Anti-nausea medicines</strong>, which can also help other treatments work</li></ul><p>Using pain medicines for headaches on more than 10 to 15 days a month can lead to more frequent headaches, called medication overuse headache. Your care team can help you set safe limits.</p><h3>Preventing attacks</h3><p>Preventive treatment may help if you have 4 or more migraine days a month or attacks that disrupt your life. Options include daily pills first developed for blood pressure, depression or seizures; medicines that block CGRP, given as monthly or quarterly shots or as pills; botulinum toxin injections every 12 weeks for chronic migraine; nerve block injections; and wearable devices that stimulate nerves. Calder is studying new preventive options; see our <a href="/clinical-trials">clinical trials</a>.</p><h3>Daily habits</h3><p>Regular sleep, regular meals, staying hydrated and steady exercise can lower the number of attacks for many people. Cognitive behavioral therapy, biofeedback and relaxation training also have good evidence behind them.</p>'
+      format: content_format

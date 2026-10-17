@@ -1,0 +1,145 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 666f49b1-b139-4c1e-8a81-cc30f6e7ed00
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 0
+  title:
+    -
+      value: Research
+  description:
+    -
+      value: 'Clinical trials, labs and research news from Calder University Health.'
+  components:
+    -
+      uuid: 79f49f06-328a-4291-9de4-10668f868bfe
+      component_id: sdc.calder.hero
+      inputs:
+        eyebrow: 'Research at Calder'
+        headline: 'Questions from the clinic, answered in the lab.'
+        intro: 'Calder researchers study what patients and clinicians need to know, then bring the answers back to the bedside. Many of our scientists also see patients, and many of our patients help shape our studies.'
+        mission: discover
+        primary_label: 'Find a clinical trial'
+        primary_url: /clinical-trials
+        secondary_label: 'Meet our researchers'
+        secondary_url: /faculty
+        illustration: discover
+        size: compact
+    -
+      uuid: 4dbdb96e-7394-48fd-ad9d-4e40b525eb0b
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: Research
+        mission: discover
+        heading: 'Explore research at Calder'
+        columns: '3'
+        background: paper
+    -
+      parent_uuid: 4dbdb96e-7394-48fd-ad9d-4e40b525eb0b
+      slot: content
+      uuid: 7d823c62-c50a-4dad-9af2-2c8ec49ea36c
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: discover
+        eyebrow: 'Find a study'
+        title: 'Clinical trials'
+        text: 'More than 200 studies are under way across the health system. Search by condition, location or age to find studies that are enrolling now.'
+        url: /clinical-trials
+    -
+      parent_uuid: 4dbdb96e-7394-48fd-ad9d-4e40b525eb0b
+      slot: content
+      uuid: 506b225b-1044-4f22-bade-8899fd044abf
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: discover
+        eyebrow: Labs
+        title: 'Labs and research groups'
+        text: "From the Arrhythmia Research Lab to the Haddad Lab's work on migraine pain circuits, our labs connect basic science with patient care."
+        url: /research/labs
+    -
+      parent_uuid: 4dbdb96e-7394-48fd-ad9d-4e40b525eb0b
+      slot: content
+      uuid: 4d7a79ae-1c28-40d7-a3d9-39de4e4cb27e
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: discover
+        eyebrow: 'Get involved'
+        title: 'Volunteer for a study'
+        text: 'Studies need both healthy volunteers and people with specific conditions. Every study is reviewed by an independent ethics board, and you can leave at any time.'
+        url: /clinical-trials
+    -
+      uuid: cc74c958-3460-4bd5-941c-09c40edc7205
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: Labs
+        mission: discover
+        heading: 'Our labs'
+        columns: '2'
+        background: white
+    -
+      parent_uuid: cc74c958-3460-4bd5-941c-09c40edc7205
+      slot: content
+      uuid: 9b0f3c60-92b0-464c-905d-89e64a64b3c4
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: discover
+        eyebrow: 'Research lab'
+        title: 'Arrhythmia Research Lab'
+        text: 'The Arrhythmia Research Lab studies how to treat atrial fibrillation and other heart rhythm problems more safely, more quickly and with longer-lasting results.'
+        url: /research/arrhythmia-research-lab
+    -
+      parent_uuid: cc74c958-3460-4bd5-941c-09c40edc7205
+      slot: content
+      uuid: 6b77567f-b57e-46f6-833f-4dc09035149e
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: discover
+        eyebrow: 'Research lab'
+        title: 'Haddad Lab'
+        text: "The Haddad Lab studies how the brain's pain circuits switch on during a migraine attack and why, for some people, they become more sensitive over time."
+        url: /research/haddad-lab
+    -
+      uuid: 8a08ed99-84a5-400d-94ef-0ddd797d2ebc
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: News
+        heading: 'Research news'
+        intro: 'Read about new findings, new studies and the people behind them.'
+        link_label: 'All news'
+        link_url: /news
+        mission: discover
+        columns: '1'
+        background: paper
+    -
+      parent_uuid: 8a08ed99-84a5-400d-94ef-0ddd797d2ebc
+      slot: content
+      uuid: 218e5405-3c06-4dd5-b872-221381b0cf8a
+      component_id: block.views_block.news-block
+      inputs:
+        label: 'Latest news'
+        label_display: '0'
+    -
+      uuid: 3c01dce9-d41f-48a4-b122-a56324f55899
+      component_id: sdc.calder.cta-band
+      inputs:
+        heading: 'Studies are enrolling now'
+        text: 'Search by condition or keyword, and see who is eligible.'
+        button_label: 'Find a clinical trial'
+        button_url: /clinical-trials
+        mission: discover
+  path:
+    -
+      alias: /research
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]"}'

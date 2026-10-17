@@ -100,6 +100,8 @@
   --accent-foreground: var(--ink);
   --border: #2f333c;
   --input: #6b707b;
+  --ink-soft: #b9bcc4; /* 9.5:1 on night */
+  --ink-muted: #9a9ea8; /* 6.9:1 on night */
   --care: #f27a6b; /* 6.7:1 on night */
   --learn: #8ea6f0;
   --discover: #ebaa2a; /* 8.9:1 on night */

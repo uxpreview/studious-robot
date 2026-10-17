@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: bce7f666-b1f5-48a1-8b2e-fbce1b0019ae
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    1dad125d-f42b-4f83-9d82-9c7aab7045f0: menu_link_content
+    566220dd-74aa-4549-b360-4c6ec34e8b9c: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Billing and insurance'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 566220dd-74aa-4549-b360-4c6ec34e8b9c
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 4
+  expanded:
+    -
+      value: true
+  parent:
+    -
+      value: 'menu_link_content:1dad125d-f42b-4f83-9d82-9c7aab7045f0'
+  revision_translation_affected:
+    -
+      value: true

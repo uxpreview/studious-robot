@@ -1,0 +1,74 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: cd215c2a-64b9-460c-831e-865c232873b8
+  bundle: program
+  default_langcode: en
+  depends:
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    fab8dd60-eeed-44ec-80c5-b654376c912b: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'PhD in Neuroscience'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /programs/phd-neuroscience
+      langcode: en
+  field_body:
+    -
+      value: "<p>The PhD in Neuroscience brings together faculty from the School of Medicine, the Neurology and Neurosurgery department and the university's departments of biology, psychology and engineering. Students choose from 38 faculty labs studying topics from pain and sensation to memory, sleep and brain development.</p><p>In the first year, students take core courses in cellular, systems and computational neuroscience and complete three lab rotations before choosing a thesis lab. The qualifying exam takes place at the end of the second year. Students also gain teaching experience and can join a clinical immersion course, shadowing neurologists and neurosurgeons to see the questions patients bring to the clinic.</p><p>Every admitted student receives full tuition, health insurance and a yearly stipend for at least five years. Program director Dr. Laila Haddad and a team of faculty mentors meet with each student every year to plan for careers in academic research, industry, science policy and beyond.</p>"
+      format: content_format
+  field_credential:
+    -
+      value: PhD
+  field_deadline:
+    -
+      value: 'December 1'
+  field_departments:
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+  field_director:
+    -
+      entity: fab8dd60-eeed-44ec-80c5-b654376c912b
+  field_duration:
+    -
+      value: '5–6 years'
+  field_highlights:
+    -
+      value: '38|faculty labs to choose from'
+    -
+      value: '3|lab rotations in your first year'
+    -
+      value: '5 years|of guaranteed full funding'
+  field_how_to_apply:
+    -
+      value: "<ol><li>Complete the online graduate application by December 1.</li><li>Upload transcripts from your college or university. A bachelor's degree in any field is accepted; coursework in biology, chemistry, psychology or computer science is helpful.</li><li>Write a personal statement about your research experience and interests, and name up to three faculty members whose work interests you.</li><li>Request three letters of recommendation, ideally from research mentors. We do not require graduate admissions test scores.</li><li>If selected, join us for an interview weekend in February. Travel costs are covered.</li><li>Receive your decision by mid-March. Admitted students have until April 15 to accept.</li></ol><p>Questions? Email neuroscience-phd@calder.example.</p>"
+      format: content_format
+  field_program_type:
+    -
+      value: phd
+  field_summary:
+    -
+      value: 'A fully funded PhD program for students who want to understand how the nervous system works, from molecules and circuits to behavior and disease.'

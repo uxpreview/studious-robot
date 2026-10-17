@@ -1,0 +1,122 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: d7ee3471-8b7d-4ddc-a2d7-711370a8136b
+  bundle: person
+  default_langcode: en
+  depends:
+    4a09ed4c-4b05-4a7a-bf0c-7a33950be1dc: node
+    65175c88-9eb1-45ab-b56d-a1f484daf9a0: node
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    58808d28-7cd7-4873-8412-3911d2ffc376: taxonomy_term
+    d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9: node
+    bc511c44-7447-4f97-bf38-dc5ed528d0b2: node
+    1b432a6b-8c3e-461f-86f1-93ef31296f14: taxonomy_term
+    5d3905dc-29db-4ed9-96ef-8fa62b6b22d1: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Marcus Reed'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /people/marcus-reed
+      langcode: en
+  field_academic_rank:
+    -
+      value: assistant_professor
+  field_academic_title:
+    -
+      value: 'Assistant Professor of Medicine (Cardiology)'
+  field_accepting_new:
+    -
+      value: true
+  field_body:
+    -
+      value: '<p>Dr. Marcus Reed is an interventional cardiologist. He uses thin tubes called catheters, threaded through a blood vessel in the wrist or groin, to open blocked heart arteries, place stents and treat heart attacks as they happen. He also performs left atrial appendage closure, a procedure that can lower stroke risk for some people with <a href="/conditions/atrial-fibrillation">atrial fibrillation</a> who cannot take blood thinners long term.</p><p>Many of Dr. Reed''s patients have <a href="/conditions/heart-failure">heart failure</a> caused by coronary artery disease. He works closely with nurse practitioner Maria Santos and the Heart Failure Clinic at Riverside so that care continues smoothly after a procedure. He is the principal investigator of a study testing whether at-home monitoring can help people with heart failure stay out of the hospital, and he is a member of the Arrhythmia Research Lab, where he tracks long-term results of appendage closure.</p><p>Dr. Reed grew up in Calder and earned his medical degree at the Calder University School of Medicine. He teaches residents and fellows in the cardiac catheterization lab, and cardiology fellows named him teacher of the year in 2024.</p>'
+      format: content_format
+  field_conditions:
+    -
+      entity: 4a09ed4c-4b05-4a7a-bf0c-7a33950be1dc
+    -
+      entity: 65175c88-9eb1-45ab-b56d-a1f484daf9a0
+  field_credentials:
+    -
+      value: MD
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_education:
+    -
+      value: 'Medical school|Calder University School of Medicine'
+    -
+      value: 'Residency|Internal Medicine, Westmoor University Hospital'
+    -
+      value: 'Fellowship|Cardiovascular Disease, Calder University Hospital'
+    -
+      value: 'Fellowship|Interventional Cardiology, Lakemont University Medical Center'
+    -
+      value: 'Board certification|Cardiovascular Disease; Interventional Cardiology'
+  field_first_name:
+    -
+      value: Marcus
+  field_job_title:
+    -
+      value: 'Interventional Cardiologist'
+  field_keywords:
+    -
+      value: 'Marcus Reed | Interventional Cardiologist | MD | Cardiology | Interventional cardiology | Heart failure | Congestive heart failure | CHF | HFrEF | HFpEF | Atrial fibrillation | AFib | AF | Irregular heartbeat | Heart & Vascular Institute'
+  field_languages:
+    -
+      entity: 58808d28-7cd7-4873-8412-3911d2ffc376
+  field_last_name:
+    -
+      value: Reed
+  field_locations:
+    -
+      entity: d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9
+    -
+      entity: bc511c44-7447-4f97-bf38-dc5ed528d0b2
+  field_pronouns:
+    -
+      value: he/him
+  field_pull_quote:
+    -
+      value: 'Most of my patients meet me on a hard day. I want them to leave knowing exactly what we did, why we did it and what the next six months should look like.'
+  field_research_interests:
+    -
+      value: 'Remote monitoring for heart failure'
+    -
+      value: 'Left atrial appendage closure outcomes'
+  field_roles:
+    -
+      value: clinician
+    -
+      value: faculty
+    -
+      value: researcher
+  field_specialties:
+    -
+      entity: 1b432a6b-8c3e-461f-86f1-93ef31296f14
+    -
+      entity: 5d3905dc-29db-4ed9-96ef-8fa62b6b22d1
+  field_summary:
+    -
+      value: 'Interventional cardiologist who opens blocked heart arteries, cares for people with heart failure and leads a study of at-home monitoring after a hospital stay.'

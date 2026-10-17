@@ -1,0 +1,8 @@
+<article class="group relative flex h-full flex-col rounded-2xl border border-line bg-white p-7 transition-shadow hover:shadow-md">
+  {% if eyebrow %}{{ include('calder:mission-marker', { mission: mission|default('neutral'), label: eyebrow }, with_context = false) }}{% endif %}
+  <h3 class="mt-4 text-[1.5rem] leading-tight">
+    <a href="{{ url }}" class="no-underline after:absolute after:inset-0 after:rounded-2xl group-hover:underline">{{ title }}</a>
+  </h3>
+  {% if text %}<p class="mt-3 mb-0 text-base text-ink-soft">{{ text }}</p>{% endif %}
+  <span class="mt-auto flex justify-end pt-6 text-ink-muted transition-transform group-hover:translate-x-1 group-hover:text-ink" aria-hidden="true">{{ icon('phosphor', 'arrow-right', { size: 22 }) }}</span>
+</article>

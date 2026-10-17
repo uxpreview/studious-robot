@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 8fa4d028-b7dc-45f2-993f-bc34e541ebe6
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    c81217b8-c8b8-40af-8436-ca407ace6d1d: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Education
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: c81217b8-c8b8-40af-8436-ca407ace6d1d
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 1
+  expanded:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 79865226-3135-4e65-b7d2-717b4c64e67a
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    1dad125d-f42b-4f83-9d82-9c7aab7045f0: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Conditions we treat'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'internal:/conditions'
+      title: null
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 1
+  expanded:
+    -
+      value: true
+  parent:
+    -
+      value: 'menu_link_content:1dad125d-f42b-4f83-9d82-9c7aab7045f0'
+  revision_translation_affected:
+    -
+      value: true
