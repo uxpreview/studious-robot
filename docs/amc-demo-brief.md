@@ -1,6 +1,6 @@
 # Brief: Academic medical center demo
 
-**Status:** planned, not started. Open questions are at the bottom.
+**Status:** built. The demo is the `recipes/amc_demo` site template, and `ddev reset` installs it. Decisions on the open questions are at the bottom.
 
 ## Goal
 
@@ -72,9 +72,11 @@ Supporting vocabularies: specialty, mission (patient care, education, research),
   2. Look and feel: brand colors and type, then the homepage and hubs in Canvas
   3. Extras: department-level editing permissions with a review step (needs an add-on such as Group), Spanish versions of one or two pages, and an accessibility pass
 
-## Open questions
+## Decisions
 
-1. **Name:** fictional and not resembling a real institution. Options: Larkspur University Health, Calder University Medical Center, Ashby Academic Health. Check the pick isn't a real place.
-2. **Audience:** which clients is this for, and what's their usual pain (people can't find things, too many editors and no control, accessibility, an aging CMS)? That decides what to polish first.
-3. **Look:** restyle Drupal CMS's neutral Mercury theme, or something more custom? Look at `ddev reset mercury_demo` and `ddev reset haven` first.
-4. **Photos:** licensed stock photos of people as fictional doctors, or illustrated avatars?
+1. **Name:** Calder University Health. No real institution by that name turned up, and the name gave the design its concept: Alexander Calder's mobiles, separate parts held in balance.
+2. **Audience:** healthcare and higher-education clients alike. The demo leads with what both struggle with: findability (Find a Doctor, condition guides, the trials finder) and keeping one person's information consistent everywhere.
+3. **Look:** a custom theme (Calder), generated from Mercury so it stays compatible with Canvas. See `docs/design-system.md`.
+4. **Photos:** no stock photos of real people. Generated mobile illustrations and monogram avatars, with image fields ready for real photography.
+
+Department-level editing permissions and Spanish versions (phase 3) are not built yet.
