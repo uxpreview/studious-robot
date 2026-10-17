@@ -1,0 +1,25 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Status pill
+description: A short status label, such as "Recruiting" or "Accepting new patients".
+group: Calder
+status: stable
+props:
+  type: object
+  required: [label]
+  properties:
+    label:
+      type: string
+      title: Label
+      examples: ["Accepting new patients"]
+    tone:
+      type: string
+      title: Tone
+      enum: [ok, care, learn, discover, neutral]
+      meta:enum:
+        ok: Positive (green)
+        care: Care (red)
+        learn: Learn (blue)
+        discover: Discover (ochre)
+        neutral: Neutral
+      default: neutral
+      examples: [ok]

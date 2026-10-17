@@ -1,0 +1,10 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Site footer
+description: Footer with a closing statement, contact details and the footer menu (two levels).
+group: Calder
+status: stable
+noUi: true
+props:
+  type: object
+  properties:
+    columns: { type: array }

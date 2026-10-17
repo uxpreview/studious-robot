@@ -1,0 +1,85 @@
+{#
+/**
+ * @file
+ * Event.
+ */
+#}
+{% set e = calder %}
+{% set details %}
+  {% if e.date %}
+    <div class="flex flex-wrap items-center gap-6">
+      <div class="flex w-24 flex-col items-center rounded-2xl border border-line bg-white py-4 text-center leading-none">
+        <span class="text-sm font-bold tracking-[0.12em] uppercase text-care-deep">{{ e.date.month }}</span>
+        <span class="mt-1 font-serif text-[2.75rem] font-medium">{{ e.date.day }}</span>
+        <span class="mt-1 text-sm text-ink-soft">{{ e.date.weekday|slice(0, 3) }}</span>
+      </div>
+      <dl class="m-0 flex flex-col gap-2 text-lg">
+        <div class="flex gap-3"><dt class="text-ink-muted">{{ icon('phosphor', 'calendar-blank', { size: 22 }) }}<span class="sr-only">Date</span></dt><dd class="m-0"><time datetime="{{ e.date.iso }}">{{ e.date.long }}</time></dd></div>
+        <div class="flex gap-3"><dt class="text-ink-muted">{{ icon('phosphor', 'clock', { size: 22 }) }}<span class="sr-only">Time</span></dt><dd class="m-0">{{ e.date.time }}</dd></div>
+        <div class="flex gap-3"><dt class="text-ink-muted">{{ icon('phosphor', e.format == 'virtual' ? 'video-camera' : 'map-pin', { size: 22 }) }}<span class="sr-only">Where</span></dt><dd class="m-0">
+          {% if e.location and e.venue and e.location.title in e.venue %}
+            {# The venue already names the location: link the name in place. #}
+            {{ e.venue|e|replace({ (e.location.title|e): '<a href="' ~ e.location.url ~ '">' ~ (e.location.title|e) ~ '</a>' })|raw }}
+          {% elseif e.location %}
+            <a href="{{ e.location.url }}">{{ e.location.title }}</a>{% if e.venue %}, {{ e.venue }}{% endif %}
+          {% else %}
+            {{ e.venue }}
+          {% endif %}
+        </dd></div>
+      </dl>
+    </div>
+  {% endif %}
+{% endset %}
+{% set actions %}
+  {% if e.date.is_past %}
+    {{ include('calder:pill', { label: 'This event has passed', tone: 'neutral' }, with_context = false) }}
+  {% elseif e.registration_label %}
+    <a href="mailto:events@calder.example?subject={{ ('Register: ' ~ e.title)|url_encode }}" class="button">{{ icon('phosphor', 'ticket', { size: 20 }) }}{{ e.registration_label }}</a>
+  {% endif %}
+{% endset %}
+
+{% set aside %}
+  <div class="mx-auto max-w-md text-ink">{{ include('calder:illustration', { variant: e.mission }, with_context = false) }}</div>
+{% endset %}
+
+<article{{ attributes }}>
+  {{ include('@calder/includes/page-header.twig', {
+    crumb: { title: 'Events', url: '/events' },
+    mission: e.mission,
+    eyebrow: e.format_label,
+    title: e.title,
+    intro: e.summary,
+    details: details,
+    actions: actions,
+    aside: aside,
+  }, with_context = false) }}
+
+  <div class="container mx-auto grid gap-14 px-4 py-16 md:py-20 lg:grid-cols-12">
+    <div class="lg:col-span-7">
+      <h2 class="text-headline">About this event</h2>
+      {% if e.body %}<div class="prose-calder mt-6">{{ e.body }}</div>{% endif %}
+    </div>
+    <aside class="flex flex-col gap-6 lg:col-span-4 lg:col-start-9">
+      <dl class="m-0 grid gap-5 rounded-2xl border border-line bg-white p-7">
+        {% if e.audience %}<div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">For</dt><dd class="m-0 mt-2 flex flex-wrap gap-2">{% for a in e.audience %}{{ include('calder:pill', { label: a, tone: e.mission }, with_context = false) }}{% endfor %}</dd></div>{% endif %}
+        {% if e.cost %}<div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Cost</dt><dd class="m-0 mt-1 text-lg">{{ e.cost }}</dd></div>{% endif %}
+        {% if e.credit %}<div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Credit</dt><dd class="m-0 mt-1 text-lg">{{ e.credit }}</dd></div>{% endif %}
+      </dl>
+      {% if e.speakers %}
+        <div class="rounded-2xl border border-line bg-white p-7">
+          <p class="m-0 text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">{{ e.speakers|length > 1 ? 'Speakers' : 'Speaker' }}</p>
+          <ul class="m-0 mt-4 flex list-none flex-col gap-5 p-0">
+            {% for s in e.speakers %}
+              <li class="m-0 flex items-center gap-4">
+                {{ include('calder:avatar', { initials: s.initials, roles: s.roles, photo: s.photo, size: 'sm' }, with_context = false) }}
+                <span><a href="{{ s.url }}" class="font-bold">{{ s.display_name }}</a><br><span class="text-sm text-ink-soft">{{ s.job_title }}</span></span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </aside>
+  </div>
+
+  {{ include('@calder/includes/connections.twig', { groups: e.connections, heading: 'Related news' }, with_context = false) }}
+</article>

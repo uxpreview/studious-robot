@@ -1,0 +1,16 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Site header
+description: Demo notice, logo, utility links, main navigation and the Find a Doctor call to action.
+group: Calder
+status: stable
+noUi: true
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+props:
+  type: object
+  properties:
+    main: { type: array }
+    utility: { type: array }
+    front_url: { type: string }

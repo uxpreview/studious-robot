@@ -1,0 +1,82 @@
+{#
+/**
+ * @file
+ * Education program.
+ */
+#}
+{% set g = calder %}
+{% set details %}
+  <dl class="m-0 flex flex-wrap gap-x-10 gap-y-4">
+    {% if g.credential %}<div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Credential</dt><dd class="m-0 mt-1 text-lg">{{ g.credential }}</dd></div>{% endif %}
+    {% if g.duration %}<div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Length</dt><dd class="m-0 mt-1 text-lg">{{ g.duration }}</dd></div>{% endif %}
+    {% if g.deadline %}<div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Apply by</dt><dd class="m-0 mt-1 text-lg">{{ g.deadline }}</dd></div>{% endif %}
+  </dl>
+{% endset %}
+{% set actions %}
+  {% if g.how_to_apply %}<a href="#apply" class="button">{{ icon('phosphor', 'graduation-cap', { size: 20 }) }}How to apply</a>{% endif %}
+{% endset %}
+{% set aside %}
+  <div class="mx-auto max-w-md text-ink">{{ include('calder:illustration', { variant: 'learn' }, with_context = false) }}</div>
+{% endset %}
+
+<article{{ attributes }}>
+  {{ include('@calder/includes/page-header.twig', {
+    crumb: { title: 'Programs', url: '/programs' },
+    mission: 'learn',
+    eyebrow: g.program_type_label,
+    title: g.title,
+    intro: g.summary,
+    details: details,
+    actions: actions,
+    aside: aside,
+  }, with_context = false) }}
+
+  {% if g.highlights %}
+    <div class="bg-learn text-white">
+      <dl class="container mx-auto m-0 grid gap-8 px-4 py-12 sm:grid-cols-3">
+        {% for h in g.highlights %}
+          <div class="flex flex-col-reverse gap-2">
+            <dt class="text-base text-white/85">{{ h.label }}</dt>
+            <dd class="m-0 font-serif text-[3.25rem] leading-none" style="font-variation-settings: 'opsz' 60">{{ h.value }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+    </div>
+  {% endif %}
+
+  <div class="container mx-auto grid gap-14 px-4 py-16 md:py-20 lg:grid-cols-12">
+    <div class="lg:col-span-7">
+      {% if g.body %}
+        <h2 class="text-headline">About the program</h2>
+        <div class="prose-calder mt-6">{{ g.body }}</div>
+      {% endif %}
+      {% if g.how_to_apply %}
+        <section id="apply" class="mt-16 scroll-mt-32 border-t border-line pt-14" aria-labelledby="apply-heading">
+          <h2 id="apply-heading" class="text-headline">How to apply</h2>
+          <div class="prose-calder mt-6 [&_ol]:list-none [&_ol]:ps-0 [&_ol]:[counter-reset:step] [&_ol>li]:relative [&_ol>li]:ps-14 [&_ol>li]:[counter-increment:step] [&_ol>li]:before:absolute [&_ol>li]:before:left-0 [&_ol>li]:before:top-0 [&_ol>li]:before:flex [&_ol>li]:before:size-9 [&_ol>li]:before:items-center [&_ol>li]:before:justify-center [&_ol>li]:before:rounded-full [&_ol>li]:before:bg-learn-tint [&_ol>li]:before:font-bold [&_ol>li]:before:text-learn [&_ol>li]:before:content-[counter(step)]">{{ g.how_to_apply }}</div>
+        </section>
+      {% endif %}
+    </div>
+    <aside class="flex flex-col gap-6 lg:col-span-4 lg:col-start-9">
+      {% if g.director %}
+        <div class="rounded-2xl border border-line bg-white p-8">
+          <p class="m-0 text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Program director</p>
+          <div class="mt-4 flex items-center gap-4">
+            {{ include('calder:avatar', { initials: g.director.initials, roles: g.director.roles, photo: g.director.photo, size: 'md' }, with_context = false) }}
+            <p class="m-0"><a href="{{ g.director.url }}" class="font-serif text-xl">{{ g.director.display_name }}</a><br><span class="text-sm text-ink-soft">{{ g.director.job_title }}</span></p>
+          </div>
+        </div>
+      {% endif %}
+      {% if g.departments %}
+        <div class="rounded-2xl bg-learn-tint p-8">
+          <p class="m-0 text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Departments</p>
+          <ul class="m-0 mt-3 flex list-none flex-col gap-2 p-0">
+            {% for d in g.departments %}<li class="m-0"><a href="{{ d.url }}" class="text-lg">{{ d.title }}</a></li>{% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </aside>
+  </div>
+
+  {{ include('@calder/includes/connections.twig', { groups: g.connections, heading: 'Related news' }, with_context = false) }}
+</article>

@@ -1,0 +1,9 @@
+services:
+  _defaults:
+    autowire: true
+  calder_demo.connections:
+    class: Drupal\calder_demo\Connections
+  Drupal\calder_demo\Connections: '@calder_demo.connections'
+  Drupal\calder_demo\EventSubscriber\DefaultContentDateShifter:
+    tags:
+      - { name: event_subscriber }

@@ -30,6 +30,7 @@
         "drupal/drupal_cms_installer": "^2"
     },
     "require-dev": {
+        "drupal/mercury": "^1.0",
         "drush/drush": "^13.7"
     },
     "conflict": {

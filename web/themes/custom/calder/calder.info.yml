@@ -1,0 +1,15 @@
+name: Calder
+type: theme
+'base theme': false
+libraries:
+  - calder/global
+logo: logo-dark.svg
+description: 'Design system and front-end theme for the Calder University Health demo.'
+core_version_requirement: ^11
+generator: 'mercury:1.0.5'
+regions:
+  content: Content
+  header: Header
+  footer: Footer
+dependencies:
+  - 'cva:cva'

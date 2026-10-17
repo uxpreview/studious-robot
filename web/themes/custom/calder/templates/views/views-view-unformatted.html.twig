@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Rows as a card grid or a stacked list, depending on the view's layout.
+ */
+#}
+{% set layouts = {
+  grid: 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3',
+  'sidebar-grid': 'grid gap-6 sm:grid-cols-2 xl:grid-cols-3',
+  list: 'flex flex-col gap-5',
+  'sidebar-list': 'flex flex-col gap-5',
+} %}
+{% if title %}<h2 class="mt-12 mb-6 text-subhead">{{ title }}</h2>{% endif %}
+<div class="{{ layouts[calder_layout] ?? layouts.list }}">
+  {% for row in rows %}
+    <div{{ row.attributes }}>{{- row.content -}}</div>
+  {% endfor %}
+</div>

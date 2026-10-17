@@ -1,0 +1,13 @@
+{% set tones = {
+  ok: 'bg-ok-tint text-ok',
+  care: 'bg-care-tint text-care-deep',
+  learn: 'bg-learn-tint text-learn',
+  discover: 'bg-discover-tint text-discover-deep',
+  neutral: 'bg-sand text-ink-soft',
+} %}
+{% set dots = { ok: 'bg-ok', care: 'bg-care', learn: 'bg-learn', discover: 'bg-discover', neutral: 'bg-ink-muted' } %}
+{% set tone = tone|default('neutral') %}
+<span class="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm leading-tight font-bold whitespace-nowrap {{ tones[tone] }}">
+  <span class="size-1.5 rounded-full {{ dots[tone] }}" aria-hidden="true"></span>
+  {{ label }}
+</span>

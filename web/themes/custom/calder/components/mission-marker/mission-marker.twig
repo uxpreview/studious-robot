@@ -1,0 +1,10 @@
+{% set shapes = {
+  care: 'bg-care rounded-[55%_45%_50%_50%/60%_55%_45%_40%]',
+  learn: 'bg-learn rounded-full',
+  discover: 'bg-discover rounded-[40%_60%_55%_45%/50%_45%_55%_50%]',
+  neutral: 'bg-ink rounded-full',
+} %}
+<span class="inline-flex items-center gap-2 text-[0.8125rem] leading-none font-bold tracking-[0.08em] uppercase text-ink-soft">
+  <span class="inline-block size-2.5 shrink-0 {{ shapes[mission|default('neutral')] ?? shapes.neutral }}" aria-hidden="true"></span>
+  {{ label }}
+</span>

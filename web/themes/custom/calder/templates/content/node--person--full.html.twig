@@ -1,0 +1,145 @@
+{#
+/**
+ * @file
+ * Person profile. One profile serves every role: clinicians get appointment
+ * details, faculty get academic titles, researchers get labs and trials. The
+ * same record also feeds Find a Doctor, the faculty directory and every page
+ * that lists this person.
+ */
+#}
+{% set p = calder %}
+{% set anchor %}{{ include('calder:avatar', { initials: p.initials, roles: p.roles|map(r => r.mission), photo: p.photo, size: 'sm' }, with_context = false) }}{% endset %}
+<article{{ attributes.addClass('calder-person') }}>
+  <header class="relative overflow-hidden">
+    <div class="container mx-auto px-4 pt-8 pb-12 md:pt-10 md:pb-16">
+      <nav aria-label="Breadcrumb" class="text-sm">
+        <ol class="m-0 flex list-none flex-wrap gap-2 p-0 text-ink-soft">
+          <li class="m-0"><a href="{{ p.is_clinician ? '/find-a-doctor' : '/faculty' }}" class="text-ink-soft">{{ p.is_clinician ? 'Find a doctor' : 'Faculty directory' }}</a></li>
+          <li class="m-0" aria-hidden="true">/</li>
+          <li class="m-0 text-ink" aria-current="page">{{ p.name }}</li>
+        </ol>
+      </nav>
+
+      <div class="mt-10 grid items-start gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-8">
+          <ul class="m-0 flex list-none flex-wrap gap-x-5 gap-y-2 p-0" aria-label="Roles">
+            {% for role in p.roles %}
+              <li class="m-0">{{ include('calder:mission-marker', { mission: role.mission, label: role.label }, with_context = false) }}</li>
+            {% endfor %}
+          </ul>
+          <h1 class="mt-5 text-title">{{ p.display_name }}</h1>
+          {% if p.job_title %}<p class="mt-4 mb-0 text-[1.375rem] leading-snug text-ink">{{ p.job_title }}</p>{% endif %}
+          {% if p.academic_title or p.pronouns %}
+            <p class="mt-2 mb-0 text-lg text-ink-soft">
+              {{ p.academic_title }}{% if p.academic_title and p.pronouns %}<span aria-hidden="true"> · </span>{% endif %}{% if p.pronouns %}<span>Pronouns: {{ p.pronouns }}</span>{% endif %}
+            </p>
+          {% endif %}
+
+          {% if p.is_clinician %}
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+              {% if p.accepting %}
+                {{ include('calder:pill', { label: 'Accepting new patients', tone: 'ok' }, with_context = false) }}
+              {% else %}
+                {{ include('calder:pill', { label: 'Waitlist only: call to be added', tone: 'neutral' }, with_context = false) }}
+              {% endif %}
+            </div>
+            {% if p.phone %}
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a href="tel:{{ p.phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}" class="button">{{ icon('phosphor', 'phone', { size: 20 }) }}Call {{ p.phone }}</a>
+                <a href="#locations" class="button bg-transparent text-ink ring-1 ring-line-strong hover:bg-sand hover:text-ink">{{ icon('phosphor', 'map-pin', { size: 20 }) }}Where {{ p.formal_name }} sees patients</a>
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
+        <div class="order-first lg:order-none lg:col-span-4 lg:flex lg:justify-end">
+          {{ include('calder:avatar', { initials: p.initials, roles: p.roles|map(r => r.mission), photo: p.photo, size: 'lg' }, with_context = false) }}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {# Key facts. #}
+  <div class="border-y border-line bg-white">
+    <dl class="container mx-auto m-0 grid gap-x-10 gap-y-8 px-4 py-10 sm:grid-cols-2 lg:grid-cols-4">
+      {% if p.specialties %}
+        <div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Specialties</dt><dd class="m-0 mt-2 text-lg">{{ p.specialties|join(', ') }}</dd></div>
+      {% endif %}
+      {% if p.departments %}
+        <div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Department</dt><dd class="m-0 mt-2 text-lg">{% for d in p.departments %}<a href="{{ d.url }}">{{ d.title }}</a>{{ not loop.last ? ', ' }}{% endfor %}</dd></div>
+      {% endif %}
+      {% if p.languages %}
+        <div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Languages</dt><dd class="m-0 mt-2 text-lg">{{ p.languages|join(', ') }}</dd></div>
+      {% endif %}
+      {% if p.academic_rank %}
+        <div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Academic rank</dt><dd class="m-0 mt-2 text-lg">{{ p.academic_rank }}</dd></div>
+      {% endif %}
+    </dl>
+  </div>
+
+  <div class="container mx-auto grid gap-14 px-4 py-16 md:py-20 lg:grid-cols-12">
+    <div class="lg:col-span-7">
+      <h2 class="text-headline">About {{ p.formal_name }}</h2>
+      {% if p.body %}<div class="prose-calder mt-6">{{ p.body }}</div>{% endif %}
+
+      {% if p.conditions %}
+        <h2 class="mt-14 text-subhead">Conditions treated</h2>
+        <ul class="mt-5 flex list-none flex-wrap gap-3 p-0">
+          {% for c in p.conditions %}
+            <li class="m-0"><a href="{{ c.url }}" class="inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-4 py-2 text-base font-bold text-ink no-underline hover:border-ink">{{ c.title }}{{ icon('phosphor', 'arrow-right', { size: 16 }) }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if p.education %}
+        <h2 class="mt-14 text-subhead">Education and training</h2>
+        <dl class="mt-5 divide-y divide-line border-y border-line">
+          {% for e in p.education %}
+            <div class="grid gap-1 py-4 sm:grid-cols-[11rem_1fr] sm:gap-6">
+              <dt class="text-base font-bold">{{ e.label }}</dt>
+              <dd class="m-0 text-base text-ink-soft">{{ e.value }}</dd>
+            </div>
+          {% endfor %}
+        </dl>
+      {% endif %}
+
+      {% if p.research_interests %}
+        <h2 class="mt-14 text-subhead">Research interests</h2>
+        <ul class="prose-calder mt-5">
+          {% for r in p.research_interests %}<li>{{ r }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <aside class="flex flex-col gap-6 lg:col-span-4 lg:col-start-9">
+      {% if p.quote %}
+        <figure class="relative m-0 overflow-hidden rounded-2xl bg-sand p-8">
+          <span class="absolute -top-6 -right-6 block size-24 rounded-[55%_45%_50%_50%/60%_55%_45%_40%] bg-care/90" aria-hidden="true"></span>
+          <p class="relative m-0 text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">My approach to care</p>
+          <blockquote class="relative m-0 mt-4 font-serif text-[1.5rem] leading-snug text-ink italic" style="font-variation-settings: 'opsz' 24">“{{ p.quote }}”</blockquote>
+        </figure>
+      {% endif %}
+
+      {% if p.locations %}
+        <div id="locations" class="scroll-mt-32 rounded-2xl border border-line bg-white p-8">
+          <h2 class="text-xl">Where {{ p.formal_name }} sees patients</h2>
+          <ul class="m-0 mt-5 flex list-none flex-col gap-5 p-0">
+            {% for l in p.locations %}
+              <li class="m-0 flex gap-3">
+                <span class="mt-1 shrink-0 text-care">{{ icon('phosphor', 'map-pin', { size: 22 }) }}</span>
+                <span><a href="{{ l.url }}" class="font-bold">{{ l.title }}</a><br><span class="text-base text-ink-soft">{{ l.address }}</span></span>
+              </li>
+            {% endfor %}
+          </ul>
+          {% if p.phone %}<p class="mt-6 mb-0 border-t border-line pt-5 text-base">Appointments: <a href="tel:{{ p.phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}" class="font-bold">{{ p.phone }}</a></p>{% endif %}
+        </div>
+      {% endif %}
+    </aside>
+  </div>
+
+  {{ include('@calder/includes/connections.twig', {
+    groups: p.connections,
+    heading: p.formal_name ~ "’s work across Calder",
+    intro: 'Teaching, research and care, in one place.',
+    anchor: anchor,
+  }, with_context = false) }}
+</article>

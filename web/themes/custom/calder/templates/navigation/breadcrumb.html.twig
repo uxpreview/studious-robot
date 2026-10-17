@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Breadcrumb, in the same quiet "Home / Section" style used by the designed
+ * page headers. The current page is listed but not linked.
+ */
+#}
+{% if breadcrumb %}
+  <nav aria-label="Breadcrumb">
+    <ol class="m-0 flex list-none flex-wrap gap-2 p-0 text-sm text-ink-soft">
+      {% for item in breadcrumb %}
+        <li class="m-0 flex gap-2">
+          {% if item.url and not loop.last %}
+            <a href="{{ item.url }}" class="text-ink-soft">{{ item.text }}</a>
+          {% else %}
+            <span class="text-ink" aria-current="page">{{ item.text }}</span>
+          {% endif %}
+          {% if not loop.last %}<span aria-hidden="true">/</span>{% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

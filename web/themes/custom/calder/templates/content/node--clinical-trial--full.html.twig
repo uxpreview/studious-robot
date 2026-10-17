@@ -1,0 +1,89 @@
+{#
+/**
+ * @file
+ * Clinical trial. Leads with the plain-language question the study asks and
+ * whether it is recruiting; the official title and protocol ID come second.
+ */
+#}
+{% set t = calder %}
+{% set mailto = 'mailto:' ~ t.contact.email ~ '?subject=' ~ ('Question about ' ~ t.protocol_id)|url_encode %}
+{% set details %}
+  <p class="m-0 text-base text-ink-soft"><span class="font-bold text-ink">Official title:</span> {{ t.official_title }}</p>
+{% endset %}
+{% set actions %}
+  {% if t.status in ['recruiting', 'not_yet_recruiting'] and t.contact.email %}
+    <a href="{{ mailto }}" class="button">{{ icon('phosphor', 'envelope-simple', { size: 20 }) }}Ask about joining</a>
+  {% endif %}
+  {% if t.contact.phone %}
+    <a href="tel:{{ t.contact.phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}" class="button bg-transparent text-ink ring-1 ring-line-strong hover:bg-sand hover:text-ink">{{ icon('phosphor', 'phone', { size: 20 }) }}{{ t.contact.phone }}</a>
+  {% endif %}
+{% endset %}
+{% set aside %}
+  <dl class="m-0 grid gap-5 rounded-2xl border border-line bg-white p-7">
+    <div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Study number</dt><dd class="m-0 mt-1 text-lg">{{ t.protocol_id }}{% if t.phase_label %} · {{ t.phase_label }}{% endif %}</dd></div>
+    {% if t.conditions %}<div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Condition</dt><dd class="m-0 mt-1 text-lg">{% for c in t.conditions %}<a href="{{ c.url }}">{{ c.title }}</a>{{ not loop.last ? ', ' }}{% endfor %}</dd></div>{% endif %}
+    {% if t.age_range %}<div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Ages</dt><dd class="m-0 mt-1 text-lg">{{ t.age_range }}</dd></div>{% endif %}
+    {% if t.locations %}<div><dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Where</dt><dd class="m-0 mt-1 text-lg">{% for l in t.locations %}<a href="{{ l.url }}">{{ l.title }}</a>{{ not loop.last ? ', ' }}{% endfor %}</dd></div>{% endif %}
+    {% if t.investigator %}
+      <div class="border-t border-line pt-5">
+        <dt class="text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Principal investigator</dt>
+        <dd class="m-0 mt-3 flex items-center gap-4">
+          {{ include('calder:avatar', { initials: t.investigator.initials, roles: t.investigator.roles, photo: t.investigator.photo, size: 'sm' }, with_context = false) }}
+          <span><a href="{{ t.investigator.url }}" class="font-bold">{{ t.investigator.display_name }}</a><br><span class="text-sm text-ink-soft">{{ t.investigator.job_title }}</span></span>
+        </dd>
+      </div>
+    {% endif %}
+  </dl>
+{% endset %}
+
+<article{{ attributes }}>
+  {{ include('@calder/includes/page-header.twig', {
+    crumb: { title: 'Clinical trials', url: '/clinical-trials' },
+    mission: 'discover',
+    eyebrow: 'Clinical trial',
+    pills: [{ label: t.status_label, tone: t.status_tone }],
+    title: t.title,
+    intro: t.summary,
+    details: details,
+    actions: actions,
+    aside: aside,
+  }, with_context = false) }}
+
+  <div class="container mx-auto grid gap-14 px-4 py-16 md:py-20 lg:grid-cols-12">
+    <div class="lg:col-span-7">
+      {% if t.body %}
+        <section aria-labelledby="about-heading">
+          <h2 id="about-heading" class="text-headline">About this study</h2>
+          <div class="prose-calder mt-6">{{ t.body }}</div>
+        </section>
+      {% endif %}
+      {% if t.what_to_expect %}
+        <section class="mt-16 border-t border-line pt-14" aria-labelledby="expect-heading">
+          <h2 id="expect-heading" class="text-headline">What to expect</h2>
+          <div class="prose-calder mt-6">{{ t.what_to_expect }}</div>
+        </section>
+      {% endif %}
+    </div>
+    <div class="lg:col-span-5">
+      {% if t.eligibility %}
+        <section class="rounded-2xl bg-discover-tint p-8" aria-labelledby="eligibility-heading">
+          <h2 id="eligibility-heading" class="text-subhead">Who can join</h2>
+          <div class="prose-calder mt-4 text-base [&_h3]:mt-6 [&_h3]:font-sans [&_h3]:text-base [&_h3]:font-bold">{{ t.eligibility }}</div>
+          <p class="mt-6 mb-0 text-sm text-ink-soft">The study team makes the final decision about who can take part, based on a screening visit.</p>
+        </section>
+      {% endif %}
+      {% if t.contact.name %}
+        <div class="mt-6 rounded-2xl border border-line bg-white p-8">
+          <h2 class="text-xl">Questions about this study?</h2>
+          <p class="mt-3 mb-0 text-base">Contact {{ t.contact.name }}</p>
+          <ul class="m-0 mt-4 flex list-none flex-col gap-2 p-0 text-base">
+            {% if t.contact.email %}<li class="m-0 flex gap-2"><span class="text-ink-muted">{{ icon('phosphor', 'envelope-simple', { size: 20 }) }}</span><a href="{{ mailto }}">{{ t.contact.email }}</a></li>{% endif %}
+            {% if t.contact.phone %}<li class="m-0 flex gap-2"><span class="text-ink-muted">{{ icon('phosphor', 'phone', { size: 20 }) }}</span>{{ t.contact.phone }}</li>{% endif %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {{ include('@calder/includes/connections.twig', { groups: t.connections, heading: 'Related news' }, with_context = false) }}
+</article>

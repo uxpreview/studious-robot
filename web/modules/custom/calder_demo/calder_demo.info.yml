@@ -1,0 +1,9 @@
+name: Calder demo
+type: module
+description: 'Site logic for the Calder University Health demo: connected content, search keywords and fresh event dates.'
+package: Calder
+core_version_requirement: ^11.3
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:datetime_range

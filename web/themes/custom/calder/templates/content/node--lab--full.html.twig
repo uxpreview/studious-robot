@@ -1,0 +1,80 @@
+{#
+/**
+ * @file
+ * Research lab.
+ */
+#}
+{% set l = calder %}
+{% set aside %}
+  {% if l.image %}
+    <img src="{{ l.image.src }}" alt="{{ l.image.alt }}" width="{{ l.image.width }}" height="{{ l.image.height }}" class="w-full rounded-2xl">
+  {% else %}
+    <div class="mx-auto max-w-md text-ink">{{ include('calder:illustration', { variant: 'discover' }, with_context = false) }}</div>
+  {% endif %}
+{% endset %}
+{% set details %}
+  {% if l.lead %}
+    <div class="flex items-center gap-4">
+      {{ include('calder:avatar', { initials: l.lead.initials, roles: l.lead.roles, photo: l.lead.photo, size: 'sm' }, with_context = false) }}
+      <p class="m-0 text-base"><span class="text-ink-soft">Led by</span> <a href="{{ l.lead.url }}" class="font-bold">{{ l.lead.display_name }}</a></p>
+    </div>
+  {% endif %}
+{% endset %}
+
+<article{{ attributes }}>
+  {{ include('@calder/includes/page-header.twig', {
+    crumb: { title: 'Research', url: '/research' },
+    mission: 'discover',
+    eyebrow: 'Research lab',
+    title: l.title,
+    intro: l.summary,
+    details: details,
+    aside: aside,
+  }, with_context = false) }}
+
+  {% if l.research_focus %}
+    <div class="bg-discover-tint">
+      <div class="container mx-auto px-4 py-12">
+        <h2 class="font-sans text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">What we study</h2>
+        <ul class="m-0 mt-5 grid list-none gap-4 p-0 sm:grid-cols-2 lg:grid-cols-4">
+          {% for f in l.research_focus %}
+            <li class="m-0 flex gap-3 font-serif text-xl leading-snug"><span class="mt-2 block size-3 shrink-0 rounded-[40%_60%_55%_45%/50%_45%_55%_50%] bg-discover" aria-hidden="true"></span>{{ f }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="container mx-auto grid gap-14 px-4 py-16 md:py-20 lg:grid-cols-12">
+    <div class="lg:col-span-7">
+      {% if l.body %}
+        <h2 class="text-headline">About the lab</h2>
+        <div class="prose-calder mt-6">{{ l.body }}</div>
+      {% endif %}
+      {% if l.recent_work %}
+        <h2 class="mt-16 border-t border-line pt-14 text-headline">Recent work</h2>
+        <ol class="m-0 mt-8 flex list-none flex-col gap-6 p-0">
+          {% for w in l.recent_work %}
+            <li class="m-0 grid grid-cols-[3rem_1fr] gap-4 text-lg"><span class="font-serif text-[2rem] leading-none text-discover-deep">{{ loop.index }}</span><span>{{ w }}</span></li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+    </div>
+    <aside class="lg:col-span-4 lg:col-start-9">
+      <div class="rounded-2xl border border-line bg-white p-8">
+        <h2 class="text-xl">People</h2>
+        <ul class="m-0 mt-5 flex list-none flex-col gap-5 p-0">
+          {% for person in [l.lead]|merge(l.members)|filter(p => p) %}
+            <li class="m-0 flex items-center gap-4">
+              {{ include('calder:avatar', { initials: person.initials, roles: person.roles, photo: person.photo, size: 'sm' }, with_context = false) }}
+              <span><a href="{{ person.url }}" class="font-bold">{{ person.display_name }}</a><br><span class="text-sm text-ink-soft">{{ loop.first ? 'Lab lead' : person.job_title }}</span></span>
+            </li>
+          {% endfor %}
+        </ul>
+        {% if l.other_members %}<p class="mt-6 mb-0 border-t border-line pt-5 text-base text-ink-soft">Also: {{ l.other_members }}</p>{% endif %}
+      </div>
+    </aside>
+  </div>
+
+  {{ include('@calder/includes/connections.twig', { groups: l.connections, heading: 'Studies from this lab' }, with_context = false) }}
+</article>

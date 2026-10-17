@@ -1,0 +1,543 @@
+@import "tailwindcss";
+
+@import "../components/hero-blog/hero-blog.tailwind.css";
+@import "../components/navbar/navbar.tailwind.css";
+@import "../components/anchor/anchor.tailwind.css";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+
+  /* Calder palette (see src/theme.css). */
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-paper: var(--paper);
+  --color-sand: var(--sand);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-night: var(--night);
+  --color-care: var(--care);
+  --color-care-deep: var(--care-deep);
+  --color-care-tint: var(--care-tint);
+  --color-learn: var(--learn);
+  --color-learn-tint: var(--learn-tint);
+  --color-discover: var(--discover);
+  --color-discover-deep: var(--discover-deep);
+  --color-discover-tint: var(--discover-tint);
+  --color-ok: var(--ok);
+  --color-ok-tint: var(--ok-tint);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+  --font-body: var(--font-body);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+}
+
+@theme {
+  --text-9xl: 7.5rem; /* 120px */
+  --text-9xl--line-height: 1; /* 120px */
+
+  --text-8xl: 6rem; /* 96px */
+  --text-8xl--line-height: 1; /* 96px */
+
+  --text-7xl: 4.5rem; /* 72px */
+  --text-7xl--line-height: 1; /* 72px */
+
+  --text-6xl: 3.75rem; /* 60px */
+  --text-6xl--line-height: 1; /* 60px */
+
+  --text-5xl: 3rem; /* 48px */
+  --text-5xl--line-height: 1.083333; /* 52px */
+
+  --text-4xl: 2.5rem; /* 40px */
+  --text-4xl--line-height: 1.2; /* 48px */
+
+  --text-3xl: 2rem; /* 32px */
+  --text-3xl--line-height: 1.3125; /* 42px */
+
+  --text-2xl: 1.5rem; /* 24px */
+  --text-2xl--line-height: 1.3333; /* 32px */
+
+  --text-xl: 1.25rem; /* 20px */
+  --text-xl--line-height: 1.35; /* 30px */
+
+  --text-lg: 1.125rem; /* 18px */
+  --text-lg--line-height: 1.5; /* 27px */
+
+  --text-base: 1rem; /* 16px */
+  --text-base--line-height: 1.5; /* 24px */
+
+  --text-md: var(--text-base);
+  --text-md--line-height: var(--text-base--line-height);
+
+  --text-sm: 0.875rem; /* 14px */
+  --text-sm--line-height: 1.5; /* 21px */
+
+  --text-xs: 0.75rem; /* 12px */
+  --text-xs--line-height: 1.5; /* 18px */
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --spacing: 4px;
+
+  /* Fluid headline sizes (serif). */
+  --text-display: clamp(2.75rem, 1.4rem + 4.6vw, 5.75rem);
+  --text-display--line-height: 1;
+  --text-display--letter-spacing: -0.02em;
+  --text-title: clamp(2.25rem, 1.5rem + 2.6vw, 4rem);
+  --text-title--line-height: 1.05;
+  --text-title--letter-spacing: -0.015em;
+  --text-headline: clamp(1.75rem, 1.35rem + 1.4vw, 2.625rem);
+  --text-headline--line-height: 1.12;
+  --text-headline--letter-spacing: -0.01em;
+  --text-subhead: clamp(1.3rem, 1.15rem + 0.5vw, 1.625rem);
+  --text-subhead--line-height: 1.25;
+
+  --container-prose: 68ch;
+  --breakpoint-3xl: 1600px;
+
+  --ease-calder: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Custom theme classes */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-background font-sans text-lg font-normal text-foreground antialiased;
+    font-feature-settings: "kern", "liga";
+  }
+
+  ::selection {
+    @apply bg-discover-tint text-ink;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--learn);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .dark :focus-visible {
+    outline-color: var(--discover);
+  }
+
+  a {
+    @apply underline decoration-1 underline-offset-[0.2em];
+    text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+  }
+
+  a:hover {
+    text-decoration-color: currentColor;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  ul,
+  ol {
+    @apply list-disc ps-5;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li {
+    @apply mb-1.5;
+  }
+
+  /* Headlines are set in Newsreader; the optical size axis follows the size. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-medium text-balance text-ink;
+    font-optical-sizing: auto;
+  }
+
+  h1 {
+    @apply text-title;
+  }
+
+  h2 {
+    @apply text-headline;
+  }
+
+  h3 {
+    @apply text-subhead;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5,
+  h6 {
+    @apply font-sans text-base font-bold tracking-wide;
+  }
+
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark h4 {
+    @apply text-paper;
+  }
+
+  code,
+  pre {
+    @apply font-mono text-sm text-inherit;
+  }
+
+  small {
+    @apply text-sm text-inherit;
+  }
+
+  strong,
+  b {
+    @apply font-bold text-inherit;
+  }
+
+  em,
+  i {
+    @apply text-inherit italic;
+  }
+
+  hr {
+    @apply my-8 border-t border-line;
+  }
+
+  table,
+  th,
+  td {
+    @apply text-base text-inherit;
+  }
+
+  sup {
+    font-size: 60%;
+    top: -0.5em;
+    /* ^ match normalize to avoid conflicts. */
+  }
+
+  .hide-scrollbar-x::-webkit-scrollbar {
+    height: 0px;
+  }
+
+  .hide-scrollbar-x {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .webform-submission-form {
+    .visually-hidden {
+      @apply sr-only;
+    }
+  }
+
+  .webform-submission-form,
+  .fieldset-wrapper,
+  *[id^="edit-page-"] {
+    @apply flex flex-col gap-6;
+  }
+
+  fieldset:not(.webform-type-fieldset) .fieldset-wrapper {
+    @apply gap-1;
+  }
+
+  label,
+  .fieldset-legend {
+    @apply mb-1.5 block text-base font-bold text-ink;
+  }
+
+  .description,
+  .webform-element-description {
+    @apply mt-1.5 text-sm text-ink-soft;
+  }
+
+  .form-required::after {
+    @apply ml-1 text-care-deep;
+    content: "*";
+  }
+
+  /* Full-box fields with a 3:1 border: easier to spot than underline-only fields. */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="date"],
+  input[type="time"],
+  textarea,
+  select {
+    @apply w-full rounded-md border border-line-strong bg-white px-3.5 py-2.5 text-base text-ink transition-colors;
+    min-height: 2.875rem;
+  }
+
+  select {
+    @apply appearance-none pe-10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2316181d' stroke-width='1.75'%3E%3Cpath d='M5 8l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.1rem;
+  }
+
+  input:hover,
+  textarea:hover,
+  select:hover {
+    @apply border-ink-soft;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply border-learn;
+    outline: 3px solid color-mix(in srgb, var(--learn) 35%, transparent);
+    outline-offset: 0;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    @apply size-5 accent-ink;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-ink-muted;
+  }
+
+  .form-submit,
+  input.button,
+  .button {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 text-base font-bold text-paper no-underline transition-colors;
+    min-height: 2.875rem;
+  }
+
+  .form-submit:hover,
+  input.button:hover,
+  .button:hover {
+    @apply bg-learn;
+  }
+
+  .form-item--error input,
+  .form-item--error textarea,
+  .form-item--error select {
+    @apply border-care-deep;
+  }
+
+  .form-item--error-message {
+    @apply mt-1 mb-3 basis-full text-sm font-bold text-care-deep;
+  }
+
+  .webform-options-display-one-column {
+    @apply flex flex-col gap-2;
+  }
+
+  .webform-type-checkbox.form-item,
+  .webform-type-radio.form-item,
+  .form-type-checkbox,
+  .form-type-radio {
+    @apply flex flex-wrap items-center gap-2.5;
+
+    label {
+      @apply m-0 font-normal;
+    }
+  }
+
+  .progress-text {
+    @apply text-inherit!;
+  }
+
+  /* Rich text from editors. */
+  .prose-calder {
+    @apply max-w-prose text-lg leading-relaxed text-ink;
+
+    > * + * {
+      @apply mt-5;
+    }
+
+    p {
+      @apply mb-0;
+    }
+
+    h3 {
+      @apply mt-10 mb-3 text-subhead;
+    }
+
+    ul,
+    ol {
+      @apply space-y-2 ps-6;
+    }
+
+    li {
+      @apply mb-0 ps-1;
+    }
+
+    li::marker {
+      @apply text-ink-muted;
+    }
+
+    a {
+      @apply text-learn;
+    }
+
+    strong {
+      @apply text-ink;
+    }
+  }
+}
+
+/* Override the moderation form block background */
+.entity-moderation-form {
+  background: inherit;
+}
+
+/* Ensure the page content does not cover the top bar when scrolling */
+.layout-container {
+  position: relative;
+  z-index: 1;
+}
+
+@layer utilities {
+  /* For custom utility classes with highest precedence. */
+
+  /* Set the container query context for full-width elements. */
+  .layout-content {
+    container-type: inline-size;
+  }
+
+  /* Set a fixed width on the main content container. */
+  /* Designed pages lay out their own full-width sections. */
+  .region-content {
+    @apply w-full;
+  }
+
+  /* Add a utility class for full-width elements. */
+  .cq-full {
+    width: 100cqw;
+    margin-inline: calc(-50cqw + 50%);
+  }
+
+  /* Provide basic styles for views elements */
+  .views-exposed-form {
+    @apply flex flex-wrap items-end gap-4;
+  }
+
+  .view-header {
+    @apply pb-4 md:pb-6;
+  }
+
+  /* Responsive text size utility */
+  .heading-responsive-8xl {
+    @apply text-6xl md:text-7xl xl:text-8xl;
+  }
+
+  .heading-responsive-7xl {
+    @apply text-5xl md:text-6xl xl:text-7xl;
+  }
+
+  .heading-responsive-6xl {
+    @apply text-4xl md:text-5xl xl:text-6xl; /* H1 */
+  }
+
+  .heading-responsive-5xl {
+    @apply text-3xl md:text-4xl xl:text-5xl;
+  }
+
+  .heading-responsive-4xl {
+    @apply text-3xl xl:text-4xl; /* H2 */
+  }
+
+  .heading-responsive-3xl {
+    @apply text-2xl xl:text-3xl; /* H3 */
+  }
+
+  .heading-responsive-2xl {
+    @apply text-xl md:text-2xl; /* H4 */
+  }
+
+  .heading-responsive-xl {
+    @apply text-lg md:text-xl; /* H5 */
+  }
+}
+
+/* Calder: listings and filters. */
+@layer utilities {
+  .calder-view--sidebar-list .views-exposed-form,
+  .calder-view--sidebar-grid .views-exposed-form {
+    @apply flex-col items-stretch gap-5;
+  }
+
+  .views-exposed-form .form-item {
+    @apply m-0 min-w-48 flex-1;
+  }
+
+  .views-exposed-form .form-actions {
+    @apply flex flex-wrap items-center gap-x-4 gap-y-2;
+  }
+
+  .calder-view--sidebar-list .views-exposed-form .form-actions .form-submit,
+  .calder-view--sidebar-grid .views-exposed-form .form-actions .form-submit {
+    @apply w-full;
+  }
+
+  /* "Clear filters" is a quiet secondary action. */
+  .views-exposed-form .form-actions [data-drupal-selector="edit-reset"] {
+    @apply w-auto min-h-0 bg-transparent p-0 font-bold text-ink underline underline-offset-4 hover:bg-transparent hover:text-learn;
+  }
+
+  .calder-result-count {
+    @apply m-0 text-base font-bold text-ink-soft;
+  }
+}

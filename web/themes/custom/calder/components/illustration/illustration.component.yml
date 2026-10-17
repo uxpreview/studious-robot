@@ -1,0 +1,32 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Mobile illustration
+description: One of Calder's hanging-mobile illustrations. Wires and black shapes follow the text color, so it works on light and dark backgrounds.
+group: Calder
+status: stable
+props:
+  type: object
+  required: [variant]
+  properties:
+    variant:
+      type: string
+      title: Illustration
+      enum: [home, care, learn, discover, heart, brain, child, story-red, story-blue, story-ochre]
+      meta:enum:
+        home: All three missions
+        care: Care (red)
+        learn: Learn (blue)
+        discover: Discover (ochre)
+        heart: Heart
+        brain: Brain
+        child: Children
+        story-red: Simple red
+        story-blue: Simple blue
+        story-ochre: Simple ochre
+      default: home
+      examples: [home]
+    sway:
+      type: boolean
+      title: Gentle motion
+      description: The mobile sways slightly. Turned off automatically for people who prefer reduced motion.
+      default: true
+      examples: [true]

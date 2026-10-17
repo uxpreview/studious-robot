@@ -1,0 +1,76 @@
+{#
+/**
+ * @file
+ * Connections: everything elsewhere on the site that links to this page.
+ *
+ * Variables:
+ * - groups: from CalderHooks::connections(): key, label, count, mission, cards.
+ * - heading: section heading.
+ * - intro: optional intro sentence.
+ * - anchor: optional avatar markup to hang the wire from.
+ *
+ * The strip at the top is a "wire" with one shape per group (colored by
+ * mission), in the visual language of the logo. Each shape links to its group.
+ */
+#}
+{% if groups %}
+  {% set shapes = {
+    care: 'bg-care rounded-[55%_45%_50%_50%/60%_55%_45%_40%]',
+    learn: 'bg-learn rounded-full',
+    discover: 'bg-discover rounded-[40%_60%_55%_45%/50%_45%_55%_50%]',
+    neutral: 'bg-ink rounded-full',
+  } %}
+  <section class="border-t border-line bg-white py-16 md:py-24" aria-labelledby="connections-heading">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl">
+        <h2 id="connections-heading" class="text-headline">{{ heading }}</h2>
+        {% if intro %}<p class="mt-4 mb-0 text-xl text-ink-soft">{{ intro }}</p>{% endif %}
+      </div>
+
+      <nav aria-label="Connections" class="mt-10 overflow-x-auto pb-2">
+        <ol class="relative m-0 flex w-max list-none items-start p-0 before:absolute before:top-6 before:right-20 before:left-6 before:h-[1.5px] before:bg-ink">
+          {% if anchor %}
+            <li class="relative z-10 m-0 me-10 bg-white pe-3">{{ anchor }}</li>
+          {% endif %}
+          {% for group in groups %}
+            <li class="relative z-10 m-0 flex w-40 flex-col items-center text-center">
+              <a href="#connections-{{ group.key }}" class="group flex flex-col items-center no-underline">
+                <span class="flex h-12 w-10 items-center justify-center bg-white">
+                  <span class="block size-6 transition-transform duration-300 group-hover:scale-125 {{ shapes[group.mission] ?? shapes.neutral }}" aria-hidden="true"></span>
+                </span>
+                <span class="mt-2 text-[0.9375rem] leading-tight font-bold text-ink group-hover:underline">{{ group.label }}</span>
+                <span class="mt-1 text-sm text-ink-soft">{{ group.count }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ol>
+      </nav>
+
+      {# Small groups (one or two items) share a grid; larger groups get a row each. #}
+      {% set small = groups|filter(g => g.count < 3) %}
+      {% set large = groups|filter(g => g.count >= 3) %}
+      {% if small %}
+        <div class="mt-14 grid items-start gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {% for group in small %}
+            <div id="connections-{{ group.key }}" class="flex scroll-mt-32 flex-col">
+              <h3 class="flex items-center gap-3 font-sans text-base font-bold tracking-[0.06em] uppercase text-ink-soft">
+                <span class="block size-3 shrink-0 {{ shapes[group.mission] ?? shapes.neutral }}" aria-hidden="true"></span>
+                {{ group.label }}
+              </h3>
+              <div class="mt-4 flex flex-1 flex-col gap-6">{{ group.cards }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% for group in large %}
+        <div id="connections-{{ group.key }}" class="mt-16 scroll-mt-32">
+          <h3 class="flex items-center gap-3 font-sans text-base font-bold tracking-[0.06em] uppercase text-ink-soft">
+            <span class="block size-3 shrink-0 {{ shapes[group.mission] ?? shapes.neutral }}" aria-hidden="true"></span>
+            {{ group.label }}
+          </h3>
+          <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{{ group.cards }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}

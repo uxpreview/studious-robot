@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Site header.
+ *
+ * Desktop: logo on the left; utility links above the main navigation on the
+ * right. Main navigation items are color coded by mission: the first three
+ * items are Patients (care), Education (learn) and Research (discover).
+ * Mobile: logo, a Find a Doctor shortcut and a menu button that opens a panel.
+ */
+#}
+{% set mission_bars = ['after:bg-care', 'after:bg-learn', 'after:bg-discover', 'after:bg-ink'] %}
+<div class="bg-ink text-paper">
+  <p class="container mx-auto m-0 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 py-2 text-center text-sm">
+    <span><strong>Demo site.</strong> Calder University Health is a fictional institution, built to show what Drupal CMS can do. Nothing here is medical advice.</span>
+    <a href="/about-this-demo" class="font-bold text-discover">How this site was built</a>
+  </p>
+</div>
+
+<header class="calder-header sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85" data-calder-header>
+  <div class="container mx-auto flex items-center gap-6 px-4 py-3 lg:py-0">
+    <div class="lg:py-5">
+      {{ include('calder:logo', { url: front_url|default('/') }, with_context = false) }}
+    </div>
+
+    <div class="ms-auto flex flex-col items-end max-lg:hidden">
+      {% if utility %}
+        <nav aria-label="Utility" class="pt-3">
+          <ul class="m-0 flex list-none gap-6 p-0 text-sm">
+            {% for item in utility %}
+              <li class="m-0"><a href="{{ item.url }}" class="text-ink-soft no-underline hover:text-ink hover:underline">{{ item.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+      <div class="flex items-center gap-2">
+        <nav aria-label="Main">
+          <ul class="m-0 flex list-none p-0">
+            {% for item in main %}
+              <li class="m-0">
+                <a href="{{ item.url }}"{% if item.active %} aria-current="page"{% endif %}
+                   class="relative block px-3.5 py-5 text-[1.0625rem] font-bold text-ink no-underline after:absolute after:inset-x-3.5 after:bottom-3 after:h-[3px] after:origin-left after:scale-x-0 after:rounded-full after:transition-transform after:duration-300 hover:after:scale-x-100 aria-[current=page]:after:scale-x-100 {{ mission_bars[loop.index0] ?? 'after:bg-ink' }}">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <a href="/search" class="flex size-11 items-center justify-center rounded-full text-ink no-underline hover:bg-sand" aria-label="Search">{{ icon('phosphor', 'magnifying-glass', { size: 22 }) }}</a>
+        <a href="/find-a-doctor" class="button ms-2">{{ icon('phosphor', 'stethoscope', { size: 20 }) }}Find a doctor</a>
+      </div>
+    </div>
+
+    <div class="ms-auto flex items-center gap-1 lg:hidden">
+      <a href="/find-a-doctor" class="flex size-11 items-center justify-center rounded-full text-ink no-underline hover:bg-sand" aria-label="Find a doctor">{{ icon('phosphor', 'stethoscope', { size: 24 }) }}</a>
+      <button type="button" class="flex h-11 items-center gap-2 rounded-full border border-line-strong px-4 font-bold" aria-expanded="false" aria-controls="calder-mobile-menu" data-calder-menu-toggle>
+        <span data-calder-menu-label>Menu</span>{{ icon('phosphor', 'list', { size: 20 }) }}
+      </button>
+    </div>
+  </div>
+
+  <div id="calder-mobile-menu" class="hidden border-t border-line bg-paper lg:hidden" data-calder-menu>
+    <nav aria-label="Main" class="container mx-auto px-4 py-4">
+      <ul class="m-0 list-none p-0">
+        {% for item in main %}
+          <li class="m-0 border-b border-line">
+            <a href="{{ item.url }}" class="flex items-center justify-between py-4 font-serif text-2xl text-ink no-underline">{{ item.title }}{{ icon('phosphor', 'arrow-right', { size: 20 }) }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul class="m-0 mt-4 grid list-none grid-cols-2 gap-3 p-0">
+        {% for item in utility %}
+          <li class="m-0"><a href="{{ item.url }}" class="text-ink-soft">{{ item.title }}</a></li>
+        {% endfor %}
+        <li class="m-0"><a href="/search" class="text-ink-soft">Search</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

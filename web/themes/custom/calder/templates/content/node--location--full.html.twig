@@ -1,0 +1,76 @@
+{#
+/**
+ * @file
+ * Location.
+ */
+#}
+{% set l = calder %}
+{% set details %}
+  <dl class="m-0 flex flex-col gap-3 text-lg">
+    <div class="flex gap-3"><dt class="text-ink-muted">{{ icon('phosphor', 'map-pin', { size: 22 }) }}<span class="sr-only">Address</span></dt><dd class="m-0">{{ l.address }}</dd></div>
+    {% if l.phone %}<div class="flex gap-3"><dt class="text-ink-muted">{{ icon('phosphor', 'phone', { size: 22 }) }}<span class="sr-only">Phone</span></dt><dd class="m-0"><a href="tel:{{ l.phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}">{{ l.phone }}</a></dd></div>{% endif %}
+  </dl>
+{% endset %}
+{% set aside %}
+  <div class="mx-auto max-w-md text-ink">{{ include('calder:illustration', { variant: l.motif }, with_context = false) }}</div>
+{% endset %}
+
+<article{{ attributes }}>
+  {{ include('@calder/includes/page-header.twig', {
+    crumb: { title: 'Locations', url: '/locations' },
+    mission: 'care',
+    eyebrow: l.location_type_label,
+    title: l.title,
+    intro: l.summary,
+    details: details,
+    aside: aside,
+  }, with_context = false) }}
+
+  <div class="container mx-auto grid gap-6 px-4 py-16 md:grid-cols-2 md:py-20 lg:grid-cols-3">
+    {% if l.hours %}
+      <section class="rounded-2xl border border-line bg-white p-8" aria-labelledby="hours-heading">
+        <h2 id="hours-heading" class="flex items-center gap-3 text-xl"><span class="text-care">{{ icon('phosphor', 'clock', { size: 24 }) }}</span>Hours</h2>
+        <ul class="m-0 mt-5 flex list-none flex-col gap-3 p-0 text-base">
+          {% for h in l.hours %}<li class="m-0 border-b border-line pb-3 last:border-0 last:pb-0">{{ h }}</li>{% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+    {% if l.parking %}
+      <section class="rounded-2xl border border-line bg-white p-8" aria-labelledby="parking-heading">
+        <h2 id="parking-heading" class="flex items-center gap-3 text-xl"><span class="text-care">{{ icon('phosphor', 'car', { size: 24 }) }}</span>Parking and directions</h2>
+        <p class="mt-5 mb-0 text-base">{{ l.parking }}</p>
+      </section>
+    {% endif %}
+    {% if l.amenities %}
+      <section class="rounded-2xl border border-line bg-white p-8" aria-labelledby="amenities-heading">
+        <h2 id="amenities-heading" class="flex items-center gap-3 text-xl"><span class="text-care">{{ icon('phosphor', 'wheelchair', { size: 24 }) }}</span>Amenities and access</h2>
+        <ul class="m-0 mt-5 flex list-none flex-col gap-3 p-0 text-base">
+          {% for a in l.amenities %}<li class="m-0 flex gap-2"><span class="mt-0.5 text-ok">{{ icon('phosphor', 'check-circle', { size: 20 }) }}</span>{{ a }}</li>{% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+  </div>
+
+  {% if l.services or l.departments %}
+    <div class="border-t border-line">
+      <div class="container mx-auto grid gap-12 px-4 py-16 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <h2 class="text-headline">Services here</h2>
+          <ul class="m-0 mt-8 grid list-none gap-x-8 gap-y-4 p-0 sm:grid-cols-2">
+            {% for s in l.services %}<li class="m-0 flex gap-3 text-lg"><span class="mt-2.5 block size-2.5 shrink-0 rounded-full bg-care" aria-hidden="true"></span>{{ s }}</li>{% endfor %}
+          </ul>
+        </div>
+        {% if l.departments %}
+          <div class="lg:col-span-4 lg:col-start-9">
+            <p class="m-0 text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Departments</p>
+            <ul class="m-0 mt-4 flex list-none flex-col gap-2 p-0">
+              {% for d in l.departments %}<li class="m-0"><a href="{{ d.url }}" class="font-serif text-xl">{{ d.title }}</a></li>{% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {{ include('@calder/includes/connections.twig', { groups: l.connections, heading: 'At ' ~ l.title }, with_context = false) }}
+</article>

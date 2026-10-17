@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Calder views layout.
+ *
+ * The view's CSS class picks the layout (set in the view's Advanced settings):
+ * - calder-view--sidebar-list / --sidebar-grid: filters in a left column.
+ * - calder-view--grid / --list: filters (if any) above the results.
+ */
+#}
+{% set classes = ['view', 'view-' ~ (id|clean_class), 'view-id-' ~ id, 'view-display-id-' ~ display_id, dom_id ? 'js-view-dom-id-' ~ dom_id] %}
+{% set sidebar = calder_layout starts with 'sidebar' %}
+{% set results %}
+  {% if attachment_before %}<div class="attachment attachment-before">{{ attachment_before }}</div>{% endif %}
+  {% if rows %}
+    <div class="view-content">{{ rows }}</div>
+  {% elseif empty %}
+    <div class="view-empty rounded-2xl border border-dashed border-line-strong p-10 text-center text-lg text-ink-soft">{{ empty }}</div>
+  {% endif %}
+  {{ pager }}
+  {% if attachment_after %}<div class="attachment attachment-after">{{ attachment_after }}</div>{% endif %}
+  {{ more }}
+{% endset %}
+<div {{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  {% if sidebar %}
+    <div class="grid gap-10 lg:grid-cols-12">
+      {% if exposed %}
+        <aside class="lg:col-span-3" aria-label="Filters">
+          <div class="rounded-2xl border border-line bg-white p-6 lg:sticky lg:top-32">
+            <h2 class="mb-5 font-sans text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Filter</h2>
+            {{ exposed }}
+          </div>
+        </aside>
+      {% endif %}
+      <div class="{{ exposed ? 'lg:col-span-9' : 'lg:col-span-12' }}">
+        {% if header %}<div class="view-header mb-5">{{ header }}</div>{% endif %}
+        {{ results }}
+      </div>
+    </div>
+  {% else %}
+    {% if exposed %}<div class="view-filters mb-10 rounded-2xl border border-line bg-white p-5">{{ exposed }}</div>{% endif %}
+    {% if header %}<div class="view-header mb-5">{{ header }}</div>{% endif %}
+    {{ results }}
+  {% endif %}
+
+  {% if footer %}<div class="view-footer mt-8">{{ footer }}</div>{% endif %}
+</div>

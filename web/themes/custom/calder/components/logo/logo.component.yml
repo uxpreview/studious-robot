@@ -1,0 +1,22 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Logo
+description: Calder University Health logo. A small mobile (one shape per mission) and the wordmark.
+group: Calder
+status: stable
+noUi: true
+props:
+  type: object
+  properties:
+    tone:
+      type: string
+      title: Tone
+      enum: [dark, light]
+      default: dark
+    url:
+      type: string
+      title: Link
+      format: uri-reference
+    mark_only:
+      type: boolean
+      title: Mark only
+      default: false
