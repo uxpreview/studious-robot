@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" color="#16181d" role="img" aria-label="Calder University Health">
+<title>Calder University Health</title>
+<g style="transform-origin: 24.8px 0px"><g transform="translate(24.8 12.9) scale(0.228)">
+<line x1="0" y1="-58.9" x2="0" y2="-7.7" stroke="currentColor" stroke-width="7.03"/>
+<g fill="none" stroke="currentColor" stroke-width="7.03" stroke-linecap="round"><path d="M-54.3,14.2 C-31.1,-15.5 51.3,-15.5 74.5,14.2"/><line x1="-54.3" y1="14.2" x2="-54.3" y2="48.2"/><line x1="74.5" y1="14.2" x2="74.5" y2="36.2"/><line x1="-54.3" y1="48.2" x2="-54.3" y2="60.2"/><path d="M34.7,47.4 C53.1,23.9 118.3,23.9 136.7,47.4"/><line x1="34.7" y1="47.4" x2="34.7" y2="73.4"/><line x1="136.7" y1="47.4" x2="136.7" y2="101.4"/><line x1="34.7" y1="73.4" x2="34.7" y2="81.4"/><line x1="136.7" y1="101.4" x2="136.7" y2="107.8"/></g>
+<g fill="#c23a2b"><path d="M-17.7,98.2 C-22.4,105.3 -40.9,108.1 -49.2,107.2 C-57.5,106.4 -64.0,97.9 -67.4,93.0 C-70.8,88.0 -69.5,82.8 -69.5,77.4 C-69.5,71.9 -71.0,64.7 -67.2,60.2 C-63.3,55.8 -54.3,50.2 -46.6,50.9 C-38.9,51.5 -25.7,56.3 -20.9,64.1 C-16.1,72.0 -13.0,91.0 -17.7,98.2Z"/></g>
+<g fill="#2346b0"><circle cx="34.7" cy="93.4" r="20.0"/></g>
+<g fill="#ebaa2a"><circle cx="136.7" cy="117.4" r="16.0"/></g>
+</g></g></svg>

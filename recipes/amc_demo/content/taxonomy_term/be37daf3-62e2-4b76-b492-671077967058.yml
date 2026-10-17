@@ -1,0 +1,23 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: be37daf3-62e2-4b76-b492-671077967058
+  bundle: mission
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Education
+  weight:
+    -
+      value: 1
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null

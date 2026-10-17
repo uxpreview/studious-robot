@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.condition
+  module:
+    - node
+id: condition_content
+label: Condition
+type: 'canonical_entities:node'
+pattern: '/conditions/[node:title]'
+selection_criteria:
+  129b3212-fd11-4e84-a981-8f4dbe31c59d:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      condition: condition
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,77 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 376157e5-dbad-4e4e-be90-dd3da79012dd
+  bundle: event
+  default_langcode: en
+  depends:
+    a761772c-ac86-4400-867e-1802822b62c6: taxonomy_term
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+    85731f33-412f-4985-a480-22a3a98742ea: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'MD Program Admissions Open House'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /events/md-program-admissions-open-house
+      langcode: en
+  field_audience:
+    -
+      entity: a761772c-ac86-4400-867e-1802822b62c6
+  field_body:
+    -
+      value: '<p>Thinking about applying to the Calder University School of Medicine? Spend a day with us and see what learning here is really like.</p><p>Dr. James Okafor, Associate Dean for Admissions, will open the day with an overview of our curriculum and what our admissions committee looks for. You will then tour the anatomy and simulation centers, join a sample small-group case session and have lunch with current medical students.</p><p><strong>Schedule</strong></p><ul><li>10:00 a.m.: Welcome and admissions overview</li><li>10:45 a.m.: Campus and simulation center tours</li><li>11:45 a.m.: Sample case-based learning session</li><li>12:30 p.m.: Lunch with current students</li><li>1:15 p.m.: Financial aid and student life panel</li></ul><p>Space is limited, so please RSVP. One guest per applicant is welcome.</p>'
+      format: content_format
+  field_cost:
+    -
+      value: Free
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+  field_event_date:
+    -
+      value: '2026-11-09T15:00:00'
+      end_value: '2026-11-09T19:00:00'
+  field_event_format:
+    -
+      value: in_person
+  field_registration_label:
+    -
+      value: RSVP
+  field_speakers:
+    -
+      entity: 85731f33-412f-4985-a480-22a3a98742ea
+  field_summary:
+    -
+      value: 'Prospective students and their families can tour the School of Medicine, sit in on a sample class and talk with current students about life at Calder.'
+  field_venue:
+    -
+      value: 'Medical Education Building, 1300 University Avenue, Calder'

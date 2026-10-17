@@ -1,0 +1,97 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b8aca073-fef4-4016-bbc1-26e7687a73cd
+  bundle: clinical_trial
+  default_langcode: en
+  depends:
+    4a09ed4c-4b05-4a7a-bf0c-7a33950be1dc: node
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    d7ee3471-8b7d-4ddc-a2d7-711370a8136b: node
+    bc511c44-7447-4f97-bf38-dc5ed528d0b2: node
+    d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Can checking in from home keep people with heart failure out of the hospital?'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /clinical-trials/cuh-2024-031
+      langcode: en
+  field_age_range:
+    -
+      value: 18–85
+  field_body:
+    -
+      value: '<p><strong>Enrollment for this study is closed.</strong> The study team is following current participants and will share results after the last participant finishes.</p><p>The weeks after a hospital stay for heart failure are a risky time. Fluid can build up again before a person notices, and many people end up back in the hospital within a month. This study asks whether daily at-home readings, reviewed each weekday by the nurses and nurse practitioners in our Heart Failure Clinic, can catch those changes early enough to adjust medicines by phone.</p><p>Participants were assigned by chance to either remote monitoring or usual follow-up care for 12 months. Both groups continue to see their own heart doctor. We are comparing hospital readmissions, emergency visits, quality of life and how many people reach the full recommended doses of their heart failure medicines.</p>'
+      format: content_format
+  field_conditions:
+    -
+      entity: 4a09ed4c-4b05-4a7a-bf0c-7a33950be1dc
+  field_contact_email:
+    -
+      value: hf-study@calder.example
+  field_contact_name:
+    -
+      value: 'Tomás Herrera, research coordinator'
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_eligibility:
+    -
+      value: '<p>These were the requirements while the study was enrolling.</p><p><strong>You may be able to join if you:</strong></p><ul><li>Were 18–85 years old</li><li>Were in the hospital for heart failure in the past 30 days</li><li>Could stand on a scale safely each morning</li><li>Had home internet or could use a study-provided cellular hub</li></ul><p><strong>You may not be able to join if you:</strong></p><ul><li>Had a mechanical heart pump or were on a heart transplant waiting list</li><li>Were receiving hospice care</li><li>Needed dialysis for kidney failure</li><li>Lived in a nursing facility</li></ul>'
+      format: content_format
+  field_investigator:
+    -
+      entity: d7ee3471-8b7d-4ddc-a2d7-711370a8136b
+  field_keywords:
+    -
+      value: 'Can checking in from home keep people with heart failure out of the hospital? | Remote Monitoring of Weight, Blood Pressure and Symptoms With Nurse-Led Medication Adjustment Versus Usual Care After Hospitalization for Heart Failure: A Randomized Controlled Trial | CUH-2024-031 | Heart failure | Congestive heart failure | CHF | HFrEF | HFpEF | Marcus Reed'
+  field_locations:
+    -
+      entity: bc511c44-7447-4f97-bf38-dc5ed528d0b2
+    -
+      entity: d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9
+  field_official_title:
+    -
+      value: 'Remote Monitoring of Weight, Blood Pressure and Symptoms With Nurse-Led Medication Adjustment Versus Usual Care After Hospitalization for Heart Failure: A Randomized Controlled Trial'
+  field_phase:
+    -
+      value: na
+  field_phone:
+    -
+      value: '(555) 555-0147'
+  field_protocol_id:
+    -
+      value: CUH-2024-031
+  field_summary:
+    -
+      value: 'This study is testing whether a connected scale, a blood pressure cuff and a short daily check-in, reviewed by heart failure nurses, can catch problems early and help people avoid going back to the hospital. Enrollment is complete.'
+  field_trial_status:
+    -
+      value: active_not_recruiting
+  field_what_to_expect:
+    -
+      value: '<p>Current participants in the remote monitoring group can expect:</p><ul><li>Weight and blood pressure readings each morning, sent automatically</li><li>A five-question symptom check-in on the study tablet</li><li>A phone call from the clinic team when readings change, usually the same day</li></ul><p>All participants have study visits at the Riverside Outpatient Center at 3, 6 and 12 months. If you are a participant and have a question, call the study team. If you have severe symptoms, call 911.</p>'
+      format: content_format

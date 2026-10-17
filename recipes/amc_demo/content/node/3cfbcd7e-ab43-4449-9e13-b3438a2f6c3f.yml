@@ -1,0 +1,80 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3cfbcd7e-ab43-4449-9e13-b3438a2f6c3f
+  bundle: program
+  default_langcode: en
+  depends:
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+    85731f33-412f-4985-a480-22a3a98742ea: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Doctor of Medicine (MD)'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /programs/doctor-medicine-md
+      langcode: en
+  field_body:
+    -
+      value: "<p>The MD program at the Calder University School of Medicine prepares physicians who can care for patients in any setting, from a small-town clinic to an intensive care unit. Students meet patients in their first week through our longitudinal community clinic program, and they follow the same small group of patients for all four years.</p><p>The curriculum has three phases. In the first 18 months, students learn the science of medicine in organ-based courses taught by scientists and clinicians together. The clerkship year places students on clinical teams across the health system in internal medicine, surgery, neurology, psychiatry, obstetrics and pediatrics. The pediatrics clerkship, led by Dr. Hannah Kim, takes place at the Children's Pavilion. The final phase offers advanced rotations, electives and focused preparation for residency.</p><p>Every student completes a scholarly concentration in research, medical education, health policy or community health. Many work in labs across the health system, from the Arrhythmia Research Lab to the Haddad Lab, and present their work before graduation.</p>"
+      format: content_format
+  field_credential:
+    -
+      value: MD
+  field_deadline:
+    -
+      value: 'November 1'
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+  field_director:
+    -
+      entity: 85731f33-412f-4985-a480-22a3a98742ea
+  field_duration:
+    -
+      value: '4 years'
+  field_highlights:
+    -
+      value: '140|students in each entering class'
+    -
+      value: 'Week 1|first patient visits, in community clinics'
+    -
+      value: '98%|of our most recent class matched into residency'
+  field_how_to_apply:
+    -
+      value: '<ol><li>Submit the national medical school application and select the Calder University School of Medicine. Applications open in early summer.</li><li>Have your admissions test scores and college transcripts sent to us.</li><li>Complete the Calder secondary application, which includes three short essays, by November 1. We waive the fee for applicants who qualify for national fee assistance.</li><li>Request three letters of recommendation, or one committee letter from your college.</li><li>If invited, interview with us. Interviews run from September through January, in person or online.</li><li>Receive your decision. We make offers on a rolling basis starting in mid-October, and every applicant hears from us by March.</li></ol><p>Questions? Email admissions@calder.example or call (555) 555-0180.</p>'
+      format: content_format
+  field_program_type:
+    -
+      value: degree
+  field_summary:
+    -
+      value: 'A four-year MD program with patient contact from the first week, clinical training across a full academic health system and a required scholarly concentration.'

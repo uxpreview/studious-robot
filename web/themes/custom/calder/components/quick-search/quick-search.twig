@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Doctor search plus quick links. The form submits straight to the Find a
+ * Doctor listing, which searches names, specialties and conditions.
+ */
+#}
+{% set field_id = 'quick-search-' ~ random() %}
+<section class="bg-white">
+  <div class="container mx-auto px-4 py-10 md:py-12">
+    <div class="grid items-end gap-8 lg:grid-cols-12">
+      <form action="/find-a-doctor" method="get" role="search" class="lg:col-span-6">
+        <label for="{{ field_id }}" class="mb-3 block font-serif text-[1.75rem] leading-tight font-medium">{{ heading }}</label>
+        <div class="flex gap-2">
+          <input id="{{ field_id }}" type="search" name="keys" placeholder="{{ placeholder }}" class="flex-1 text-lg" autocomplete="off">
+          <button type="submit" class="button shrink-0">{{ icon('phosphor', 'magnifying-glass', { size: 20 }) }}<span>Search</span></button>
+        </div>
+      </form>
+      {% if links %}
+        <div class="lg:col-span-6">
+          <div class="grid grid-cols-2 gap-3 md:grid-cols-4">{{ links }}</div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

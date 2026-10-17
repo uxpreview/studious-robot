@@ -1,0 +1,130 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9e4af940-c31b-4bf3-80ac-2fe7b9664c23
+  bundle: person
+  default_langcode: en
+  depends:
+    8936edf8-d293-416f-b534-4e70b9835f5c: node
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+    58808d28-7cd7-4873-8412-3911d2ffc376: taxonomy_term
+    8c83dfe2-f5c1-43e6-8728-97e7069380f3: taxonomy_term
+    2f175a7e-7e6b-47b1-ab8b-253d231b8160: node
+    d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9: node
+    8681820d-053f-4ce8-bab7-d43d3c5e8e28: taxonomy_term
+    88acb92e-18c6-4dd3-bd1d-3e9d313953ad: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Samuel Brooks'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /people/samuel-brooks
+      langcode: en
+  field_academic_rank:
+    -
+      value: associate_professor
+  field_academic_title:
+    -
+      value: 'Associate Professor of Pediatrics (Cardiology)'
+  field_accepting_new:
+    -
+      value: true
+  field_body:
+    -
+      value: "<p>Dr. Samuel Brooks is a pediatric cardiologist who cares for babies, children and teens with <a href=\"/conditions/congenital-heart-disease\">congenital heart disease</a>, heart murmurs, chest pain, fainting and heart rhythm problems. He specializes in heart imaging, including echocardiograms and cardiac MRI. At Calder University Hospital, he performs fetal echocardiograms, detailed ultrasounds of a baby's heart during pregnancy, and meets with expecting parents to plan care before birth.</p><p>Dr. Brooks is the medical director of the new Pediatric Heart Clinic at the Children's Pavilion, which brings heart tests, specialist visits and support services into one place for families. He led a study, now completed, which showed that a faster, free-breathing MRI scan lets most children ages 4 to 12 skip sedation. That scan is now the standard first choice at the Pavilion.</p><p>Dr. Brooks is fluent in American Sign Language and can talk directly with Deaf parents and children. He teaches pediatric residents and cardiology fellows, and he is a member of both the Heart &amp; Vascular Institute and Children's Health.</p>"
+      format: content_format
+  field_conditions:
+    -
+      entity: 8936edf8-d293-416f-b534-4e70b9835f5c
+  field_credentials:
+    -
+      value: MD
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+  field_education:
+    -
+      value: 'Medical school|Westmoor University School of Medicine'
+    -
+      value: 'Residency|Pediatrics, Calder University Hospital'
+    -
+      value: "Fellowship|Pediatric Cardiology, Lakemont Children's Hospital"
+    -
+      value: "Fellowship|Advanced Cardiac Imaging, Lakemont Children's Hospital"
+    -
+      value: 'Board certification|Pediatrics; Pediatric Cardiology'
+  field_first_name:
+    -
+      value: Samuel
+  field_job_title:
+    -
+      value: 'Pediatric Cardiologist and Medical Director, Pediatric Heart Clinic'
+  field_keywords:
+    -
+      value: "Samuel Brooks | Pediatric Cardiologist and Medical Director, Pediatric Heart Clinic | MD | Pediatric cardiology | Cardiac imaging | Congenital heart disease | Congenital heart defect | CHD | Heart condition present at birth | Heart & Vascular Institute | Children's Health"
+  field_languages:
+    -
+      entity: 58808d28-7cd7-4873-8412-3911d2ffc376
+    -
+      entity: 8c83dfe2-f5c1-43e6-8728-97e7069380f3
+  field_last_name:
+    -
+      value: Brooks
+  field_locations:
+    -
+      entity: 2f175a7e-7e6b-47b1-ab8b-253d231b8160
+    -
+      entity: d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9
+  field_pronouns:
+    -
+      value: he/him
+  field_pull_quote:
+    -
+      value: 'When a baby has a heart condition, the whole family is my patient. I draw a lot of pictures, answer every question and give parents my honest read on what comes next.'
+  field_research_interests:
+    -
+      value: 'Fetal echocardiography'
+    -
+      value: 'Cardiac MRI without sedation'
+    -
+      value: 'Long-term outcomes in congenital heart disease'
+  field_roles:
+    -
+      value: clinician
+    -
+      value: faculty
+    -
+      value: researcher
+  field_specialties:
+    -
+      entity: 8681820d-053f-4ce8-bab7-d43d3c5e8e28
+    -
+      entity: 88acb92e-18c6-4dd3-bd1d-3e9d313953ad
+  field_summary:
+    -
+      value: 'Pediatric cardiologist and imaging specialist who cares for babies, children and teens with heart conditions, sometimes starting before birth.'

@@ -1,0 +1,74 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 58dd8fb1-93e9-4a62-a493-4cf192ec3b03
+  bundle: news
+  default_langcode: en
+  depends:
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    fade6e56-36ac-4d2a-bce9-5708b098e440: media
+    957a0614-14e7-4ea8-8dad-fc0c3afb8ae5: taxonomy_term
+    9e4af940-c31b-4bf3-80ac-2fe7b9664c23: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: "New Pediatric Heart Clinic opens at the Children's Pavilion"
+  created:
+    -
+      value: 1788385468
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/new-pediatric-heart-clinic-opens-childrens-pavilion
+      langcode: en
+  field_body:
+    -
+      value: "<p>Families of children with heart conditions used to make several stops for a single checkup: an echocardiogram in one building, an ECG in another and a cardiology visit somewhere else. Now all of that happens in one place.</p><p>The new Pediatric Heart Clinic, on the third floor of the Children's Pavilion, brings together pediatric cardiologists, echocardiography, ECG and heart rhythm monitoring, a dedicated child life specialist and a nutritionist. The clinic also includes a cardiac MRI suite designed for children, with a projector that turns the scanner room into a small movie theater.</p><p>\"Most of our kids need heart checkups for the rest of their lives,\" says Dr. Samuel Brooks, the clinic's medical director. \"If we make every visit easier, families keep coming back, and that's what keeps these kids healthy.\"</p><p>The clinic is a partnership between Children's Health and the Heart &amp; Vascular Institute. It cares for babies, children and teens with congenital heart disease, heart murmurs, fainting, chest pain and rhythm problems. It also offers consultations for expecting parents whose baby has a heart condition found before birth, and a transition program to help teens move to adult heart care.</p><p>The MRI suite uses a faster, free-breathing scan tested in a Calder study led by Dr. Brooks. In that study, 86 percent of children ages 4 to 12 completed their scan without sedation.</p><p>To make an appointment, families can ask their child's pediatrician for a referral or call the Children's Pavilion at (555) 555-0130.</p>"
+      format: content_format
+  field_departments:
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_image:
+    -
+      entity: fade6e56-36ac-4d2a-bce9-5708b098e440
+  field_mission:
+    -
+      entity: 957a0614-14e7-4ea8-8dad-fc0c3afb8ae5
+  field_people:
+    -
+      entity: 9e4af940-c31b-4bf3-80ac-2fe7b9664c23
+  field_pull_quote:
+    -
+      value: "If we make every visit easier, families keep coming back, and that's what keeps these kids healthy."
+  field_quote_attribution:
+    -
+      value: 'Dr. Samuel Brooks, medical director, Pediatric Heart Clinic'
+  field_story_type:
+    -
+      value: announcement
+  field_summary:
+    -
+      value: "Children with heart conditions can now get specialist visits, heart tests and support services in one place, on the third floor of the Children's Pavilion."

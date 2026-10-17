@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 5e89c6a2-b127-4729-bdee-d9218a6156c7
+  bundle: image
+  default_langcode: en
+  depends:
+    fa41d247-6b0c-488f-b791-2bc737dacc9d: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Illustration: heart-sand'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Illustration: a hanging mobile with a large red shape'
+      title: ''
+      width: 1200
+      height: 900
+      entity: fa41d247-6b0c-488f-b791-2bc737dacc9d

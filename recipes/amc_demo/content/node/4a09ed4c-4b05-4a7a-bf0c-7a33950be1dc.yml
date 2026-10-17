@@ -1,0 +1,71 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 4a09ed4c-4b05-4a7a-bf0c-7a33950be1dc
+  bundle: condition
+  default_langcode: en
+  depends:
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Heart failure'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /conditions/heart-failure
+      langcode: en
+  field_also_called:
+    -
+      value: 'Congestive heart failure'
+    -
+      value: CHF
+    -
+      value: HFrEF
+    -
+      value: HFpEF
+  field_body:
+    -
+      value: '<p>Heart failure is a long-term condition in which the heart muscle cannot pump or fill with blood as well as it should. As a result, the body may not get all the oxygen it needs, and fluid can build up in the lungs, legs and belly.</p><p>There are two main types. In heart failure with reduced ejection fraction (HFrEF), the heart muscle is weak and does not squeeze well. In heart failure with preserved ejection fraction (HFpEF), the muscle squeezes normally but is too stiff to fill properly. Ejection fraction is the share of blood the heart pumps out with each beat.</p><p>Common causes include coronary artery disease and past heart attacks, long-term high blood pressure, diabetes, heart valve disease and irregular heart rhythms such as <a href="/conditions/atrial-fibrillation">atrial fibrillation</a>. Heart failure usually cannot be cured, but the right treatment can ease symptoms, slow it down and sometimes help the heart regain strength.</p>'
+      format: content_format
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_diagnosis:
+    -
+      value: '<p>Your care team will ask about your symptoms and do a physical exam, listening to your heart and lungs and checking for swelling. The most important test is an echocardiogram, an ultrasound that shows how well your heart pumps and measures your ejection fraction.</p><p>Other common tests include a blood test called BNP, which rises when the heart is under strain, an ECG, a chest x-ray and blood work to check your kidneys. Some people also need a cardiac MRI or a heart catheterization to look for blocked arteries.</p>'
+      format: content_format
+  field_seek_care:
+    -
+      value: 'Call 911 if you have chest pain, severe shortness of breath or trouble breathing while resting, fainting, or a cough that brings up pink, foamy mucus. Call your heart failure team the same day if you gain more than 2–3 pounds in a day or 5 pounds in a week, have new or worse swelling, or need more pillows than usual to breathe at night.'
+  field_summary:
+    -
+      value: 'Heart failure means the heart is not pumping or filling with blood as well as the body needs. It does not mean the heart has stopped, and with treatment many people feel better and live longer.'
+  field_symptoms:
+    -
+      value: '<p>Symptoms often start slowly and can be mistaken for getting older or being out of shape.</p><ul><li>Shortness of breath during activity, when lying flat or at night</li><li>Swelling in the feet, ankles, legs or belly</li><li>Sudden weight gain from fluid, such as 2–3 pounds in a day or 5 pounds in a week</li><li>Feeling very tired or weak</li><li>A cough that will not go away, especially at night</li><li>Needing extra pillows to sleep comfortably</li><li>Feeling full quickly or losing your appetite</li></ul>'
+      format: content_format
+  field_treatment:
+    -
+      value: '<p>Most people with heart failure take several medicines that work together. Each one is usually started at a low dose and adjusted over weeks to months.</p><h3>Medicines</h3><ul><li><strong>Medicines that protect the heart</strong>, such as beta blockers, ACE inhibitors, ARBs or ARNIs, and mineralocorticoid receptor antagonists</li><li><strong>SGLT2 inhibitors</strong>, first used for diabetes, which also help people with heart failure whether or not they have diabetes</li><li><strong>Diuretics</strong>, or water pills, which remove extra fluid and ease swelling and shortness of breath</li></ul><h3>Devices and procedures</h3><p>Some people benefit from an implantable defibrillator, which can stop a dangerous heart rhythm, or a special pacemaker that helps both sides of the heart beat together. Opening blocked arteries or repairing a heart valve may also help. For advanced heart failure, your team can talk with you about options such as a mechanical heart pump or a referral for transplant evaluation.</p><h3>Daily self-care</h3><ul><li>Weigh yourself every morning, after using the bathroom, and write it down</li><li>Take your medicines exactly as prescribed, even when you feel well</li><li>Follow the salt and fluid limits your care team gives you</li><li>Stay active with a plan that fits you; cardiac rehab can help</li></ul><p>Our Heart Failure Clinic at the Riverside Outpatient Center offers quick follow-up visits after a hospital stay, help adjusting medicines and support between appointments.</p>'
+      format: content_format

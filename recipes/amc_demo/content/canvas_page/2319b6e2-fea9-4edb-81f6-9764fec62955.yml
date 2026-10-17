@@ -1,0 +1,237 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 2319b6e2-fea9-4edb-81f6-9764fec62955
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Home
+  description:
+    -
+      value: 'Calder University Health: care, teaching and research.'
+  components:
+    -
+      uuid: a58cef9b-b637-40b0-b268-9858bbb77a20
+      component_id: sdc.calder.hero
+      inputs:
+        eyebrow: 'Calder University Health'
+        headline: 'Close to home. Connected to discovery.'
+        intro: 'Calder University Health brings together a teaching hospital, neighborhood clinics, a medical school and research labs. The doctor you see on Monday may be teaching residents on Tuesday and leading a clinical trial on Wednesday.'
+        mission: neutral
+        primary_label: 'Find a doctor'
+        primary_url: /find-a-doctor
+        secondary_label: 'Find a location'
+        secondary_url: /locations
+        illustration: home
+        size: large
+    -
+      uuid: 705479c2-6a9f-4e49-89fa-7479bcf949e8
+      component_id: sdc.calder.quick-search
+      inputs:
+        heading: 'Find the right doctor'
+        placeholder: 'Name, specialty or condition, like AFib'
+    -
+      parent_uuid: 705479c2-6a9f-4e49-89fa-7479bcf949e8
+      slot: links
+      uuid: 48dd7b34-a2fd-431a-80c6-28c1030530ec
+      component_id: sdc.calder.quick-link
+      inputs:
+        label: Locations
+        url: /locations
+        icon: map-pin
+    -
+      parent_uuid: 705479c2-6a9f-4e49-89fa-7479bcf949e8
+      slot: links
+      uuid: 8325c854-b40c-4f77-974d-db2747b8b887
+      component_id: sdc.calder.quick-link
+      inputs:
+        label: Conditions
+        url: /conditions
+        icon: first-aid
+    -
+      parent_uuid: 705479c2-6a9f-4e49-89fa-7479bcf949e8
+      slot: links
+      uuid: 490c9c18-0d1b-4b05-8f38-3df8515bdb8e
+      component_id: sdc.calder.quick-link
+      inputs:
+        label: 'Clinical trials'
+        url: /clinical-trials
+        icon: flask
+    -
+      parent_uuid: 705479c2-6a9f-4e49-89fa-7479bcf949e8
+      slot: links
+      uuid: 9e142538-b776-4606-b960-ed870a607e4e
+      component_id: sdc.calder.quick-link
+      inputs:
+        label: 'Pay a bill'
+        url: /billing-insurance
+        icon: credit-card
+    -
+      uuid: 26a81de5-a5f4-4a3c-8313-778f7467253a
+      component_id: sdc.calder.callout
+      inputs:
+        heading: 'Need care today?'
+        text: 'For a life-threatening emergency, call 911. The emergency department at Calder University Hospital is open 24 hours. For a same-day appointment with a primary care or pediatric provider, call (555) 555-0110.'
+        tone: care
+    -
+      uuid: abc01099-0c0b-4e9c-ae03-be4659347dee
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: 'Our missions'
+        heading: 'One institution, three missions'
+        intro: 'Our hospital, clinics, medical school and labs share people, ideas and a single medical record, and each part helps keep the others in balance. For you, that means fewer repeat tests and specialists who talk to each other.'
+        columns: '3'
+        background: paper
+        mission: neutral
+    -
+      parent_uuid: abc01099-0c0b-4e9c-ae03-be4659347dee
+      slot: content
+      uuid: d94e064f-6fb7-472d-b96c-ec980d78a215
+      component_id: sdc.calder.mission-card
+      inputs:
+        mission: care
+        title: Care
+        text: 'Primary and specialty care at three locations, with free interpreters in more than 200 languages and same-day appointments for urgent needs.'
+        link_label: 'For patients and visitors'
+        url: /patients
+    -
+      parent_uuid: abc01099-0c0b-4e9c-ae03-be4659347dee
+      slot: content
+      uuid: adda45cf-9a50-4664-b0bd-675a6e894d9b
+      component_id: sdc.calder.mission-card
+      inputs:
+        mission: learn
+        title: Learn
+        text: 'The Calder University School of Medicine trains doctors and scientists, from first-year MD students to fellows preparing to lead their fields.'
+        link_label: 'Education at Calder'
+        url: /education
+    -
+      parent_uuid: abc01099-0c0b-4e9c-ae03-be4659347dee
+      slot: content
+      uuid: a8c815c9-6838-49be-a0ea-d1c748457141
+      component_id: sdc.calder.mission-card
+      inputs:
+        mission: discover
+        title: Discover
+        text: 'More than 200 clinical trials and dozens of labs pursue questions that start with real patients, from heart rhythm to migraine.'
+        link_label: 'Research at Calder'
+        url: /research
+    -
+      uuid: 1040f3fa-a26b-44ae-a3fa-9a69d64838a2
+      component_id: block.calder_person_spotlight
+      inputs:
+        label: 'Person spotlight'
+        label_display: '0'
+        person: 46d057ff-7a59-45df-8265-f2d7fc0c7028
+        eyebrow: 'One person, many roles'
+        heading: 'Care, teaching and research meet in one person'
+        text: 'The doctor you see on Monday may be teaching residents on Tuesday and leading a clinical trial on Wednesday. At Calder, those roles strengthen each other.'
+    -
+      uuid: cbfec8cc-1549-4a6e-925a-9549806d3eb6
+      component_id: sdc.calder.section
+      inputs:
+        background: night
+        columns: '4'
+        eyebrow: 'Calder by the numbers'
+        heading: 'A health system that teaches and discovers'
+        mission: neutral
+    -
+      parent_uuid: cbfec8cc-1549-4a6e-925a-9549806d3eb6
+      slot: content
+      uuid: 94e19d78-f693-486f-96ee-ddd829357f59
+      component_id: sdc.calder.stat
+      inputs:
+        value: '480'
+        label: 'hospital beds'
+        mission: care
+    -
+      parent_uuid: cbfec8cc-1549-4a6e-925a-9549806d3eb6
+      slot: content
+      uuid: d2810412-dc3c-4867-a796-b0e701394054
+      component_id: sdc.calder.stat
+      inputs:
+        value: '220'
+        label: 'active clinical trials'
+        mission: discover
+    -
+      parent_uuid: cbfec8cc-1549-4a6e-925a-9549806d3eb6
+      slot: content
+      uuid: 08b5155c-d586-488b-94d6-eb154289e4f7
+      component_id: sdc.calder.stat
+      inputs:
+        value: '1,300'
+        label: 'medical students, residents and fellows'
+        mission: learn
+    -
+      parent_uuid: cbfec8cc-1549-4a6e-925a-9549806d3eb6
+      slot: content
+      uuid: 802db325-de9b-47a8-b29c-595fda1bf787
+      component_id: sdc.calder.stat
+      inputs:
+        value: $184M
+        label: 'in research funding last year'
+        mission: discover
+    -
+      uuid: d8da1944-e7bc-4d8e-a08a-c9445882ad0e
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: Upcoming
+        heading: Events
+        link_label: 'All events'
+        link_url: /events
+        mission: learn
+        columns: '1'
+        background: white
+    -
+      parent_uuid: d8da1944-e7bc-4d8e-a08a-c9445882ad0e
+      slot: content
+      uuid: 38a40290-3629-4b75-ac61-8d042bb275be
+      component_id: block.views_block.events-block
+      inputs:
+        label: 'Upcoming events'
+        label_display: '0'
+    -
+      uuid: 22852e62-b39a-4275-8086-e7441c2eb646
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: 'News and stories'
+        heading: 'From across Calder'
+        link_label: 'All news'
+        link_url: /news
+        columns: '1'
+        background: paper
+        mission: neutral
+    -
+      parent_uuid: 22852e62-b39a-4275-8086-e7441c2eb646
+      slot: content
+      uuid: 6f7302c8-da16-4fad-9cb9-882bb07be5d5
+      component_id: block.views_block.news-block
+      inputs:
+        label: 'Latest news'
+        label_display: '0'
+    -
+      uuid: 914287a3-4b4e-44ba-a8fa-a1afbb90746a
+      component_id: sdc.calder.cta-band
+      inputs:
+        heading: 'Looking for a clinical trial?'
+        text: 'Studies at Calder give patients access to new treatments and answer the questions that shape future care. Search by condition, location or age.'
+        button_label: 'Find a study'
+        button_url: /clinical-trials
+        mission: discover
+  path:
+    -
+      alias: /home
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]"}'

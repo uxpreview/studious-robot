@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_diagnosis
+    - filter.format.content_format
+    - node.type.condition
+  module:
+    - text
+id: node.condition.field_diagnosis
+field_name: field_diagnosis
+entity_type: node
+bundle: condition
+label: Diagnosis
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - content_format
+field_type: text_long

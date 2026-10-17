@@ -1,0 +1,80 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 6f94cf11-64aa-45ad-9a40-10353d1be536
+  bundle: news
+  default_langcode: en
+  depends:
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+    5865dbf2-7495-4607-acdd-b3e89ccfad86: media
+    be37daf3-62e2-4b76-b492-671077967058: taxonomy_term
+    85731f33-412f-4985-a480-22a3a98742ea: node
+    9e7c8662-8df3-4e57-9f18-c02ef3696f11: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: "Match Day: Calder's graduating MD class learns where residency will take them"
+  created:
+    -
+      value: 1789681468
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/match-day-calders-graduating-md-class-learns-where-residency-will-take-them
+      langcode: en
+  field_body:
+    -
+      value: '<p>At exactly noon, 139 envelopes opened at once in the atrium of the Medical Education Building, and the room erupted. Match Day, when graduating medical students learn where they will spend the next three to seven years of training, is the most emotional day of the year at the Calder University School of Medicine.</p><p>This year, 136 of 139 students, or 98 percent, matched into residency programs in 27 states. Forty-one percent will train in primary care fields, including family medicine, internal medicine and pediatrics. Twenty-four graduates will stay in Calder for residency at Calder University Hospital.</p><p>For Dr. James Okafor, Associate Dean for Admissions, the day closes a loop that began years earlier. "I interviewed many of these students when they were college seniors, nervous in borrowed suits," he says. "Today they''re doctors with a plan. That never gets old."</p><p>Eleven graduates matched into pediatrics, the most in the school''s history. Dr. Hannah Kim, who directs the pediatrics clerkship, says many of them first discovered the specialty during their eight weeks at the Children''s Pavilion. "Kids are honest patients," she says. "Students either love that or they don''t, and this class loved it."</p><p>The three students who did not match are working with advisers in the Office of Student Affairs to secure positions through the national process for unfilled residency spots.</p><p>Congratulations to every graduate, and to the families, faculty and staff who helped them get here.</p>'
+      format: content_format
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+  field_image:
+    -
+      entity: 5865dbf2-7495-4607-acdd-b3e89ccfad86
+  field_mission:
+    -
+      entity: be37daf3-62e2-4b76-b492-671077967058
+  field_people:
+    -
+      entity: 85731f33-412f-4985-a480-22a3a98742ea
+    -
+      entity: 9e7c8662-8df3-4e57-9f18-c02ef3696f11
+  field_pull_quote:
+    -
+      value: "I interviewed many of these students when they were college seniors, nervous in borrowed suits. Today they're doctors with a plan."
+  field_quote_attribution:
+    -
+      value: 'Dr. James Okafor, Associate Dean for Admissions'
+  field_story_type:
+    -
+      value: education
+  field_summary:
+    -
+      value: "Ninety-eight percent of Calder's graduating medical students matched into residency programs, with 41 percent heading into primary care and 24 staying at Calder University Hospital."

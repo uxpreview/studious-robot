@@ -1,0 +1,75 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 95444b34-a603-4719-adb5-b5808910d653
+  bundle: event
+  default_langcode: en
+  depends:
+    c83e0d6b-d38b-4a8d-82dd-6a58f81def64: taxonomy_term
+    e4a8a915-f653-4534-9343-cfd5018d1b89: taxonomy_term
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    bc511c44-7447-4f97-bf38-dc5ed528d0b2: node
+    9af0a39d-40fe-4ff5-9a4c-babd8134a521: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Free Heart Health Screening'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /events/free-heart-health-screening
+      langcode: en
+  field_audience:
+    -
+      entity: c83e0d6b-d38b-4a8d-82dd-6a58f81def64
+    -
+      entity: e4a8a915-f653-4534-9343-cfd5018d1b89
+  field_body:
+    -
+      value: '<p>High blood pressure and atrial fibrillation often cause no symptoms, so many people do not know they have them. Our free screening takes about 15 minutes and helps you know your numbers.</p><p><strong>What we check</strong></p><ul><li>Blood pressure</li><li>Heart rhythm, using a handheld 30-second ECG</li><li>Pulse and blood oxygen level</li></ul><p>Nurse practitioner Maria Santos and members of the Heart &amp; Vascular Institute team will go over your results with you in English, Spanish or Portuguese, and interpreters for other languages are available. If anything needs follow-up, we will help you schedule a visit, whether or not you have insurance.</p><p>This screening does not replace regular care from your own doctor. If you have chest pain, trouble breathing or signs of a stroke, call 911.</p>'
+      format: content_format
+  field_cost:
+    -
+      value: Free
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_event_date:
+    -
+      value: '2026-11-02T14:00:00'
+      end_value: '2026-11-02T18:00:00'
+  field_event_format:
+    -
+      value: in_person
+  field_locations:
+    -
+      entity: bc511c44-7447-4f97-bf38-dc5ed528d0b2
+  field_speakers:
+    -
+      entity: 9af0a39d-40fe-4ff5-9a4c-babd8134a521
+  field_summary:
+    -
+      value: 'Stop by for a free blood pressure check and a 30-second heart rhythm test, and talk with a nurse practitioner about your results. No appointment needed.'
+  field_venue:
+    -
+      value: 'Community Room A, off the main lobby'

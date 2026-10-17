@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recent_work
+    - node.type.lab
+id: node.lab.field_recent_work
+field_name: field_recent_work
+entity_type: node
+bundle: lab
+label: 'Recent work'
+description: 'One finding or project per entry.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

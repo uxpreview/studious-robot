@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_protocol_id
+    - node.type.clinical_trial
+id: node.clinical_trial.field_protocol_id
+field_name: field_protocol_id
+entity_type: node
+bundle: clinical_trial
+label: 'Protocol ID'
+description: 'Our internal study number, for example CUH-2025-014.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

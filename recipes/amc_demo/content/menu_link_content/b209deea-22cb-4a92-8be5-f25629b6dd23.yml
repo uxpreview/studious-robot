@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: b209deea-22cb-4a92-8be5-f25629b6dd23
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    b3771da2-6003-4614-a6dc-a2876499a726: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Clinical trials'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'internal:/clinical-trials'
+      title: null
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: true
+  parent:
+    -
+      value: 'menu_link_content:b3771da2-6003-4614-a6dc-a2876499a726'
+  revision_translation_affected:
+    -
+      value: true

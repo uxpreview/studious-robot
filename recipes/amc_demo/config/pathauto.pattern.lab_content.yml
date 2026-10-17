@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lab
+  module:
+    - node
+id: lab_content
+label: 'Research lab'
+type: 'canonical_entities:node'
+pattern: '/research/[node:title]'
+selection_criteria:
+  eb3228a4-2d63-47e7-8001-fe284eecce79:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      lab: lab
+selection_logic: and
+weight: 0
+relationships: {  }

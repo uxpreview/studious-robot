@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f68eb94a-f595-4b0a-b4fa-43fd12ac01a6
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: learn-sand.png
+  uri:
+    -
+      value: 'public://calder/learn-sand.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 21080
+  status:
+    -
+      value: true

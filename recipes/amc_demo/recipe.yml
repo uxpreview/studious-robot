@@ -1,0 +1,91 @@
+name: 'Calder University Health'
+type: Site
+description: 'A fictional academic medical center for demos: connected people, conditions, clinical trials, programs, labs, events and news, with the Calder theme and Canvas landing pages.'
+recipes:
+  - drupal_cms_site_template_base
+  - drupal_cms_search
+install:
+  - telephone
+  - link
+  - datetime
+  - datetime_range
+  - calder_demo
+  - calder
+config:
+  strict: false
+  actions:
+    system.theme:
+      simpleConfigUpdate:
+        default: calder
+    system.site:
+      simpleConfigUpdate:
+        page.front: /home
+    system.date:
+      simpleConfigUpdate:
+        timezone.default: America/New_York
+    workflows.workflow.basic_editorial:
+      addNodeTypes:
+        - person
+        - department
+        - condition
+        - location
+        - clinical_trial
+        - program
+        - lab
+        - event
+        - news
+    user.role.content_editor:
+      grantPermissions:
+        - 'create person content'
+        - 'edit any person content'
+        - 'delete any person content'
+        - 'view person revisions'
+        - 'revert person revisions'
+        - 'create department content'
+        - 'edit any department content'
+        - 'delete any department content'
+        - 'view department revisions'
+        - 'revert department revisions'
+        - 'create condition content'
+        - 'edit any condition content'
+        - 'delete any condition content'
+        - 'view condition revisions'
+        - 'revert condition revisions'
+        - 'create location content'
+        - 'edit any location content'
+        - 'delete any location content'
+        - 'view location revisions'
+        - 'revert location revisions'
+        - 'create clinical_trial content'
+        - 'edit any clinical_trial content'
+        - 'delete any clinical_trial content'
+        - 'view clinical_trial revisions'
+        - 'revert clinical_trial revisions'
+        - 'create program content'
+        - 'edit any program content'
+        - 'delete any program content'
+        - 'view program revisions'
+        - 'revert program revisions'
+        - 'create lab content'
+        - 'edit any lab content'
+        - 'delete any lab content'
+        - 'view lab revisions'
+        - 'revert lab revisions'
+        - 'create event content'
+        - 'edit any event content'
+        - 'delete any event content'
+        - 'view event revisions'
+        - 'revert event revisions'
+        - 'create news content'
+        - 'edit any news content'
+        - 'delete any news content'
+        - 'view news revisions'
+        - 'revert news revisions'
+        - 'create terms in specialty'
+        - 'edit terms in specialty'
+        - 'create terms in language'
+        - 'edit terms in language'
+        - 'create terms in mission'
+        - 'edit terms in mission'
+        - 'create terms in audience'
+        - 'edit terms in audience'

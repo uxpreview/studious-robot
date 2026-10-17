@@ -11,7 +11,7 @@ web_environment:
 hooks:
   post-start:
     - composer: install
-    # First start only: if no site is installed yet, build it from the Byte template.
+    # First start only: if no site is installed yet, build the Calder demo.
     - exec: |
         if ! drush status --field=bootstrap 2>/dev/null | grep -q Successful; then
           bash /mnt/ddev_config/commands/web/reset --yes

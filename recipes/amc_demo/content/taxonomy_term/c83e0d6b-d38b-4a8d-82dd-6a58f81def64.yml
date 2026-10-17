@@ -1,0 +1,23 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: c83e0d6b-d38b-4a8d-82dd-6a58f81def64
+  bundle: audience
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Community
+  weight:
+    -
+      value: 4
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null

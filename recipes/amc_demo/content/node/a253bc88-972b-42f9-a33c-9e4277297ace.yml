@@ -1,0 +1,55 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: a253bc88-972b-42f9-a33c-9e4277297ace
+  bundle: department
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: "Children's Health"
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /departments/childrens-health
+      langcode: en
+  field_body:
+    -
+      value: '<p>At the Children''s Pavilion, your child can see a pediatrician for checkups and vaccines, get a same-day appointment when they are sick and see a specialist without leaving the building. Exam rooms have space for a parent, a stroller and a sibling or two. Child life specialists help kids understand what will happen during tests and procedures, using play and plain words.</p><p>Our new Pediatric Heart Clinic cares for babies, children and teens with <a href="/conditions/congenital-heart-disease">congenital heart disease</a>, heart murmurs, fainting and heart rhythm problems. Pediatric cardiologists work alongside our pediatricians, so heart care and everyday care stay connected.</p><p>Children grow up, and their care should grow with them. Starting around age 14, we help teens learn to manage their own health, and we work with adult specialists so that young people with ongoing conditions move to adult care without a gap.</p>'
+      format: content_format
+  field_highlights:
+    -
+      value: '22,000|pediatric clinic visits each year'
+    -
+      value: '30+|pediatric specialties and services'
+    -
+      value: '24/7|pediatric nurse advice line'
+  field_motif:
+    -
+      value: child
+  field_phone:
+    -
+      value: '(555) 555-0170'
+  field_summary:
+    -
+      value: "Children's Health offers primary and specialty care for kids from birth through age 18 at the Children's Pavilion, a building designed around children and the adults who love them."

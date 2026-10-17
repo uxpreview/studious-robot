@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Inlines one of the generated mobiles (see tools/mobiles.py) so its wires can
+ * take on the surrounding text color.
+ */
+#}
+{% set variant = variant|default('home') %}
+<div class="calder-mobile {{ sway ?? true ? 'calder-mobile--sway' }} [&_svg]:h-auto [&_svg]:w-full" aria-hidden="true">
+  {{ source('@calder/images/mobiles/' ~ variant ~ '.svg') }}
+</div>

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_trial_status
+field_name: field_trial_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: recruiting
+      label: Recruiting
+    -
+      value: not_yet_recruiting
+      label: 'Not yet recruiting'
+    -
+      value: active_not_recruiting
+      label: 'Active, not recruiting'
+    -
+      value: completed
+      label: Completed
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

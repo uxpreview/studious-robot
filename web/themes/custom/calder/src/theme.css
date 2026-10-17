@@ -1,0 +1,109 @@
+/**
+ * @file theme.css
+ * Calder design tokens.
+ *
+ * The palette borrows from Alexander Calder's mobiles: black, warm paper and
+ * three primaries. Each primary marks one of the institution's missions, and is
+ * used for wayfinding rather than decoration:
+ *   - Care (patient care): red
+ *   - Learn (education): blue
+ *   - Discover (research): ochre
+ *
+ * Every text color here meets WCAG 2.2 AA (4.5:1) on paper, white and sand.
+ * The shadcn-style names (--background, --primary, ...) are kept so the
+ * components inherited from Mercury keep working.
+ */
+
+:root {
+  /* Neutrals */
+  --ink: #16181d; /* 16.6:1 on paper */
+  --ink-soft: #4a4f59; /* 7.7:1 on paper */
+  --ink-muted: #5f6470; /* 5.5:1 on paper */
+  --paper: #faf7f2;
+  --white: #ffffff;
+  --sand: #f2ede4;
+  --line: #e3dccf; /* decorative hairlines */
+  --line-strong: #8f8679; /* form field borders, 3:1 on paper */
+  --night: #14161b;
+
+  /* Missions */
+  --care: #c23a2b; /* 5.0:1 on paper; white text on it 5.3:1 */
+  --care-deep: #a8301f;
+  --care-tint: #fbeae6;
+  --learn: #2346b0; /* 7.6:1 on paper; white text on it 8.2:1 */
+  --learn-tint: #e8edfb;
+  --discover: #ebaa2a; /* fill only; ink text on it 8.7:1 */
+  --discover-deep: #7e5300; /* text, 6.3:1 on paper */
+  --discover-tint: #fcf2dc;
+
+  /* Status */
+  --ok: #1d7448; /* 5.4:1 on paper */
+  --ok-tint: #e2f1e8;
+
+  /* Mercury / shadcn mapping */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--white);
+  --card-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: var(--sand);
+  --secondary-foreground: var(--ink);
+  --muted: var(--sand);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--learn);
+  --accent-foreground: var(--white);
+  --destructive: var(--care-deep);
+  --destructive-foreground: var(--white);
+  --border: var(--line);
+  --input: var(--line-strong);
+
+  /* Type */
+  --font-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Atkinson Hyperlegible Next", "Helvetica Neue", Arial, sans-serif;
+  --font-body: var(--font-sans);
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Shape and depth. Calder favors hairlines over shadows. */
+  --radius: 0.75rem;
+  --shadow-2xs: 0 1px 0 0 rgb(22 24 29 / 0.04);
+  --shadow-xs: 0 1px 2px 0 rgb(22 24 29 / 0.05);
+  --shadow-sm: 0 1px 2px 0 rgb(22 24 29 / 0.06), 0 1px 3px 0 rgb(22 24 29 / 0.04);
+  --shadow: 0 2px 4px -1px rgb(22 24 29 / 0.06), 0 4px 12px -2px rgb(22 24 29 / 0.06);
+  --shadow-md: 0 4px 8px -2px rgb(22 24 29 / 0.07), 0 8px 24px -4px rgb(22 24 29 / 0.08);
+  --shadow-lg: 0 8px 16px -4px rgb(22 24 29 / 0.08), 0 16px 40px -8px rgb(22 24 29 / 0.1);
+  --shadow-xl: var(--shadow-lg);
+  --shadow-2xl: var(--shadow-lg);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  --navbar-height: calc(var(--spacing) * 16);
+
+  @media (min-width: 768px) {
+    --navbar-height: calc(var(--spacing) * 20);
+  }
+}
+
+/* Inverted sections (footer, dark bands). */
+.dark {
+  --background: var(--night);
+  --foreground: var(--paper);
+  --card: #1d2027;
+  --card-foreground: var(--paper);
+  --primary: var(--paper);
+  --primary-foreground: var(--ink);
+  --secondary: #2a2e37;
+  --secondary-foreground: var(--paper);
+  --muted: #2a2e37;
+  --muted-foreground: #b9bcc4; /* 9.5:1 on night */
+  --accent: #8ea6f0; /* 7.6:1 on night */
+  --accent-foreground: var(--ink);
+  --border: #2f333c;
+  --input: #6b707b;
+  --ink-soft: #b9bcc4; /* 9.5:1 on night */
+  --ink-muted: #9a9ea8; /* 6.9:1 on night */
+  --care: #f27a6b; /* 6.7:1 on night */
+  --learn: #8ea6f0;
+  --discover: #ebaa2a; /* 8.9:1 on night */
+  --discover-deep: #ebaa2a;
+}

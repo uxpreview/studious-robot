@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program.field_body
+    - field.field.node.program.field_credential
+    - field.field.node.program.field_deadline
+    - field.field.node.program.field_departments
+    - field.field.node.program.field_director
+    - field.field.node.program.field_duration
+    - field.field.node.program.field_highlights
+    - field.field.node.program.field_how_to_apply
+    - field.field.node.program.field_program_type
+    - field.field.node.program.field_summary
+    - node.type.program
+  module:
+    - user
+id: node.program.default
+targetEntityType: node
+bundle: program
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_body: true
+  field_credential: true
+  field_deadline: true
+  field_departments: true
+  field_director: true
+  field_duration: true
+  field_highlights: true
+  field_how_to_apply: true
+  field_program_type: true
+  field_summary: true
+  search_api_excerpt: true

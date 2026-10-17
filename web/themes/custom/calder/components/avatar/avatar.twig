@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Avatar. Without a photo it shows a monogram on sand. Each role adds a small
+ * colored shape on the rim: red for clinicians, blue for faculty, ochre for
+ * researchers. Someone with all three roles carries all three colors.
+ */
+#}
+{% set size = size|default('md') %}
+{% set dims = { sm: 'size-12 text-lg', md: 'size-20 text-[1.75rem]', lg: 'size-36 text-[3.5rem] md:size-44 md:text-[4.25rem]' } %}
+{% set dot = { sm: 'size-3', md: 'size-4', lg: 'size-6 md:size-7' } %}
+{% set colors = { care: 'bg-care', learn: 'bg-learn', discover: 'bg-discover' } %}
+{# Positions on the rim, clockwise from about one o'clock. #}
+{% set spots = ['top-[2%] right-[8%]', 'top-[30%] -right-[4%]', 'top-[62%] -right-[2%]'] %}
+<span class="relative inline-block shrink-0 {{ dims[size] }}" aria-hidden="true">
+  {% if photo.src %}
+    <img src="{{ photo.src }}" alt="" class="size-full rounded-full object-cover" loading="lazy">
+  {% else %}
+    <span class="flex size-full items-center justify-center rounded-full bg-sand font-serif font-medium text-ink" style="font-variation-settings: 'opsz' 48">{{ initials }}</span>
+  {% endif %}
+  {% for role in roles|default([]) %}
+    <span class="absolute {{ spots[loop.index0] }} {{ dot[size] }} {{ colors[role] }} rounded-full ring-2 ring-paper"></span>
+  {% endfor %}
+</span>

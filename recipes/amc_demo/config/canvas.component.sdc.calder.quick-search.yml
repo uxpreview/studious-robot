@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - calder
+active_version: 3243438cec00619b
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Find the right doctor'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        placeholder:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Name, specialty or condition, like AFib'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        links:
+          title: 'Quick links'
+          description: 'Add "Quick link" components here.'
+label: 'Doctor search and quick links'
+id: sdc.calder.quick-search
+provider: calder
+source: sdc
+source_local_id: 'calder:quick-search'

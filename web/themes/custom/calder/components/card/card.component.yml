@@ -1,0 +1,57 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Content card
+description: A card for conditions, trials, programs, events, news, labs, locations and departments.
+group: Calder
+status: stable
+noUi: true
+props:
+  type: object
+  properties:
+    variant:
+      type:
+      - string
+      - 'null'
+      description: 'One of: grid, row.'
+    mission:
+      type:
+      - string
+      - 'null'
+    eyebrow:
+      type:
+      - string
+      - 'null'
+    title:
+      type:
+      - string
+      - 'null'
+    url:
+      type:
+      - string
+      - 'null'
+    text:
+      type:
+      - string
+      - 'null'
+    meta:
+      type:
+      - array
+      - 'null'
+      description: '[{icon, text}]'
+    status:
+      type:
+      - object
+      - 'null'
+      description: '{label, tone}'
+    date:
+      type:
+      - object
+      - 'null'
+      description: '{month, day, weekday, time, is_past}'
+    image:
+      type:
+      - object
+      - 'null'
+    heading_level:
+      type:
+      - integer
+      - 'null'

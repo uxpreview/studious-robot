@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Person card. The whole card is clickable (a stretched link on the name), but
+ * only the name is announced as the link, so screen readers don't read the
+ * entire card as one long link.
+ */
+#}
+{% set h = 'h' ~ (heading_level|default(3)) %}
+{% set role_missions = roles|default([])|map(r => r.mission ?? r) %}
+{% set accepting_pill %}
+  {% if accepting is same as(true) %}
+    {{ include('calder:pill', { label: 'Accepting new patients', tone: 'ok' }, with_context = false) }}
+  {% elseif accepting is same as(false) %}
+    {{ include('calder:pill', { label: 'Waitlist only', tone: 'neutral' }, with_context = false) }}
+  {% endif %}
+{% endset %}
+
+{% if variant|default('grid') == 'row' %}
+  <article class="group relative grid gap-5 rounded-2xl border border-line bg-white p-5 transition-shadow hover:shadow-md md:grid-cols-[auto_1fr_15rem] md:gap-8 md:p-7">
+    {{ include('calder:avatar', { initials: initials, roles: role_missions, photo: photo, size: 'md' }, with_context = false) }}
+    <div class="min-w-0">
+      <{{ h }} class="font-serif text-2xl leading-tight font-medium">
+        <a href="{{ url }}" class="no-underline after:absolute after:inset-0 after:rounded-2xl group-hover:underline">{{ display_name }}</a>
+      </{{ h }}>
+      {% if job_title %}<p class="mt-1 mb-0 text-base text-ink-soft">{{ job_title }}</p>{% endif %}
+      {% if specialties %}
+        <ul class="mt-4 flex list-none flex-wrap gap-2 p-0" aria-label="Specialties">
+          {% for s in specialties %}
+            <li class="m-0 rounded-md bg-sand px-2.5 py-1 text-sm text-ink">{{ s }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    <div class="flex flex-col gap-2.5 border-t border-line pt-4 text-[0.9375rem] text-ink-soft md:border-t-0 md:border-l md:pt-0 md:pl-6">
+      {% if accepting is not null %}<div class="mb-1">{{ accepting_pill }}</div>{% endif %}
+      {% if locations %}
+        <p class="m-0 flex gap-2"><span class="mt-0.5 shrink-0 text-ink-muted">{{ icon('phosphor', 'map-pin', { size: 18 }) }}</span><span>{{ locations|map(l => l.title)|join(', ') }}</span></p>
+      {% endif %}
+      {% if languages %}
+        <p class="m-0 flex gap-2"><span class="mt-0.5 shrink-0 text-ink-muted">{{ icon('phosphor', 'translate', { size: 18 }) }}</span><span><span class="sr-only">Languages: </span>{{ languages|join(', ') }}</span></p>
+      {% endif %}
+      {% if phone %}
+        <p class="relative z-10 m-0 flex gap-2"><span class="mt-0.5 shrink-0 text-ink-muted">{{ icon('phosphor', 'phone', { size: 18 }) }}</span><a href="tel:{{ phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}" class="text-ink">{{ phone }}</a></p>
+      {% endif %}
+    </div>
+  </article>
+{% else %}
+  <article class="group relative flex h-full flex-col rounded-2xl border border-line bg-white p-6 transition-shadow hover:shadow-md">
+    <div class="flex items-start justify-between gap-4">
+      {{ include('calder:avatar', { initials: initials, roles: role_missions, photo: photo, size: 'md' }, with_context = false) }}
+      {% if accepting is not null %}<div class="pt-1">{{ accepting_pill }}</div>{% endif %}
+    </div>
+    <{{ h }} class="mt-5 font-serif text-[1.375rem] leading-tight font-medium">
+      <a href="{{ url }}" class="no-underline after:absolute after:inset-0 after:rounded-2xl group-hover:underline">{{ display_name }}</a>
+    </{{ h }}>
+    {% if job_title %}<p class="mt-1.5 mb-0 text-base text-ink-soft">{{ job_title }}</p>{% endif %}
+    {% if academic_title and not job_title %}<p class="mt-1.5 mb-0 text-base text-ink-soft">{{ academic_title }}</p>{% endif %}
+    {% if locations or languages %}
+      <div class="mt-auto flex flex-col gap-1.5 border-t border-line pt-4 text-sm text-ink-soft [&:not(:first-child)]:mt-5">
+        {% if locations %}<p class="m-0 flex gap-2"><span class="shrink-0 text-ink-muted">{{ icon('phosphor', 'map-pin', { size: 16 }) }}</span>{{ locations|map(l => l.title)|join(', ') }}</p>{% endif %}
+        {% if languages %}<p class="m-0 flex gap-2"><span class="shrink-0 text-ink-muted">{{ icon('phosphor', 'translate', { size: 16 }) }}</span><span><span class="sr-only">Languages: </span>{{ languages|join(', ') }}</span></p>{% endif %}
+      </div>
+    {% endif %}
+  </article>
+{% endif %}

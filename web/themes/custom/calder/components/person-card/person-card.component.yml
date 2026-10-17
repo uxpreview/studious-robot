@@ -1,0 +1,70 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Person card
+description: A doctor, faculty member or researcher, as a grid card or a directory row.
+group: Calder
+status: stable
+noUi: true
+props:
+  type: object
+  properties:
+    variant:
+      type:
+      - string
+      - 'null'
+      description: 'One of: grid, row.'
+    display_name:
+      type:
+      - string
+      - 'null'
+    url:
+      type:
+      - string
+      - 'null'
+    job_title:
+      type:
+      - string
+      - 'null'
+    academic_title:
+      type:
+      - string
+      - 'null'
+    initials:
+      type:
+      - string
+      - 'null'
+    roles:
+      type:
+      - array
+      - 'null'
+    photo:
+      type:
+      - object
+      - 'null'
+    specialties:
+      type:
+      - array
+      - 'null'
+    locations:
+      type:
+      - array
+      - 'null'
+    languages:
+      type:
+      - array
+      - 'null'
+    accepting:
+      type:
+      - boolean
+      - 'null'
+    phone:
+      type:
+      - string
+      - 'null'
+    summary:
+      type:
+      - string
+      - 'null'
+    heading_level:
+      type:
+      - integer
+      - 'null'

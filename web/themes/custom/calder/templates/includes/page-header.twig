@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Shared page header for designed content types.
+ *
+ * Variables:
+ * - crumb: {title, url} of the parent listing.
+ * - mission: care | learn | discover | neutral.
+ * - eyebrow: label next to the mission marker.
+ * - pills: [{label, tone}].
+ * - title, intro.
+ * - details: markup under the intro (facts, dates).
+ * - actions: markup for buttons.
+ * - aside: markup for the right column (illustration, key facts).
+ * - tone: paper (default) or white.
+ */
+#}
+<header class="border-b border-line {{ tone == 'white' ? 'bg-white' : 'bg-paper' }}">
+  <div class="container mx-auto px-4 pt-8 pb-12 md:pt-10 md:pb-16">
+    {% if crumb %}
+      <nav aria-label="Breadcrumb" class="text-sm">
+        <ol class="m-0 flex list-none flex-wrap gap-2 p-0 text-ink-soft">
+          <li class="m-0"><a href="/" class="text-ink-soft">Home</a></li>
+          <li class="m-0" aria-hidden="true">/</li>
+          <li class="m-0"><a href="{{ crumb.url }}" class="text-ink-soft">{{ crumb.title }}</a></li>
+        </ol>
+      </nav>
+    {% endif %}
+    <div class="mt-10 grid items-center gap-10 lg:grid-cols-12">
+      <div class="{{ aside ? 'lg:col-span-7' : 'lg:col-span-9' }}">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+          {% if eyebrow %}{{ include('calder:mission-marker', { mission: mission, label: eyebrow }, with_context = false) }}{% endif %}
+          {% for pill in pills|default([]) %}{{ include('calder:pill', pill, with_context = false) }}{% endfor %}
+        </div>
+        <h1 class="mt-5 text-title text-pretty">{{ title }}</h1>
+        {% if intro %}<p class="mt-5 mb-0 max-w-3xl text-[1.3125rem] leading-relaxed text-ink-soft">{{ intro }}</p>{% endif %}
+        {% if details %}<div class="mt-8">{{ details }}</div>{% endif %}
+        {% if actions %}<div class="mt-8 flex flex-wrap gap-3">{{ actions }}</div>{% endif %}
+      </div>
+      {% if aside %}
+        <div class="lg:col-span-5 lg:col-start-8">{{ aside }}</div>
+      {% endif %}
+    </div>
+  </div>
+</header>

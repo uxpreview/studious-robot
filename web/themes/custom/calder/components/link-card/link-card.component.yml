@@ -1,0 +1,24 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Link card
+description: A card that links to a page, with a mission color, an eyebrow and a short description.
+group: Calder
+status: stable
+props:
+  type: object
+  required: [title, url]
+  properties:
+    mission:
+      type: string
+      title: Color
+      enum: [care, learn, discover, neutral]
+      meta:enum: { care: Care (red), learn: Learn (blue), discover: Discover (ochre), neutral: Black }
+      default: neutral
+      examples: [care]
+    eyebrow: { type: string, title: Eyebrow, examples: ["Patient care"] }
+    title: { type: string, title: Title, examples: ["Find a doctor"] }
+    text:
+      type: string
+      title: Text
+      pattern: "(.|\\r?\\n)*"
+      examples: ["Search by name, specialty or condition."]
+    url: { type: string, title: Link, format: uri-reference, examples: ["/find-a-doctor"] }

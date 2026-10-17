@@ -1,0 +1,71 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7e3280f1-dfef-41ea-8df5-0f7f224b4c37
+  bundle: news
+  default_langcode: en
+  depends:
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    bf26b1b7-7611-4ae3-8e08-431c5040da6b: media
+    957a0614-14e7-4ea8-8dad-fc0c3afb8ae5: taxonomy_term
+    46d057ff-7a59-45df-8265-f2d7fc0c7028: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: "Back on the ridge trail: a retired teacher's AFib story"
+  created:
+    -
+      value: 1791755068
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/back-ridge-trail-retired-teachers-afib-story
+      langcode: en
+  field_body:
+    -
+      value: '<p>For 31 years, Carol Jennings taught eighth-grade science in Calder. When she retired, she finally had time for the thing she loved most: hiking. Every Saturday she and two friends from her old school drove out to the ridge trails north of town.</p><p>About two years ago, that changed. "I''d get halfway up a hill I''d climbed a hundred times and have to stop," she says. "My heart felt like it was flopping around in my chest." Her primary care doctor ordered an ECG, which showed atrial fibrillation, or AFib, a common heart rhythm problem.</p><p>Carol started a blood thinner to lower her stroke risk and a medicine to slow her heart rate. The medicines helped, but the episodes kept coming back, sometimes two or three times a week. Her doctor referred her to Dr. Priya Patel, a heart rhythm specialist at the Heart &amp; Vascular Institute.</p><p>At their first visit, Dr. Patel sketched Carol''s heart on the paper covering the exam table and walked her through three options: stay on her current medicines, try a rhythm control medicine or have a catheter ablation. "She never pushed," Carol says. "She told me what the numbers looked like for someone like me and asked what I wanted my life to look like." Carol chose ablation.</p><p>The procedure took less than two hours, and she went home that evening. Dr. Patel was clear that ablation does not work for everyone and that some people need a second procedure. For Carol, the first one held. Eight months later, a two-week patch monitor showed no AFib. She still takes a blood thinner, because her stroke risk calls for it whether or not AFib returns.</p><p>Last month, Carol and her friends hiked the full ridge loop, all 6 miles. "I''m slower than I was at 50," she says, laughing. "But I''m not stopping because of my heart anymore."</p>'
+      format: content_format
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_image:
+    -
+      entity: bf26b1b7-7611-4ae3-8e08-431c5040da6b
+  field_mission:
+    -
+      entity: 957a0614-14e7-4ea8-8dad-fc0c3afb8ae5
+  field_people:
+    -
+      entity: 46d057ff-7a59-45df-8265-f2d7fc0c7028
+  field_pull_quote:
+    -
+      value: 'She told me what the numbers looked like for someone like me and asked what I wanted my life to look like.'
+  field_quote_attribution:
+    -
+      value: 'Carol Jennings, patient'
+  field_story_type:
+    -
+      value: patient_story
+  field_summary:
+    -
+      value: 'Carol Jennings stopped hiking when atrial fibrillation left her winded on the easiest trails. After an ablation with Dr. Priya Patel, she is back to her Saturday hikes.'

@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 #ddev-silent-no-warn
 
-## Description: Wipe the site and rebuild it fresh from a Drupal CMS site template
+## Description: Wipe the site and rebuild it fresh from a site template (default: the Calder demo)
 ## Usage: reset [template] [--yes]
-## Example: "ddev reset" (rebuild from Byte)\n"ddev reset haven" (switch to the Haven nonprofit template)\n"ddev reset starter --yes" (skip the confirmation)
+## Example: "ddev reset" (rebuild the Calder demo)\n"ddev reset byte" (switch to the Byte SaaS template)\n"ddev reset haven --yes" (Haven nonprofit template, no confirmation)
 
 set -euo pipefail
 
-template="byte"
+template="amc_demo"
 confirm=1
 for arg in "$@"; do
   case "$arg" in
@@ -34,7 +34,8 @@ fi
 
 cd /var/www/html
 
-# Download the template the first time it is used.
+# Download the template the first time it is used. (amc_demo is part of this
+# repo, so it is always there.)
 if [ ! -d "recipes/${template}" ]; then
   echo "Downloading the '${template}' template..."
   composer require "drupal/${template}" --no-interaction
@@ -51,8 +52,11 @@ echo "Installing Drupal CMS with the '${template}' template. This takes a minute
 drush site:install "/var/www/html/recipes/${template}" \
   --account-name=admin \
   --account-pass="${password}" \
-  --site-name="Drupal CMS Sandbox" \
+  --site-name="$( [ "$template" = amc_demo ] && echo "Calder University Health" || echo "Drupal CMS Sandbox" )" \
   --yes
+
+# Index content for site search now, instead of waiting for the first cron run.
+drush search-api:index >/dev/null 2>&1 || true
 
 echo
 echo "Done. Your site is ready."

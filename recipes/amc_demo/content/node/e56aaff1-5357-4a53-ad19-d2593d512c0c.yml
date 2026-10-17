@@ -1,0 +1,71 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e56aaff1-5357-4a53-ad19-d2593d512c0c
+  bundle: event
+  default_langcode: en
+  depends:
+    e4a8a915-f653-4534-9343-cfd5018d1b89: taxonomy_term
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    5fcb2b09-1de2-434d-9375-cc452e65d7de: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Living With Migraine: Monthly Support Group'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /events/living-migraine-monthly-support-group
+      langcode: en
+  field_audience:
+    -
+      entity: e4a8a915-f653-4534-9343-cfd5018d1b89
+  field_body:
+    -
+      value: '<p>Migraine can be isolating. This free group meets online once a month and is led by a licensed clinical social worker from our Headache Medicine Program. Each session starts with a short topic and leaves plenty of time for conversation.</p><p>This month, neurologist Dr. Elena Ruiz joins as a guest to talk about preventive treatment options and answer general questions. She cannot give personal medical advice during the group, so please bring questions about your own care to your care team.</p><p>You are welcome whether or not you are a Calder patient, and family members and caregivers are welcome too. You can keep your camera off and simply listen.</p>'
+      format: content_format
+  field_cost:
+    -
+      value: Free
+  field_departments:
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+  field_event_date:
+    -
+      value: '2026-10-05T22:00:00'
+      end_value: '2026-10-05T23:00:00'
+  field_event_format:
+    -
+      value: virtual
+  field_registration_label:
+    -
+      value: Register
+  field_speakers:
+    -
+      entity: 5fcb2b09-1de2-434d-9375-cc452e65d7de
+  field_summary:
+    -
+      value: 'A monthly online group where people with migraine and the people who support them share what helps. This month, Dr. Elena Ruiz joins to answer questions about preventive treatment.'
+  field_venue:
+    -
+      value: 'Online via video'

@@ -1,0 +1,90 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9
+  bundle: location
+  default_langcode: en
+  depends:
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Calder University Hospital'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /locations/calder-university-hospital
+      langcode: en
+  field_address:
+    -
+      value: '1200 University Avenue, Calder'
+  field_amenities:
+    -
+      value: 'Free interpreters, including American Sign Language'
+    -
+      value: 'Wheelchairs at every entrance'
+    -
+      value: 'Outpatient pharmacy, first floor'
+    -
+      value: 'Lobby cafe and 24-hour vending'
+    -
+      value: 'Chapel and quiet room'
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+  field_hours:
+    -
+      value: 'Open 24 hours, 7 days a week'
+    -
+      value: 'Visiting hours: 8 a.m.–9 p.m. daily; one support person may stay overnight'
+  field_location_type:
+    -
+      value: hospital
+  field_parking:
+    -
+      value: 'Park in the Elm Street Garage, connected to the main lobby by a covered walkway. Valet parking is available at the main entrance from 6 a.m. to 8 p.m.'
+  field_phone:
+    -
+      value: '(555) 555-0100'
+  field_services:
+    -
+      value: 'Emergency department, open 24/7'
+    -
+      value: 'Heart catheterization and heart rhythm labs'
+    -
+      value: 'Stroke and neurocritical care'
+    -
+      value: Neurosurgery
+    -
+      value: 'Maternity care and fetal heart imaging'
+    -
+      value: 'MRI, CT and nuclear imaging'
+  field_summary:
+    -
+      value: 'Calder University Hospital is our 480-bed teaching hospital, with a 24-hour emergency department, a comprehensive stroke center and our most specialized heart, brain and surgical care.'

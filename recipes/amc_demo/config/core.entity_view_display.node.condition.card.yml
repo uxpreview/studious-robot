@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.condition.field_also_called
+    - field.field.node.condition.field_body
+    - field.field.node.condition.field_departments
+    - field.field.node.condition.field_diagnosis
+    - field.field.node.condition.field_seek_care
+    - field.field.node.condition.field_summary
+    - field.field.node.condition.field_symptoms
+    - field.field.node.condition.field_treatment
+    - node.type.condition
+  module:
+    - user
+id: node.condition.card
+targetEntityType: node
+bundle: condition
+mode: card
+content: {  }
+hidden:
+  content_moderation_control: true
+  field_also_called: true
+  field_body: true
+  field_departments: true
+  field_diagnosis: true
+  field_seek_care: true
+  field_summary: true
+  field_symptoms: true
+  field_treatment: true
+  links: true
+  search_api_excerpt: true

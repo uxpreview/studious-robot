@@ -1,0 +1,97 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3cb7a3ef-297e-4247-a02b-d6b78f679f3c
+  bundle: clinical_trial
+  default_langcode: en
+  depends:
+    65175c88-9eb1-45ab-b56d-a1f484daf9a0: node
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    46d057ff-7a59-45df-8265-f2d7fc0c7028: node
+    d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9: node
+    bc511c44-7447-4f97-bf38-dc5ed528d0b2: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Does a shorter ablation procedure work as well for AFib?'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /clinical-trials/cuh-2025-014
+      langcode: en
+  field_age_range:
+    -
+      value: 18–80
+  field_body:
+    -
+      value: '<p>Catheter ablation is a common treatment for atrial fibrillation (AFib). Calder doctors use two approved methods. Pulsed field ablation uses very short electrical pulses and usually takes less time. Radiofrequency ablation uses heat and has been used for many years. Both work well, but they have not been compared head to head in many patients over a full year.</p><p>In this study, people who are already planning to have an ablation will be assigned by chance to one of the two methods. We will compare how many people stay free of AFib after one year, how long each procedure takes, how quickly people recover and how they feel day to day.</p><p>We plan to enroll 240 people at Calder. What we learn could help doctors and patients choose the method that fits each person best.</p>'
+      format: content_format
+  field_conditions:
+    -
+      entity: 65175c88-9eb1-45ab-b56d-a1f484daf9a0
+  field_contact_email:
+    -
+      value: afib-study@calder.example
+  field_contact_name:
+    -
+      value: 'Dana Whitfield, RN, research nurse coordinator'
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_eligibility:
+    -
+      value: '<p><strong>You may be able to join if you:</strong></p><ul><li>Are 18–80 years old</li><li>Have AFib that causes symptoms, such as a racing heartbeat or tiredness</li><li>Have already decided with your heart doctor that ablation is right for you</li><li>Have tried, or cannot take, at least one heart rhythm medicine</li><li>Can come to follow-up visits for one year</li></ul><p><strong>You may not be able to join if you:</strong></p><ul><li>Have had an ablation for AFib before</li><li>Had heart surgery or a heart attack in the past 3 months</li><li>Have severe heart valve disease</li><li>Cannot take a blood thinner for at least 3 months around the time of the procedure</li><li>Are pregnant or plan to become pregnant during the study</li></ul><p>The study team will review your health history with you to confirm whether you can take part.</p>'
+      format: content_format
+  field_investigator:
+    -
+      entity: 46d057ff-7a59-45df-8265-f2d7fc0c7028
+  field_keywords:
+    -
+      value: 'Does a shorter ablation procedure work as well for AFib? | A Randomized Trial Comparing Pulsed Field Ablation and Radiofrequency Ablation for Symptomatic Atrial Fibrillation: Freedom From Arrhythmia, Procedure Time and Quality of Life at 12 Months | CUH-2025-014 | Atrial fibrillation | AFib | AF | Irregular heartbeat | Priya Patel'
+  field_locations:
+    -
+      entity: d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9
+    -
+      entity: bc511c44-7447-4f97-bf38-dc5ed528d0b2
+  field_official_title:
+    -
+      value: 'A Randomized Trial Comparing Pulsed Field Ablation and Radiofrequency Ablation for Symptomatic Atrial Fibrillation: Freedom From Arrhythmia, Procedure Time and Quality of Life at 12 Months'
+  field_phase:
+    -
+      value: na
+  field_phone:
+    -
+      value: '(555) 555-0145'
+  field_protocol_id:
+    -
+      value: CUH-2025-014
+  field_summary:
+    -
+      value: 'This study compares two approved ways of doing catheter ablation for AFib: a newer method that is usually faster and the standard method. We want to know whether the faster procedure keeps hearts in rhythm just as well one year later.'
+  field_trial_status:
+    -
+      value: recruiting
+  field_what_to_expect:
+    -
+      value: '<p>Taking part lasts about one year.</p><ol><li><strong>Screening visit.</strong> A research nurse will explain the study, answer your questions and review your health history. You sign a consent form only if you decide to join.</li><li><strong>Assignment.</strong> A computer assigns you to pulsed field or radiofrequency ablation by chance, like flipping a coin.</li><li><strong>Procedure.</strong> Your ablation takes place at Calder University Hospital. Most people go home the same day or the next morning.</li><li><strong>Follow-up.</strong> You will have visits at the Riverside Outpatient Center at 3, 6 and 12 months. Before each visit, you will wear a small patch monitor on your chest for 2 weeks and fill out a short survey.</li></ol><p>Study tests and monitors are provided at no cost. You will receive $50 for each follow-up visit, and parking is free. You can leave the study at any time, and your care at Calder will not change.</p>'
+      format: content_format

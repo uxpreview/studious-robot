@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.event.field_audience
+    - field.field.node.event.field_body
+    - field.field.node.event.field_cost
+    - field.field.node.event.field_credit
+    - field.field.node.event.field_departments
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_format
+    - field.field.node.event.field_locations
+    - field.field.node.event.field_registration_label
+    - field.field.node.event.field_speakers
+    - field.field.node.event.field_summary
+    - field.field.node.event.field_venue
+    - node.type.event
+  module:
+    - user
+id: node.event.card
+targetEntityType: node
+bundle: event
+mode: card
+content: {  }
+hidden:
+  content_moderation_control: true
+  field_audience: true
+  field_body: true
+  field_cost: true
+  field_credit: true
+  field_departments: true
+  field_event_date: true
+  field_event_format: true
+  field_locations: true
+  field_registration_label: true
+  field_speakers: true
+  field_summary: true
+  field_venue: true
+  links: true
+  search_api_excerpt: true

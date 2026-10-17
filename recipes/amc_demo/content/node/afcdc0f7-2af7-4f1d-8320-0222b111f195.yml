@@ -1,0 +1,94 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: afcdc0f7-2af7-4f1d-8320-0222b111f195
+  bundle: clinical_trial
+  default_langcode: en
+  depends:
+    ff03e0ff-d94f-4395-b819-2c852b52f5fd: node
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    5fcb2b09-1de2-434d-9375-cc452e65d7de: node
+    d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Can a monthly shot of a new medicine prevent migraine attacks?'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /clinical-trials/cuh-2026-007
+      langcode: en
+  field_age_range:
+    -
+      value: 18–65
+  field_body:
+    -
+      value: '<p>Many people with migraine still have frequent attacks after trying several preventive medicines. This study is testing an investigational medicine, one that is not approved for general use, that blocks PACAP. PACAP is a natural signaling protein that appears to help start migraine attacks. Research in the Haddad Lab at Calder helped show how PACAP affects pain pathways in the brain.</p><p>For the first 12 weeks, participants are assigned by chance to receive either the study medicine or a placebo, a shot with no active medicine. Two out of every three people receive the study medicine. Neither you nor the study team will know which one you get. After 12 weeks, everyone who continues can receive the study medicine for up to 40 more weeks.</p><p>Our team includes bilingual research coordinators, and all consent forms, headache diaries and surveys are available in English and Spanish. We plan to enroll about 90 people at Calder.</p>'
+      format: content_format
+  field_conditions:
+    -
+      entity: ff03e0ff-d94f-4395-b819-2c852b52f5fd
+  field_contact_email:
+    -
+      value: migraine-study@calder.example
+  field_contact_name:
+    -
+      value: 'Lucía Moreno, bilingual research coordinator'
+  field_departments:
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+  field_eligibility:
+    -
+      value: '<p><strong>You may be able to join if you:</strong></p><ul><li>Are 18–65 years old</li><li>Have had migraine for at least 1 year, starting before age 50</li><li>Have 4 or more migraine days a month, on average</li><li>Are willing to keep a short daily headache diary on your phone or on paper, in English or Spanish</li><li>Can come to Calder University Hospital once a month for the first 3 months</li></ul><p><strong>You may not be able to join if you:</strong></p><ul><li>Take, or took in the past 6 months, a medicine that blocks CGRP</li><li>Have tried more than 4 types of preventive migraine medicine without any improvement</li><li>Had a heart attack, stroke or mini-stroke in the past 12 months</li><li>Have high blood pressure that is not under control</li><li>Are pregnant, breastfeeding or planning a pregnancy</li></ul>'
+      format: content_format
+  field_investigator:
+    -
+      entity: 5fcb2b09-1de2-434d-9375-cc452e65d7de
+  field_keywords:
+    -
+      value: 'Can a monthly shot of a new medicine prevent migraine attacks? | A Phase 2, Randomized, Double-Blind, Placebo-Controlled Study of an Investigational Anti-PACAP Monoclonal Antibody for the Preventive Treatment of Episodic and Chronic Migraine in Adults, With an Open-Label Extension | CUH-2026-007 | Migraine | Migraine headache | Migraine with aura | Chronic migraine | Elena Ruiz'
+  field_locations:
+    -
+      entity: d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9
+  field_official_title:
+    -
+      value: 'A Phase 2, Randomized, Double-Blind, Placebo-Controlled Study of an Investigational Anti-PACAP Monoclonal Antibody for the Preventive Treatment of Episodic and Chronic Migraine in Adults, With an Open-Label Extension'
+  field_phase:
+    -
+      value: phase_2
+  field_phone:
+    -
+      value: '(555) 555-0158'
+  field_protocol_id:
+    -
+      value: CUH-2026-007
+  field_summary:
+    -
+      value: 'This study is testing whether an investigational medicine, given as a monthly shot, can reduce the number of migraine days. Spanish-speaking participants are welcome, and every study visit can take place in English or Spanish.'
+  field_trial_status:
+    -
+      value: recruiting
+  field_what_to_expect:
+    -
+      value: '<ol><li><strong>Screening and diary.</strong> At your first visit, a coordinator reviews the study with you in English or Spanish. If you join, you keep a daily headache diary for 4 weeks before treatment starts.</li><li><strong>Treatment.</strong> You receive a shot under the skin at Calder University Hospital once a month for 3 months. Each visit takes about an hour.</li><li><strong>Extension.</strong> After 3 months, you can choose to receive the study medicine for up to 40 more weeks.</li><li><strong>Final check-in.</strong> A last visit takes place about 12 weeks after your final shot.</li></ol><p>You can keep using the medicines you already take to treat migraine attacks. The study medicine and study tests are provided at no cost, and you will receive $75 for each visit. Parking is validated. You can leave the study at any time without affecting your care.</p>'
+      format: content_format

@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * What the search index reads for each designed content type: plain text with
+ * the fields people are likely to search for. Never shown to visitors.
+ */
+#}
+{% set c = calder %}
+<article>
+  <h2>{{ c.title }}</h2>
+  <p>{{ c.type_label }}. {{ c.summary }}</p>
+  {% if c.display_name %}<p>{{ c.display_name }}. {{ c.job_title }}. {{ c.academic_title }}. {{ c.specialties|join(', ') }}. {{ c.languages|join(', ') }}.</p>{% endif %}
+  {% if c.also_called %}<p>Also called {{ c.also_called|join(', ') }}.</p>{% endif %}
+  {% if c.protocol_id %}<p>{{ c.protocol_id }}. {{ c.official_title }}. {{ c.status_label }}.</p>{% endif %}
+  {% if c.investigator %}<p>Principal investigator: {{ c.investigator.display_name }}.</p>{% endif %}
+  {% if c.director %}<p>Program director: {{ c.director.display_name }}.</p>{% endif %}
+  {% if c.lead %}<p>Led by {{ c.lead.display_name }}.</p>{% endif %}
+  {% if c.speakers %}<p>Speakers: {{ c.speakers|map(s => s.display_name)|join(', ') }}.</p>{% endif %}
+  {% if c.people %}<p>{{ c.people|map(s => s.display_name)|join(', ') }}.</p>{% endif %}
+  {% if c.conditions %}<p>{{ c.conditions|map(x => x.title)|join(', ') }}.</p>{% endif %}
+  {% if c.departments %}<p>{{ c.departments|map(x => x.title)|join(', ') }}.</p>{% endif %}
+  {% if c.address %}<p>{{ c.address }}. {{ c.services|join(', ') }}.</p>{% endif %}
+  {{ c.body }}
+  {{ c.symptoms }}
+  {{ c.treatment }}
+  {{ c.eligibility }}
+</article>

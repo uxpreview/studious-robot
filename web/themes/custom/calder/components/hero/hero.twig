@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Hero. The headline is the page's h1, so use one hero per page.
+ */
+#}
+{% set size = size|default('large') %}
+{% set mission = mission|default('neutral') %}
+<section class="relative overflow-hidden border-b border-line">
+  <div class="container mx-auto grid items-center gap-10 px-4 {{ size == 'large' ? 'py-16 md:py-24 lg:grid-cols-12' : 'py-12 md:py-16 lg:grid-cols-12' }}">
+    <div class="{{ size == 'large' ? 'lg:col-span-7' : 'lg:col-span-8' }}">
+      {% if eyebrow %}{{ include('calder:mission-marker', { mission: mission, label: eyebrow }, with_context = false) }}{% endif %}
+      <h1 class="mt-6 text-balance {{ size == 'large' ? 'text-display' : 'text-title' }}">{{ headline }}</h1>
+      {% if intro %}<p class="mt-6 mb-0 max-w-2xl text-[1.375rem] leading-relaxed text-ink-soft">{{ intro }}</p>{% endif %}
+      {% if primary_label and primary_url or secondary_label and secondary_url %}
+        <div class="mt-10 flex flex-wrap gap-3">
+          {% if primary_label and primary_url %}<a href="{{ primary_url }}" class="button">{{ primary_label }}{{ icon('phosphor', 'arrow-right', { size: 20 }) }}</a>{% endif %}
+          {% if secondary_label and secondary_url %}<a href="{{ secondary_url }}" class="button bg-transparent text-ink ring-1 ring-line-strong hover:bg-sand hover:text-ink">{{ secondary_label }}</a>{% endif %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="{{ size == 'large' ? 'lg:col-span-5' : 'lg:col-span-4' }} mx-auto w-full {{ size == 'large' ? 'max-w-xl' : 'max-w-sm' }} text-ink">
+      {{ include('calder:illustration', { variant: illustration|default('home'), sway: true }, with_context = false) }}
+    </div>
+  </div>
+</section>

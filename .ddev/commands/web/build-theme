@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#ddev-silent-no-warn
+
+## Description: Rebuild the Calder theme's CSS after changing its styles or templates
+## Usage: build-theme
+## Example: "ddev build-theme"
+
+set -euo pipefail
+cd /var/www/html/web/themes/custom/calder
+if [ ! -d node_modules ]; then
+  echo "Installing the theme's build tools (first time only)..."
+  npm ci --no-audit --no-fund
+fi
+npm run build
+drush cache:rebuild >/dev/null
+echo "Theme rebuilt. Reload the page to see your changes."

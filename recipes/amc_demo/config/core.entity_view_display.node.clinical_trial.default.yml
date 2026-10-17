@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.clinical_trial.field_age_range
+    - field.field.node.clinical_trial.field_body
+    - field.field.node.clinical_trial.field_conditions
+    - field.field.node.clinical_trial.field_contact_email
+    - field.field.node.clinical_trial.field_contact_name
+    - field.field.node.clinical_trial.field_departments
+    - field.field.node.clinical_trial.field_eligibility
+    - field.field.node.clinical_trial.field_investigator
+    - field.field.node.clinical_trial.field_keywords
+    - field.field.node.clinical_trial.field_locations
+    - field.field.node.clinical_trial.field_official_title
+    - field.field.node.clinical_trial.field_phase
+    - field.field.node.clinical_trial.field_phone
+    - field.field.node.clinical_trial.field_protocol_id
+    - field.field.node.clinical_trial.field_summary
+    - field.field.node.clinical_trial.field_trial_status
+    - field.field.node.clinical_trial.field_what_to_expect
+    - node.type.clinical_trial
+  module:
+    - user
+id: node.clinical_trial.default
+targetEntityType: node
+bundle: clinical_trial
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_age_range: true
+  field_body: true
+  field_conditions: true
+  field_contact_email: true
+  field_contact_name: true
+  field_departments: true
+  field_eligibility: true
+  field_investigator: true
+  field_keywords: true
+  field_locations: true
+  field_official_title: true
+  field_phase: true
+  field_phone: true
+  field_protocol_id: true
+  field_summary: true
+  field_trial_status: true
+  field_what_to_expect: true
+  search_api_excerpt: true

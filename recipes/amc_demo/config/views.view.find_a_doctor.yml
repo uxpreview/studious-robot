@@ -1,0 +1,280 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.person
+    - taxonomy.vocabulary.language
+    - taxonomy.vocabulary.specialty
+  module:
+    - node
+    - options
+    - taxonomy
+    - user
+id: find_a_doctor
+label: 'Find a doctor'
+module: views
+description: 'Clinicians, with filters.'
+tag: Calder
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Find a doctor'
+      pager:
+        type: none
+        options:
+          offset: 0
+      exposed_form:
+        type: basic
+        options:
+          submit_button: 'Show results'
+          reset_button: true
+          reset_button_label: 'Clear filters'
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          plugin_id: text_custom
+          empty: true
+          content: '<p>Nothing matches those filters. Try removing one, or <a href="?">clear all filters</a>.</p>'
+      sorts:
+        field_last_name_value:
+          id: field_last_name_value
+          table: node__field_last_name
+          field: field_last_name_value
+          plugin_id: standard
+          order: ASC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            person: person
+        field_roles_value:
+          id: field_roles_value
+          table: node__field_roles
+          field: field_roles_value
+          plugin_id: list_field
+          operator: or
+          value:
+            clinician: clinician
+          reduce_duplicates: true
+        field_keywords_value:
+          id: field_keywords_value
+          table: node__field_keywords
+          field: field_keywords_value
+          plugin_id: string
+          operator: word
+          value: ''
+          exposed: true
+          expose:
+            operator_id: keys_op
+            label: 'Name, specialty or condition'
+            description: ''
+            use_operator: false
+            operator: keys_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: keys
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+        field_specialties_target_id:
+          id: field_specialties_target_id
+          table: node__field_specialties
+          field: field_specialties_target_id
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          exposed: true
+          expose:
+            operator_id: specialty_op
+            label: Specialty
+            description: ''
+            use_operator: false
+            operator: specialty_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: specialty
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          vid: specialty
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_locations_target_id:
+          id: field_locations_target_id
+          table: node__field_locations
+          field: field_locations_target_id
+          plugin_id: entity_reference
+          operator: or
+          value: {  }
+          exposed: true
+          expose:
+            operator_id: location_op
+            label: Location
+            description: ''
+            use_operator: false
+            operator: location_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: location
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          sub_handler: 'default:node'
+          widget: select
+          sub_handler_settings:
+            target_bundles:
+              location: location
+            sort:
+              field: title
+              direction: ASC
+            auto_create: false
+        field_languages_target_id:
+          id: field_languages_target_id
+          table: node__field_languages
+          field: field_languages_target_id
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          exposed: true
+          expose:
+            operator_id: language_op
+            label: Language
+            description: ''
+            use_operator: false
+            operator: language_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: language
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          vid: language
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_accepting_new_value:
+          id: field_accepting_new_value
+          table: node__field_accepting_new
+          field: field_accepting_new_value
+          plugin_id: boolean
+          operator: '='
+          value: All
+          exposed: true
+          expose:
+            operator_id: accepting_op
+            label: 'Accepting new patients'
+            description: ''
+            use_operator: false
+            operator: accepting_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: accepting
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          accept_null: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: teaser
+      query:
+        type: views_query
+        options:
+          distinct: true
+      css_class: 'calder-view calder-view--sidebar-list'
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          plugin_id: result
+          empty: false
+          content: '<p class="calder-result-count">@total doctors and providers</p>'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page:
+    id: page
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: find-a-doctor
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }

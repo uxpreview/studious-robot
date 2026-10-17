@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+#ddev-silent-no-warn
+
+## Description: Save the site's current Calder content and settings back into the demo template (recipes/amc_demo)
+## Usage: save-demo
+## Example: "ddev save-demo" (then commit the changes in recipes/amc_demo)
+
+# What this saves:
+# - Content: every person, department, condition, location, trial, program,
+#   lab, event and news item, all Canvas pages, the main/utility/footer menus,
+#   and the images and terms they use.
+# - Settings: everything the template already includes (content types,
+#   fields, views, Canvas components), plus new fields on the Calder content
+#   types and new views tagged "Calder".
+# A brand-new content type has to be added to the template by hand.
+
+set -euo pipefail
+cd /var/www/html
+
+recipe="$PWD/recipes/amc_demo"
+bundles="person department condition location clinical_trial program lab event news"
+tmp="$(mktemp -d)"
+trap 'rm -rf "$tmp"' EXIT
+
+echo "Exporting settings..."
+drush config:export --destination="$tmp" --yes >/dev/null
+
+# Config the template should carry: what it already has, plus new Calder items.
+wanted="$tmp/wanted.txt"
+ls "$recipe/config" > "$wanted"
+for bundle in $bundles; do
+  ( cd "$tmp" && ls field.field.node."$bundle".*.yml core.entity_view_display.node."$bundle".*.yml 2>/dev/null ) >> "$wanted" || true
+done
+( cd "$tmp" && grep -l "^tag: Calder" views.view.*.yml 2>/dev/null ) >> "$wanted" || true
+( cd "$tmp" && ls canvas.component.sdc.calder.*.yml canvas.component.block.calder_*.yml 2>/dev/null ) >> "$wanted" || true
+# Field storage for every field used by a Calder content type.
+for f in $(sort -u "$wanted" | grep '^field\.field\.node\.'); do
+  echo "field.storage.node.$(echo "$f" | sed -E 's/^field\.field\.node\.[a-z_]+\.(.+)$/\1/')"
+done >> "$wanted"
+
+rm -f "$recipe"/config/*.yml
+for name in $(sort -u "$wanted"); do
+  if [ -f "$tmp/$name" ]; then
+    # Site-specific IDs don't belong in a template.
+    sed -e '/^uuid: /d' -e '/^_core:$/,+1d' "$tmp/$name" > "$recipe/config/$name"
+  else
+    echo "  (no longer in the site, dropped: $name)"
+  fi
+done
+
+echo "Exporting content..."
+rm -rf "$recipe/content"
+mkdir -p "$recipe/content"
+bundle_args=""
+for bundle in $bundles; do bundle_args="$bundle_args --bundle=$bundle"; done
+vendor/bin/dr content:export node $bundle_args --with-dependencies --dir="$recipe/content" 2>/dev/null >/dev/null
+vendor/bin/dr content:export canvas_page --with-dependencies --dir="$recipe/content" 2>/dev/null >/dev/null
+vendor/bin/dr content:export menu_link_content --with-dependencies --dir="$recipe/content" 2>/dev/null >/dev/null
+# Keep only the Calder menus (the base template supplies its own admin menus).
+for file in "$recipe"/content/menu_link_content/*.yml; do
+  menu="$(awk '/^  menu_name:/{getline; getline; print $2; exit}' "$file")"
+  case "$menu" in
+    main|utility|footer) ;;
+    *) rm "$file" ;;
+  esac
+done
+
+# Content that another template already supplies (for example the base
+# template's privacy policy page and its footer links) stays with that template.
+for file in $(find "$recipe/content" -name '*.yml'); do
+  name="$(basename "$file")"
+  if find recipes -path recipes/amc_demo -prune -o -name "$name" -print | grep -q .; then
+    rm "$file"
+  fi
+done
+
+# Dates in the template are relative to today; see DefaultContentDates.
+sed -i -E "s/(CONTENT_REFERENCE_DATE = ')[0-9-]+(';)/\1$(date +%Y-%m-%d)\2/" \
+  web/modules/custom/calder_demo/src/EventSubscriber/DefaultContentDates.php
+
+echo
+echo "Saved. $(ls "$recipe"/config | wc -l) settings files and $(find "$recipe"/content -name "*.yml" | wc -l) content items are in recipes/amc_demo."
+echo "Commit the changes to keep them. 'ddev reset' now rebuilds this version."

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.department.field_body
+    - field.field.node.department.field_highlights
+    - field.field.node.department.field_image
+    - field.field.node.department.field_motif
+    - field.field.node.department.field_phone
+    - field.field.node.department.field_summary
+    - node.type.department
+  module:
+    - user
+id: node.department.card
+targetEntityType: node
+bundle: department
+mode: card
+content: {  }
+hidden:
+  content_moderation_control: true
+  field_body: true
+  field_highlights: true
+  field_image: true
+  field_motif: true
+  field_phone: true
+  field_summary: true
+  links: true
+  search_api_excerpt: true

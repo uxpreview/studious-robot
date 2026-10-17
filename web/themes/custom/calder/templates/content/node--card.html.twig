@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * Card view mode for every designed content type. The data comes from
+ * CalderHooks::preprocessNode(); the markup from the card components.
+ */
+#}
+{% if calder.bundle == 'person' %}
+  {{ include('calder:person-card', calder|merge({ variant: 'grid' }), with_context = false) }}
+{% elseif calder.card %}
+  {{ include('calder:card', calder.card|merge({ variant: 'grid' }), with_context = false) }}
+{% endif %}

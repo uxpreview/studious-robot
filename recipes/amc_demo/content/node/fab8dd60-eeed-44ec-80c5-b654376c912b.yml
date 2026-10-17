@@ -1,0 +1,107 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: fab8dd60-eeed-44ec-80c5-b654376c912b
+  bundle: person
+  default_langcode: en
+  depends:
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    58808d28-7cd7-4873-8412-3911d2ffc376: taxonomy_term
+    f6c72d30-15b1-4561-90e0-37c4923f12a4: taxonomy_term
+    51259345-7f37-4f99-95e6-f97367c8e0e6: taxonomy_term
+    52589686-afc6-4e6c-aa0c-8a3b7dbf56fb: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Laila Haddad'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /people/laila-haddad
+      langcode: en
+  field_academic_rank:
+    -
+      value: associate_professor
+  field_academic_title:
+    -
+      value: 'Associate Professor of Neurology and Neuroscience'
+  field_accepting_new:
+    -
+      value: false
+  field_body:
+    -
+      value: "<p>Dr. Laila Haddad is a neuroscientist who studies how pain signals are created and amplified in the brain. Her lab focuses on the trigeminal nerve system, the network that carries sensation from the face and head and plays a central role in migraine. Her team studies why light, sound and lost sleep can set off an attack, and why attacks become more frequent for some people over time.</p><p>Dr. Haddad works closely with neurologist Dr. Elena Ruiz, and questions from Dr. Ruiz's clinic often shape the lab's experiments. The lab's work on PACAP, a signaling protein involved in migraine, helped inform the design of the migraine prevention study now enrolling at Calder. Her research is supported by national research agencies and private foundations.</p><p>As director of the PhD in Neuroscience program, Dr. Haddad oversees the training of more than 60 graduate students, and 14 PhD graduates have completed their degrees in her lab. She speaks English, Arabic and French. Dr. Haddad is a research scientist and does not see patients.</p>"
+      format: content_format
+  field_credentials:
+    -
+      value: PhD
+  field_departments:
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+  field_education:
+    -
+      value: 'PhD|Neuroscience, Westmoor University'
+    -
+      value: 'Fellowship|Postdoctoral fellowship in pain neurobiology, Lakemont University'
+  field_first_name:
+    -
+      value: Laila
+  field_job_title:
+    -
+      value: 'Neuroscientist and Director, PhD in Neuroscience Program'
+  field_keywords:
+    -
+      value: 'Laila Haddad | Neuroscientist and Director, PhD in Neuroscience Program | PhD | Neuroscience | Neurology & Neurosurgery'
+  field_languages:
+    -
+      entity: 58808d28-7cd7-4873-8412-3911d2ffc376
+    -
+      entity: f6c72d30-15b1-4561-90e0-37c4923f12a4
+    -
+      entity: 51259345-7f37-4f99-95e6-f97367c8e0e6
+  field_last_name:
+    -
+      value: Haddad
+  field_pronouns:
+    -
+      value: she/her
+  field_research_interests:
+    -
+      value: 'Neural circuits of pain'
+    -
+      value: 'Trigeminal nerve signaling in migraine'
+    -
+      value: 'Sensitivity to light and sound'
+    -
+      value: 'Sleep loss and pain thresholds'
+  field_roles:
+    -
+      value: faculty
+    -
+      value: researcher
+  field_specialties:
+    -
+      entity: 52589686-afc6-4e6c-aa0c-8a3b7dbf56fb
+  field_summary:
+    -
+      value: 'Neuroscientist who studies how pain circuits in the brain switch on and grow more sensitive in migraine, and who directs the Neuroscience PhD program.'

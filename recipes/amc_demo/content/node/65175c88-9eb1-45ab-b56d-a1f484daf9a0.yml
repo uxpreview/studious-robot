@@ -1,0 +1,69 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 65175c88-9eb1-45ab-b56d-a1f484daf9a0
+  bundle: condition
+  default_langcode: en
+  depends:
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Atrial fibrillation'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /conditions/atrial-fibrillation
+      langcode: en
+  field_also_called:
+    -
+      value: AFib
+    -
+      value: AF
+    -
+      value: 'Irregular heartbeat'
+  field_body:
+    -
+      value: '<p>Atrial fibrillation, often called AFib, is the most common type of irregular heartbeat. Normally, the heart''s upper chambers (the atria) squeeze in a steady rhythm. In AFib, chaotic electrical signals make them quiver instead. The lower chambers may then beat fast and unevenly.</p><p>AFib is not usually life-threatening by itself, but it matters for two reasons. Blood can pool in the quivering upper chambers and form clots, which raises the risk of stroke. Over time, a heart that beats too fast can also become weaker and lead to <a href="/conditions/heart-failure">heart failure</a>.</p><p>AFib becomes more common with age. High blood pressure, heart valve disease, sleep apnea, diabetes, obesity, thyroid problems and heavy alcohol use all raise the risk. Some people have AFib that comes and goes on its own (paroxysmal AFib). Others have AFib that lasts longer than a week or does not stop without treatment (persistent AFib).</p>'
+      format: content_format
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_diagnosis:
+    -
+      value: "<p>AFib is diagnosed with an electrocardiogram (ECG or EKG), a quick, painless test that records the heart's electrical activity. Because AFib can come and go, your doctor may ask you to wear a small monitor for a few days or weeks to catch it.</p><p>Other tests help find the cause and plan treatment. These may include an echocardiogram (an ultrasound of the heart), blood tests to check your thyroid and kidneys, and sometimes a sleep study to look for sleep apnea.</p>"
+      format: content_format
+  field_seek_care:
+    -
+      value: 'Call 911 if you have chest pain or pressure, fainting, severe shortness of breath, or signs of a stroke such as sudden face drooping, weakness on one side of the body or trouble speaking. Call your care team the same day if your heart is racing and does not settle down, or if you feel much more tired or short of breath than usual.'
+  field_summary:
+    -
+      value: "Atrial fibrillation (AFib) is a common heart rhythm problem in which the heart's upper chambers quiver instead of beating in a steady rhythm. It raises the risk of stroke, but it can be treated and managed well."
+  field_symptoms:
+    -
+      value: '<p>Some people feel AFib right away. Others have no symptoms at all, and AFib is found during a routine checkup or by a smartwatch alert.</p><ul><li>A fluttering, pounding or racing heartbeat</li><li>Feeling tired or weak</li><li>Shortness of breath, especially with activity</li><li>Dizziness or lightheadedness</li><li>Chest discomfort</li><li>Being less able to exercise than usual</li></ul>'
+      format: content_format
+  field_treatment:
+    -
+      value: '<p>Treatment for AFib has three goals: lower your risk of stroke, control your heart rate and, when it makes sense, restore a normal rhythm. Your care team will help you weigh the options based on your symptoms, your other health conditions and what matters most to you.</p><h3>Lowering stroke risk</h3><p>Many people with AFib take a blood thinner (anticoagulant) to prevent clots. Your doctor will use a simple scoring tool to estimate your stroke risk and decide whether you need one. For some people who cannot take blood thinners long term, a procedure called left atrial appendage closure may be an option.</p><h3>Controlling heart rate and rhythm</h3><ul><li><strong>Rate control medicines</strong>, such as beta blockers or calcium channel blockers, slow the heart down.</li><li><strong>Rhythm control medicines</strong> (antiarrhythmics) help keep the heart in a normal rhythm.</li><li><strong>Cardioversion</strong> uses a brief, controlled electrical shock, given while you are asleep, to reset the heart''s rhythm.</li></ul><h3>Catheter ablation</h3><p>Ablation uses thin, flexible tubes threaded through a vein in the leg to reach the heart. The doctor then creates tiny areas of scar tissue that block the faulty electrical signals. Many people go home the same day. Ablation tends to work best for people whose AFib has not been present for a long time, and some people need a second procedure. Calder doctors are studying ways to make ablation shorter; see our <a href="/clinical-trials">clinical trials</a>.</p><h3>Everyday steps that help</h3><p>Treating high blood pressure and sleep apnea, losing extra weight, staying active and cutting back on alcohol can reduce AFib episodes and help other treatments work better.</p>'
+      format: content_format

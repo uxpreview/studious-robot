@@ -1,0 +1,22 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Callout
+description: A full-width notice, such as when to call 911.
+group: Calder
+status: stable
+props:
+  type: object
+  required: [text]
+  properties:
+    heading: { type: string, title: Heading, examples: ["Need care today?"] }
+    text:
+      type: string
+      title: Text
+      pattern: "(.|\\r?\\n)*"
+      examples: ["For a life-threatening emergency, call 911."]
+    tone:
+      type: string
+      title: Tone
+      enum: [care, learn, discover]
+      meta:enum: { care: Urgent (red), learn: Information (blue), discover: Highlight (ochre) }
+      default: care
+      examples: [care]

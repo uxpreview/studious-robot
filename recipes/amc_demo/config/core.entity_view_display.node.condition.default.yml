@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.condition.field_also_called
+    - field.field.node.condition.field_body
+    - field.field.node.condition.field_departments
+    - field.field.node.condition.field_diagnosis
+    - field.field.node.condition.field_seek_care
+    - field.field.node.condition.field_summary
+    - field.field.node.condition.field_symptoms
+    - field.field.node.condition.field_treatment
+    - node.type.condition
+  module:
+    - user
+id: node.condition.default
+targetEntityType: node
+bundle: condition
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_also_called: true
+  field_body: true
+  field_departments: true
+  field_diagnosis: true
+  field_seek_care: true
+  field_summary: true
+  field_symptoms: true
+  field_treatment: true
+  search_api_excerpt: true

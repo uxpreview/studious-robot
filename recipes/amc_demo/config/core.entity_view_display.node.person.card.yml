@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.person.field_academic_rank
+    - field.field.node.person.field_academic_title
+    - field.field.node.person.field_accepting_new
+    - field.field.node.person.field_body
+    - field.field.node.person.field_conditions
+    - field.field.node.person.field_credentials
+    - field.field.node.person.field_departments
+    - field.field.node.person.field_education
+    - field.field.node.person.field_first_name
+    - field.field.node.person.field_job_title
+    - field.field.node.person.field_keywords
+    - field.field.node.person.field_languages
+    - field.field.node.person.field_last_name
+    - field.field.node.person.field_locations
+    - field.field.node.person.field_phone
+    - field.field.node.person.field_photo
+    - field.field.node.person.field_pronouns
+    - field.field.node.person.field_pull_quote
+    - field.field.node.person.field_research_interests
+    - field.field.node.person.field_roles
+    - field.field.node.person.field_specialties
+    - field.field.node.person.field_summary
+    - node.type.person
+  module:
+    - user
+id: node.person.card
+targetEntityType: node
+bundle: person
+mode: card
+content: {  }
+hidden:
+  content_moderation_control: true
+  field_academic_rank: true
+  field_academic_title: true
+  field_accepting_new: true
+  field_body: true
+  field_conditions: true
+  field_credentials: true
+  field_departments: true
+  field_education: true
+  field_first_name: true
+  field_job_title: true
+  field_keywords: true
+  field_languages: true
+  field_last_name: true
+  field_locations: true
+  field_phone: true
+  field_photo: true
+  field_pronouns: true
+  field_pull_quote: true
+  field_research_interests: true
+  field_roles: true
+  field_specialties: true
+  field_summary: true
+  links: true
+  search_api_excerpt: true

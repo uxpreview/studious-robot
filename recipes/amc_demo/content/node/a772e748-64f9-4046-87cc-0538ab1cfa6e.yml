@@ -1,0 +1,78 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: a772e748-64f9-4046-87cc-0538ab1cfa6e
+  bundle: lab
+  default_langcode: en
+  depends:
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    e83e65f6-8a41-48a4-af68-20e956e8a141: media
+    fab8dd60-eeed-44ec-80c5-b654376c912b: node
+    5fcb2b09-1de2-434d-9375-cc452e65d7de: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Haddad Lab'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /research/haddad-lab
+      langcode: en
+  field_body:
+    -
+      value: '<p>Migraine affects about one in seven people worldwide, yet scientists still do not fully understand what starts an attack. The Haddad Lab, led by neuroscientist Dr. Laila Haddad, studies the trigeminal nerve system, the pathway that carries sensation from the face and head, to learn how ordinary signals like light, sound or a missed night of sleep can turn into hours of pain.</p><p>The lab combines studies in lab models with brain imaging and sensory testing in human volunteers. Its work on PACAP, a signaling protein that rises during migraine attacks, helped lay the groundwork for the migraine prevention study now enrolling at Calder.</p><p>Neurologist Dr. Elena Ruiz is a core member of the lab and brings questions straight from the Headache Medicine Program. First-year students in the Neuroscience PhD program often rotate through the lab.</p>'
+      format: content_format
+  field_departments:
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+  field_image:
+    -
+      entity: e83e65f6-8a41-48a4-af68-20e956e8a141
+  field_lead:
+    -
+      entity: fab8dd60-eeed-44ec-80c5-b654376c912b
+  field_members:
+    -
+      entity: 5fcb2b09-1de2-434d-9375-cc452e65d7de
+  field_other_members:
+    -
+      value: '3 postdoctoral fellows, 5 PhD students and 2 research technicians'
+  field_recent_work:
+    -
+      value: 'Showed in lab models that a single night of lost sleep makes trigeminal nerve cells respond more strongly to light.'
+    -
+      value: 'Measured how PACAP levels change in the hours before and during a migraine attack in a group of 40 volunteers.'
+    -
+      value: 'Started a sensory testing study with Dr. Elena Ruiz to learn why light sensitivity lingers between attacks for some people with chronic migraine.'
+  field_research_focus:
+    -
+      value: 'Trigeminal pain circuits'
+    -
+      value: 'Light and sound sensitivity'
+    -
+      value: 'Sleep loss and pain thresholds'
+    -
+      value: 'PACAP and CGRP signaling'
+  field_summary:
+    -
+      value: "The Haddad Lab studies how the brain's pain circuits switch on during a migraine attack and why, for some people, they become more sensitive over time."

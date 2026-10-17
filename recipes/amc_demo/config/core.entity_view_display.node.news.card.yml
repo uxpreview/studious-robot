@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.news.field_body
+    - field.field.node.news.field_departments
+    - field.field.node.news.field_image
+    - field.field.node.news.field_mission
+    - field.field.node.news.field_people
+    - field.field.node.news.field_pull_quote
+    - field.field.node.news.field_quote_attribution
+    - field.field.node.news.field_story_type
+    - field.field.node.news.field_summary
+    - node.type.news
+  module:
+    - user
+id: node.news.card
+targetEntityType: node
+bundle: news
+mode: card
+content: {  }
+hidden:
+  content_moderation_control: true
+  field_body: true
+  field_departments: true
+  field_image: true
+  field_mission: true
+  field_people: true
+  field_pull_quote: true
+  field_quote_attribution: true
+  field_story_type: true
+  field_summary: true
+  links: true
+  search_api_excerpt: true

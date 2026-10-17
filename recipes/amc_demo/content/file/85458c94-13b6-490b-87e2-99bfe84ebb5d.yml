@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 85458c94-13b6-490b-87e2-99bfe84ebb5d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: brain-sand.png
+  uri:
+    -
+      value: 'public://calder/brain-sand.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 23385
+  status:
+    -
+      value: true

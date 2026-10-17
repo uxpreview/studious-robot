@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.program
+id: node.program.field_duration
+field_name: field_duration
+entity_type: node
+bundle: program
+label: Length
+description: 'For example: 4 years'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_age_range
+    - node.type.clinical_trial
+id: node.clinical_trial.field_age_range
+field_name: field_age_range
+entity_type: node
+bundle: clinical_trial
+label: Ages
+description: 'For example: 18–80'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

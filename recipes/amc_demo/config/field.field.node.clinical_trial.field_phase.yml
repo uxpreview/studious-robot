@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phase
+    - node.type.clinical_trial
+  module:
+    - options
+id: node.clinical_trial.field_phase
+field_name: field_phase
+entity_type: node
+bundle: clinical_trial
+label: Phase
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

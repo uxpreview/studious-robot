@@ -1,0 +1,116 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9e7c8662-8df3-4e57-9f18-c02ef3696f11
+  bundle: person
+  default_langcode: en
+  depends:
+    8936edf8-d293-416f-b534-4e70b9835f5c: node
+    ff03e0ff-d94f-4395-b819-2c852b52f5fd: node
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+    58808d28-7cd7-4873-8412-3911d2ffc376: taxonomy_term
+    ae423daf-af70-4352-b2dd-dd226fdbb9aa: taxonomy_term
+    2f175a7e-7e6b-47b1-ab8b-253d231b8160: node
+    bfb54922-e28a-4626-8753-a1eb283dd37e: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Hannah Kim'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /people/hannah-kim
+      langcode: en
+  field_academic_rank:
+    -
+      value: assistant_professor
+  field_academic_title:
+    -
+      value: 'Assistant Professor of Pediatrics'
+  field_accepting_new:
+    -
+      value: true
+  field_body:
+    -
+      value: '<p>Dr. Hannah Kim is a general pediatrician at the Children''s Pavilion. She sees children from birth through age 18 for checkups, vaccines, sick visits and long-term conditions such as asthma, ADHD and childhood <a href="/conditions/migraine">migraine</a>. For children who also see specialists, including those with <a href="/conditions/congenital-heart-disease">congenital heart disease</a> followed in the Pediatric Heart Clinic, she is the home base that keeps everyone on the same page.</p><p>Dr. Kim directs the pediatrics clerkship, the required eight-week rotation in which third-year Calder medical students learn to care for children. Students spend time in her clinic, on the Pavilion''s inpatient unit and in the newborn nursery at Calder University Hospital. Students know her for giving specific, kind feedback on the same day.</p><p>Dr. Kim speaks English and Korean. Outside the exam room, she runs a program that gives a free picture book to every child at well-child visits from 6 months to 5 years old.</p>'
+      format: content_format
+  field_conditions:
+    -
+      entity: 8936edf8-d293-416f-b534-4e70b9835f5c
+    -
+      entity: ff03e0ff-d94f-4395-b819-2c852b52f5fd
+  field_credentials:
+    -
+      value: MD
+  field_departments:
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+  field_education:
+    -
+      value: 'Medical school|Calder University School of Medicine'
+    -
+      value: "Residency|Pediatrics, Lakemont Children's Hospital"
+    -
+      value: 'Board certification|Pediatrics'
+  field_first_name:
+    -
+      value: Hannah
+  field_job_title:
+    -
+      value: 'General Pediatrician and Pediatrics Clerkship Director'
+  field_keywords:
+    -
+      value: "Hannah Kim | General Pediatrician and Pediatrics Clerkship Director | MD | Pediatrics | Congenital heart disease | Congenital heart defect | CHD | Heart condition present at birth | Migraine | Migraine headache | Migraine with aura | Chronic migraine | Children's Health"
+  field_languages:
+    -
+      entity: 58808d28-7cd7-4873-8412-3911d2ffc376
+    -
+      entity: ae423daf-af70-4352-b2dd-dd226fdbb9aa
+  field_last_name:
+    -
+      value: Kim
+  field_locations:
+    -
+      entity: 2f175a7e-7e6b-47b1-ab8b-253d231b8160
+  field_pronouns:
+    -
+      value: she/her
+  field_pull_quote:
+    -
+      value: 'Parents know their children best. I listen first, explain my thinking out loud and make sure families leave with a plan they can actually follow at home.'
+  field_research_interests:
+    -
+      value: 'Clinical teaching and feedback'
+    -
+      value: 'Early literacy in pediatric primary care'
+  field_roles:
+    -
+      value: clinician
+    -
+      value: faculty
+  field_specialties:
+    -
+      entity: bfb54922-e28a-4626-8753-a1eb283dd37e
+  field_summary:
+    -
+      value: 'General pediatrician who cares for children from birth through age 18 and teaches third-year medical students on their pediatrics rotation.'

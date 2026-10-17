@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" color="#16181d" role="img" aria-label="A hanging mobile with a large red shape">
+<title>A hanging mobile with a large red shape</title>
+<rect width="1200" height="900" fill="#f2ede4"/>
+<g style="transform-origin: 493.9px 0px"><g transform="translate(493.9 155.0) scale(2.524)">
+<line x1="0" y1="-63.4" x2="0" y2="-7.8" stroke="currentColor" stroke-width="0.89"/>
+<g fill="none" stroke="currentColor" stroke-width="0.89" stroke-linecap="round"><path d="M-43.8,14.2 C-14.7,-15.5 88.7,-15.5 117.8,14.2"/><line x1="-43.8" y1="14.2" x2="-43.8" y2="74.2"/><line x1="117.8" y1="14.2" x2="117.8" y2="114.2"/><line x1="-43.8" y1="74.2" x2="-43.8" y2="91.0"/><path d="M55.6,123.2 C74.0,104.4 139.2,104.4 157.6,123.2"/><line x1="55.6" y1="123.2" x2="55.6" y2="203.2"/><line x1="157.6" y1="123.2" x2="157.6" y2="163.2"/><line x1="55.6" y1="203.2" x2="55.6" y2="209.6"/><line x1="157.6" y1="163.2" x2="157.6" y2="171.2"/></g>
+<g fill="currentColor"><circle cx="0.0" cy="-7.8" r="2.6"/><circle cx="117.8" cy="109.3" r="2.6"/></g>
+<g fill="#c23a2b"><path d="M-77.9,76.7 C-69.0,69.9 -46.7,73.0 -36.5,77.2 C-26.3,81.4 -19.2,93.7 -16.7,101.8 C-14.2,109.9 -18.3,119.0 -21.7,125.8 C-25.0,132.7 -29.3,139.7 -36.6,143.1 C-43.9,146.4 -56.5,149.8 -65.5,145.7 C-74.4,141.5 -88.2,129.5 -90.3,118.0 C-92.4,106.6 -86.9,83.5 -77.9,76.7Z"/></g>
+<g fill="currentColor"><circle cx="55.6" cy="219.2" r="16.0"/></g>
+<g fill="#c23a2b"><circle cx="157.6" cy="183.2" r="20.0"/></g>
+</g></g></svg>

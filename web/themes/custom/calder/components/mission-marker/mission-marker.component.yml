@@ -1,0 +1,19 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Mission marker
+description: A small colored shape plus an uppercase label. Marks which mission (care, learn, discover) something belongs
+  to.
+group: Calder
+status: stable
+noUi: true
+props:
+  type: object
+  properties:
+    mission:
+      type:
+      - string
+      - 'null'
+      description: 'One of: care, learn, discover, neutral.'
+    label:
+      type:
+      - string
+      - 'null'

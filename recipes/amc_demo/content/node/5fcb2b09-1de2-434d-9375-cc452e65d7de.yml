@@ -1,0 +1,124 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5fcb2b09-1de2-434d-9375-cc452e65d7de
+  bundle: person
+  default_langcode: en
+  depends:
+    ff03e0ff-d94f-4395-b819-2c852b52f5fd: node
+    f3bce172-7265-4e6b-ac1d-588ebf6a23d9: node
+    58808d28-7cd7-4873-8412-3911d2ffc376: taxonomy_term
+    d089a0d7-423f-4e5e-b783-3cd2878d7aad: taxonomy_term
+    d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9: node
+    58f0e4ec-88f1-483c-a9f8-11de647b3279: taxonomy_term
+    ba9971ca-6f9a-439e-8090-4014c13dfda8: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Elena Ruiz'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /people/elena-ruiz
+      langcode: en
+  field_academic_rank:
+    -
+      value: professor
+  field_academic_title:
+    -
+      value: 'Professor of Neurology'
+  field_accepting_new:
+    -
+      value: false
+  field_body:
+    -
+      value: '<p>Dr. Elena Ruiz is a neurologist and the director of the Headache Medicine Program at Calder University Hospital. She cares for adults with chronic <a href="/conditions/migraine">migraine</a>, migraine with aura, cluster headache and headaches that have not improved with earlier treatment. Her approach combines medicines, procedures such as nerve blocks and practical changes to sleep, meals and daily routines.</p><p>Dr. Ruiz earned both a medical degree and a PhD in neuroscience, and her research connects the clinic to the lab. She is the principal investigator of the migraine prevention study now enrolling at Calder, and she is a core member of Dr. Laila Haddad''s lab, where the team studies why attacks become more frequent for some people over time. She has a special interest in making headache care and research easier to reach for Spanish-speaking patients.</p><p>Dr. Ruiz is not accepting new patients right now. New patients with migraine can be seen by other members of the headache medicine team, usually within four to six weeks. She teaches neurology residents and joins the monthly virtual migraine support group as a guest speaker.</p>'
+      format: content_format
+  field_conditions:
+    -
+      entity: ff03e0ff-d94f-4395-b819-2c852b52f5fd
+  field_credentials:
+    -
+      value: 'MD, PhD'
+  field_departments:
+    -
+      entity: f3bce172-7265-4e6b-ac1d-588ebf6a23d9
+  field_education:
+    -
+      value: 'Medical school|Calder University School of Medicine'
+    -
+      value: 'PhD|Neuroscience, Calder University'
+    -
+      value: 'Residency|Neurology, Westmoor University Hospital'
+    -
+      value: 'Fellowship|Headache Medicine, Lakemont University Medical Center'
+    -
+      value: 'Board certification|Neurology; Headache Medicine'
+  field_first_name:
+    -
+      value: Elena
+  field_job_title:
+    -
+      value: 'Neurologist and Director, Headache Medicine Program'
+  field_keywords:
+    -
+      value: 'Elena Ruiz | Neurologist and Director, Headache Medicine Program | MD, PhD | Neurology | Headache medicine | Migraine | Migraine headache | Migraine with aura | Chronic migraine | Neurology & Neurosurgery'
+  field_languages:
+    -
+      entity: 58808d28-7cd7-4873-8412-3911d2ffc376
+    -
+      entity: d089a0d7-423f-4e5e-b783-3cd2878d7aad
+  field_last_name:
+    -
+      value: Ruiz
+  field_locations:
+    -
+      entity: d0adf5bd-a71b-477e-a8e9-4e03e1ed12d9
+  field_pronouns:
+    -
+      value: she/her
+  field_pull_quote:
+    -
+      value: 'People with migraine have often been told it is just a headache. I start by believing them, and then we build a plan together, one step at a time.'
+  field_research_interests:
+    -
+      value: 'Migraine prevention'
+    -
+      value: 'Light sensitivity in chronic migraine'
+    -
+      value: 'Including Spanish-speaking patients in clinical research'
+  field_roles:
+    -
+      value: clinician
+    -
+      value: faculty
+    -
+      value: researcher
+  field_specialties:
+    -
+      entity: 58f0e4ec-88f1-483c-a9f8-11de647b3279
+    -
+      entity: ba9971ca-6f9a-439e-8090-4014c13dfda8
+  field_summary:
+    -
+      value: "Headache specialist and neuroscientist who treats complex and chronic migraine and leads Calder's migraine prevention research."

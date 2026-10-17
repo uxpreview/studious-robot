@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlights
+    - node.type.program
+id: node.program.field_highlights
+field_name: field_highlights
+entity_type: node
+bundle: program
+label: Highlights
+description: 'Three numbers, written as "Number|Label".'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

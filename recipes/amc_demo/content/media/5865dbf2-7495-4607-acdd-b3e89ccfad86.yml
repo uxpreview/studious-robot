@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 5865dbf2-7495-4607-acdd-b3e89ccfad86
+  bundle: image
+  default_langcode: en
+  depends:
+    f68eb94a-f595-4b0a-b4fa-43fd12ac01a6: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Illustration: learn-sand'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Illustration: a hanging mobile in blue'
+      title: ''
+      width: 1200
+      height: 900
+      entity: f68eb94a-f595-4b0a-b4fa-43fd12ac01a6

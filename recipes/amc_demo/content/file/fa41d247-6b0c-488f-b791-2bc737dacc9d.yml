@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: fa41d247-6b0c-488f-b791-2bc737dacc9d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: heart-sand.png
+  uri:
+    -
+      value: 'public://calder/heart-sand.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 20756
+  status:
+    -
+      value: true

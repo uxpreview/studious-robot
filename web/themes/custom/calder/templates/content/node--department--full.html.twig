@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Department. Nearly everything on this page is assembled automatically: the
+ * people, conditions, trials, programs, labs, events and news all point at
+ * the department, so the page grows as the department's content does.
+ */
+#}
+{% set d = calder %}
+{% set actions %}
+  <a href="/find-a-doctor" class="button">{{ icon('phosphor', 'stethoscope', { size: 20 }) }}Find a doctor</a>
+  {% if d.phone %}<a href="tel:{{ d.phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}" class="button bg-transparent text-ink ring-1 ring-line-strong hover:bg-sand hover:text-ink">{{ icon('phosphor', 'phone', { size: 20 }) }}{{ d.phone }}</a>{% endif %}
+{% endset %}
+{% set aside %}
+  <div class="mx-auto max-w-lg text-ink">{{ include('calder:illustration', { variant: d.motif }, with_context = false) }}</div>
+{% endset %}
+
+<article{{ attributes }}>
+  {{ include('@calder/includes/page-header.twig', {
+    crumb: { title: 'Patients & Visitors', url: '/patients' },
+    mission: 'care',
+    eyebrow: 'Department',
+    title: d.title,
+    intro: d.summary,
+    actions: actions,
+    aside: aside,
+  }, with_context = false) }}
+
+  {% if d.highlights %}
+    <div class="bg-night text-paper">
+      <ul class="container mx-auto m-0 grid list-none gap-8 px-4 py-12 sm:grid-cols-3">
+        {% for h in d.highlights %}
+          <li class="m-0 flex flex-col gap-2 border-l-2 {{ ['border-care', 'border-learn', 'border-discover'][loop.index0] }} ps-5">
+            <span class="block font-serif text-[3.25rem] leading-none" style="font-variation-settings: 'opsz' 60">{{ h.value }}</span>
+            <span class="text-base text-paper/80">{{ h.label }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  {% if d.body %}
+    <div class="container mx-auto px-4 py-16 md:py-20">
+      <div class="prose-calder mx-auto text-xl">{{ d.body }}</div>
+    </div>
+  {% endif %}
+
+  {{ include('@calder/includes/connections.twig', {
+    groups: d.connections,
+    heading: 'Inside the ' ~ d.title,
+    intro: 'Our people, the conditions we treat, and the research and teaching happening here.',
+  }, with_context = false) }}
+</article>

@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_exclude
+third_party_settings:
+  search_api_exclude:
+    enabled: true
+name: Condition
+type: condition
+description: 'A health condition, explained in plain language.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

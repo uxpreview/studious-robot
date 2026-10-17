@@ -1,0 +1,87 @@
+{#
+/**
+ * @file
+ * Condition page: plain-language guide, with the urgent-care alert placed
+ * where nobody can miss it, then the specialists and trials connected to it.
+ */
+#}
+{% set c = calder %}
+{% set people = c.connections|filter(g => g.key == 'people')|first %}
+{% set trials = c.connections|filter(g => g.key == 'trials')|first %}
+{% set sections = [
+  { id: 'overview', label: 'Overview', content: c.body },
+  { id: 'symptoms', label: 'Symptoms', content: c.symptoms },
+  { id: 'diagnosis', label: 'Diagnosis', content: c.diagnosis },
+  { id: 'treatment', label: 'Treatment', content: c.treatment },
+]|filter(s => s.content) %}
+
+{% set details %}
+  {% if c.also_called %}
+    <p class="m-0 text-base text-ink-soft"><span class="font-bold text-ink">Also called:</span> {{ c.also_called|join(', ') }}</p>
+  {% endif %}
+{% endset %}
+{% set aside %}
+  <div class="mx-auto max-w-md text-ink">{{ include('calder:illustration', { variant: c.motif }, with_context = false) }}</div>
+{% endset %}
+
+<article{{ attributes }}>
+  {{ include('@calder/includes/page-header.twig', {
+    crumb: { title: 'Conditions we treat', url: '/conditions' },
+    mission: 'care',
+    eyebrow: 'Condition',
+    title: c.title,
+    intro: c.summary,
+    details: details,
+    aside: aside,
+  }, with_context = false) }}
+
+  {% if c.seek_care %}
+    <div class="bg-care-tint">
+      <div class="container mx-auto flex gap-4 px-4 py-6" role="note" aria-label="When to get care right away">
+        <span class="mt-0.5 shrink-0 text-care-deep">{{ icon('phosphor', 'first-aid', { size: 28 }) }}</span>
+        <p class="m-0 max-w-4xl text-lg text-ink"><strong class="text-care-deep">Get care right away.</strong> {{ c.seek_care }}</p>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="container mx-auto grid gap-12 px-4 py-16 md:py-20 lg:grid-cols-12">
+    <nav aria-label="On this page" class="lg:col-span-3">
+      <div class="lg:sticky lg:top-32">
+        <p class="m-0 text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">On this page</p>
+        <ol class="m-0 mt-4 flex list-none flex-wrap gap-2 p-0 lg:flex-col lg:gap-0 lg:border-l lg:border-line">
+          {% for s in sections %}
+            <li class="m-0"><a href="#{{ s.id }}" class="block rounded-full border border-line px-3 py-1.5 text-base text-ink no-underline hover:border-ink lg:-ml-px lg:rounded-none lg:border-0 lg:border-l-2 lg:border-transparent lg:px-4 lg:py-2 lg:hover:border-care">{{ s.label }}</a></li>
+          {% endfor %}
+          {% if people %}<li class="m-0"><a href="#connections-people" class="block rounded-full border border-line px-3 py-1.5 text-base text-ink no-underline hover:border-ink lg:-ml-px lg:rounded-none lg:border-0 lg:border-l-2 lg:border-transparent lg:px-4 lg:py-2 lg:hover:border-care">Specialists</a></li>{% endif %}
+          {% if trials %}<li class="m-0"><a href="#connections-trials" class="block rounded-full border border-line px-3 py-1.5 text-base text-ink no-underline hover:border-ink lg:-ml-px lg:rounded-none lg:border-0 lg:border-l-2 lg:border-transparent lg:px-4 lg:py-2 lg:hover:border-care">Clinical trials</a></li>{% endif %}
+        </ol>
+      </div>
+    </nav>
+
+    <div class="lg:col-span-8 lg:col-start-5">
+      {% for s in sections %}
+        <section id="{{ s.id }}" class="scroll-mt-32 {{ not loop.first ? 'mt-16 border-t border-line pt-14' }}" aria-labelledby="{{ s.id }}-heading">
+          <h2 id="{{ s.id }}-heading" class="text-headline">{{ s.label }}</h2>
+          <div class="prose-calder mt-6">{{ s.content }}</div>
+        </section>
+      {% endfor %}
+
+      {% if c.departments %}
+        <div class="mt-16 rounded-2xl border border-line bg-white p-8">
+          <p class="m-0 text-sm font-bold tracking-[0.08em] uppercase text-ink-soft">Where we treat {{ c.title|lower }}</p>
+          <ul class="m-0 mt-4 flex list-none flex-col gap-2 p-0">
+            {% for d in c.departments %}
+              <li class="m-0"><a href="{{ d.url }}" class="font-serif text-xl">{{ d.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {{ include('@calder/includes/connections.twig', {
+    groups: c.connections,
+    heading: 'Care and research for ' ~ c.title|lower,
+    intro: 'The specialists who treat this condition, and the studies looking for better ways to treat it.',
+  }, with_context = false) }}
+</article>

@@ -1,0 +1,72 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 8936edf8-d293-416f-b534-4e70b9835f5c
+  bundle: condition
+  default_langcode: en
+  depends:
+    a253bc88-972b-42f9-a33c-9e4277297ace: node
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Congenital heart disease'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /conditions/congenital-heart-disease
+      langcode: en
+  field_also_called:
+    -
+      value: 'Congenital heart defect'
+    -
+      value: CHD
+    -
+      value: 'Heart condition present at birth'
+  field_body:
+    -
+      value: "<p>Congenital heart disease (CHD) means a baby is born with a difference in how the heart or nearby blood vessels formed. It is the most common type of birth defect, affecting about 1 in 100 babies.</p><p>Some heart differences are small and close on their own. Others affect how blood flows through the heart and need treatment soon after birth. Common types include holes between the heart's chambers (atrial or ventricular septal defects), narrow or leaky heart valves, a narrowed aorta (coarctation of the aorta) and tetralogy of Fallot. In most cases there is no clear cause, and nothing a parent did or did not do led to it.</p><p>Thanks to better treatment, most children with CHD now grow up to be adults. People with CHD need heart checkups throughout their lives, even after a successful repair.</p>"
+      format: content_format
+  field_departments:
+    -
+      entity: a253bc88-972b-42f9-a33c-9e4277297ace
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_diagnosis:
+    -
+      value: "<p>A fetal echocardiogram, a detailed ultrasound of the baby's heart, can find many heart differences during pregnancy. After birth, every newborn has a quick, painless pulse oximetry screening that measures oxygen in the blood.</p><p>To diagnose and plan treatment, a pediatric cardiologist may use an echocardiogram, an ECG, a chest x-ray, a cardiac MRI or CT scan, or a cardiac catheterization. At the Children's Pavilion, a faster MRI scan lets many children ages 4 and up have their scan awake, without sedation.</p>"
+      format: content_format
+  field_seek_care:
+    -
+      value: "Call 911 if your child is struggling to breathe, turns blue or gray around the lips or face, faints, has a seizure or is very hard to wake up. Call your child's heart team the same day if your baby is feeding poorly, sweating during feeds, breathing fast while resting or not gaining weight."
+  field_summary:
+    -
+      value: 'Congenital heart disease is a difference in the structure of the heart that a baby is born with. Some types are mild and need no treatment, while others need surgery or a procedure, and most children with CHD now grow up to be healthy adults.'
+  field_symptoms:
+    -
+      value: '<p>Many heart differences are found before birth on a routine ultrasound, or soon after birth with a simple oxygen test. Others are found later, sometimes when a doctor hears a heart murmur.</p><p><strong>In babies:</strong></p><ul><li>Fast or hard breathing</li><li>Blue or gray color of the lips, tongue or fingernails</li><li>Getting tired or sweaty while feeding</li><li>Slow weight gain</li><li>Being unusually sleepy</li></ul><p><strong>In older children and teens:</strong></p><ul><li>Getting tired or out of breath more easily than other kids during play</li><li>Fainting or chest pain during exercise</li><li>Swelling in the legs, belly or around the eyes</li><li>A heart murmur heard at a checkup</li></ul>'
+      format: content_format
+  field_treatment:
+    -
+      value: "<p>Treatment depends on the type of heart difference and how it affects your child. A pediatric cardiologist will explain the plan and what to expect over time.</p><h3>Watchful waiting</h3><p>Small holes and mild valve changes often need only regular checkups. Many close or improve on their own.</p><h3>Medicines</h3><p>Medicines can help the heart pump better, control heart rate or remove extra fluid while a child grows or waits for a procedure.</p><h3>Catheter procedures</h3><p>Using thin tubes passed through a blood vessel, doctors can close some holes, open narrow valves with a small balloon or widen narrowed blood vessels, often without open-heart surgery.</p><h3>Heart surgery</h3><p>Some children need surgery to repair the heart, sometimes in stages over the first few years of life.</p><h3>Lifelong care</h3><p>Children with CHD need regular heart checkups into adulthood. Our Pediatric Heart Clinic works with your child's pediatrician on everyday health, growth, vaccines and school, and helps teens get ready to move to adult congenital heart care.</p>"
+      format: content_format

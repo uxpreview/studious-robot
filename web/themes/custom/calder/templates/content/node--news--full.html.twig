@@ -1,0 +1,62 @@
+{#
+/**
+ * @file
+ * News story: an editorial layout with a reading-width body and a pull quote
+ * set between the opening paragraphs and the rest of the story.
+ */
+#}
+{% set n = calder %}
+{% set rule = { care: 'bg-care', learn: 'bg-learn', discover: 'bg-discover', neutral: 'bg-ink' } %}
+<article{{ attributes }}>
+  <header class="container mx-auto px-4 pt-8 md:pt-10">
+    <nav aria-label="Breadcrumb" class="text-sm">
+      <ol class="m-0 flex list-none flex-wrap gap-2 p-0 text-ink-soft">
+        <li class="m-0"><a href="/" class="text-ink-soft">Home</a></li>
+        <li class="m-0" aria-hidden="true">/</li>
+        <li class="m-0"><a href="/news" class="text-ink-soft">News</a></li>
+      </ol>
+    </nav>
+    <div class="mx-auto mt-12 max-w-4xl text-center">
+      <div class="flex justify-center">{{ include('calder:mission-marker', { mission: n.mission, label: n.story_type_label }, with_context = false) }}</div>
+      <h1 class="mt-6 text-title">{{ n.title }}</h1>
+      <p class="mx-auto mt-6 mb-0 max-w-2xl text-[1.3125rem] leading-relaxed text-ink-soft">{{ n.summary }}</p>
+      <p class="mt-6 mb-0 text-base text-ink-soft"><time datetime="{{ n.date_iso }}">{{ n.date }}</time>{% if n.mission_label %} · {{ n.mission_label }}{% endif %}</p>
+    </div>
+  </header>
+
+  {% if n.image %}
+    <figure class="container mx-auto mt-12 px-4">
+      <img src="{{ n.image.src }}" alt="{{ n.image.alt }}" width="{{ n.image.width }}" height="{{ n.image.height }}" class="mx-auto max-h-[36rem] w-full max-w-5xl rounded-2xl object-cover">
+    </figure>
+  {% endif %}
+
+  <div class="container mx-auto px-4 py-14 md:py-20">
+    <div class="prose-calder mx-auto text-xl">
+      {{ n.body_parts[0] }}
+      {% if n.quote %}
+        <figure class="relative my-12 py-2 ps-8">
+          <span class="absolute top-0 bottom-0 left-0 w-1 rounded-full {{ rule[n.mission] }}" aria-hidden="true"></span>
+          <blockquote class="m-0 font-serif text-[1.875rem] leading-snug text-ink" style="font-variation-settings: 'opsz' 36">“{{ n.quote }}”</blockquote>
+          {% if n.quote_attribution %}<figcaption class="mt-4 text-base text-ink-soft">{{ n.quote_attribution }}</figcaption>{% endif %}
+        </figure>
+      {% endif %}
+      {{ n.body_parts[1] }}
+    </div>
+  </div>
+
+  {% if n.people %}
+    <section class="border-t border-line bg-white py-16" aria-labelledby="people-heading">
+      <div class="container mx-auto px-4">
+        <h2 id="people-heading" class="text-subhead">People in this story</h2>
+        <ul class="m-0 mt-8 grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3">
+          {% for p in n.people %}
+            <li class="m-0 flex items-center gap-4 rounded-2xl border border-line p-5">
+              {{ include('calder:avatar', { initials: p.initials, roles: p.roles, photo: p.photo, size: 'sm' }, with_context = false) }}
+              <span><a href="{{ p.url }}" class="font-bold">{{ p.display_name }}</a><br><span class="text-sm text-ink-soft">{{ p.job_title }}</span></span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  {% endif %}
+</article>

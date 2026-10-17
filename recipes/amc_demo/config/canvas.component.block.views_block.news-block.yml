@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - views
+active_version: 9b0ed2a1eeed998c
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:news-block'
+        label: 'Calder: Latest news'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Calder: Latest news'
+id: block.views_block.news-block
+provider: views
+source: block
+source_local_id: 'views_block:news-block'

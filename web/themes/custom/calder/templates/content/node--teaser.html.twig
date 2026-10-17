@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * Teaser view mode: the horizontal "row" version of each card, used by the
+ * directory and finder listings.
+ */
+#}
+{% if calder.bundle == 'person' %}
+  {{ include('calder:person-card', calder|merge({ variant: 'row' }), with_context = false) }}
+{% elseif calder.card %}
+  {{ include('calder:card', calder.card|merge({ variant: 'row' }), with_context = false) }}
+{% endif %}

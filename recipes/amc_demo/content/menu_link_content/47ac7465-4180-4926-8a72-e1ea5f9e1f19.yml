@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 47ac7465-4180-4926-8a72-e1ea5f9e1f19
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    b3771da2-6003-4614-a6dc-a2876499a726: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: News
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'internal:/news'
+      title: null
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 2
+  expanded:
+    -
+      value: true
+  parent:
+    -
+      value: 'menu_link_content:b3771da2-6003-4614-a6dc-a2876499a726'
+  revision_translation_affected:
+    -
+      value: true

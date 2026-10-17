@@ -1,0 +1,42 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Section
+description: A full-width band with an optional heading and a grid of components.
+group: Calder
+status: stable
+props:
+  type: object
+  required: [background, columns]
+  properties:
+    eyebrow: { type: string, title: Eyebrow, examples: ["Our missions"] }
+    heading: { type: string, title: Heading, examples: ["Care, learning and discovery"] }
+    intro:
+      type: string
+      title: Introduction
+      pattern: "(.|\\r?\\n)*"
+      examples: ["Three missions, one institution."]
+    mission:
+      type: string
+      title: Eyebrow color
+      enum: [care, learn, discover, neutral]
+      meta:enum: { care: Care (red), learn: Learn (blue), discover: Discover (ochre), neutral: Black }
+      default: neutral
+      examples: [neutral]
+    link_label: { type: string, title: Link label, examples: ["See all"] }
+    link_url: { type: string, title: Link, format: uri-reference, examples: ["/news"] }
+    background:
+      type: string
+      title: Background
+      enum: [paper, white, sand, night]
+      meta:enum: { paper: Paper, white: White, sand: Sand, night: Night (dark) }
+      default: paper
+      examples: [paper]
+    columns:
+      type: string
+      title: Columns
+      enum: ["1", "2", "3", "4"]
+      meta:enum: { "1": One, "2": Two, "3": Three, "4": Four }
+      default: "3"
+      examples: ["3"]
+slots:
+  content:
+    title: Content

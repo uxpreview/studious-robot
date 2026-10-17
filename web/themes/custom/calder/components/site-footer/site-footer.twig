@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Site footer. Dark ("night") so the mobile's colors carry the brand at the
+ * end of every page. Columns come from the footer menu: top-level items are
+ * the column headings, their children are the links.
+ */
+#}
+<footer class="dark bg-night text-paper" role="contentinfo">
+  <div class="container mx-auto px-4 pt-16 pb-10 md:pt-24">
+    <div class="grid gap-12 border-b border-white/15 pb-14 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        {{ include('calder:logo', { tone: 'light', url: '/' }, with_context = false) }}
+        <p class="mt-8 max-w-md font-serif text-[1.75rem] leading-snug text-paper" style="font-variation-settings: 'opsz' 30">Care, learning and discovery, each holding the others in balance.</p>
+        <dl class="mt-8 grid gap-4 text-base text-muted-foreground">
+          <div class="flex gap-3"><dt class="shrink-0">{{ icon('phosphor', 'map-pin', { size: 20 }) }}<span class="sr-only">Address</span></dt><dd class="m-0">1200 University Avenue, Calder</dd></div>
+          <div class="flex gap-3"><dt class="shrink-0">{{ icon('phosphor', 'phone', { size: 20 }) }}<span class="sr-only">Phone</span></dt><dd class="m-0"><a href="tel:5555550100" class="text-paper">(555) 555-0100</a></dd></div>
+          <div class="flex gap-3"><dt class="shrink-0 text-care">{{ icon('phosphor', 'first-aid', { size: 20 }) }}<span class="sr-only">Emergency</span></dt><dd class="m-0">In an emergency, call 911.</dd></div>
+        </dl>
+      </div>
+      <nav class="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 lg:col-span-7" aria-label="Footer">
+        {% for column in columns|filter(c => c.children) %}
+          <div>
+            <h2 class="mb-4 font-sans text-sm font-bold tracking-[0.12em] uppercase text-muted-foreground">{{ column.title }}</h2>
+            <ul class="m-0 flex list-none flex-col gap-3 p-0">
+              {% for link in column.children %}
+                <li class="m-0"><a href="{{ link.url }}" class="text-paper no-underline hover:underline">{{ link.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </nav>
+    </div>
+    <div class="flex flex-col gap-4 pt-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+      <div class="flex flex-col gap-3 md:flex-row md:items-center md:gap-6">
+        <p class="m-0">© {{ 'now'|date('Y') }} Calder University Health. A fictional institution for demonstration only.</p>
+        {# Footer menu items without children (such as the privacy links Drupal
+           CMS adds) are legal links, so they sit down here. #}
+        {% set legal = columns|filter(c => not c.children) %}
+        {% if legal %}
+          <ul class="m-0 flex list-none flex-wrap gap-x-5 gap-y-2 p-0">
+            {% for link in legal %}
+              <li class="m-0"><a href="{{ link.url }}"{% if link.rel %} rel="{{ link.rel }}"{% endif %} class="inline-flex min-h-6 items-center text-paper">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      <p class="m-0">Built with <a href="https://new.drupal.org/drupal-cms" class="text-paper">Drupal CMS</a> and <a href="https://claude.com/claude-code" class="text-paper">Claude</a>.</p>
+    </div>
+  </div>
+</footer>

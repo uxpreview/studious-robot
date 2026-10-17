@@ -1,0 +1,21 @@
+/* The whole mobile sways from its hanging point at the top center. */
+.calder-mobile--sway svg > g {
+  /* transform-origin (the hanging point) is set inline by the generator. */
+  transform-box: view-box;
+  animation: calder-sway 9s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+@keyframes calder-sway {
+  from {
+    rotate: -1.4deg;
+  }
+  to {
+    rotate: 1.4deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .calder-mobile--sway svg > g {
+    animation: none;
+  }
+}

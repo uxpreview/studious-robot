@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seek_care
+    - node.type.condition
+id: node.condition.field_seek_care
+field_name: field_seek_care
+entity_type: node
+bundle: condition
+label: 'When to get care right away'
+description: 'Shown as an alert near the top of the page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

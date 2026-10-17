@@ -1,0 +1,17 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Quick link
+description: A compact icon link for a top task. Use inside "Doctor search and quick links".
+group: Calder
+status: stable
+props:
+  type: object
+  required: [label, url, icon]
+  properties:
+    label: { type: string, title: Label, examples: ["Locations"] }
+    url: { type: string, title: Link, format: uri-reference, examples: ["/locations"] }
+    icon:
+      type: string
+      title: Icon
+      enum: [map-pin, first-aid, flask, credit-card, calendar-blank, graduation-cap, stethoscope, phone, hospital, users]
+      meta:enum: { map-pin: Location pin, first-aid: First aid, flask: Research flask, credit-card: Payment card, calendar-blank: Calendar, graduation-cap: Graduation cap, stethoscope: Stethoscope, phone: Phone, hospital: Hospital, users: People }
+      examples: [map-pin]

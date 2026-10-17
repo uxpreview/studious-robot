@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.department.field_body
+    - field.field.node.department.field_highlights
+    - field.field.node.department.field_image
+    - field.field.node.department.field_motif
+    - field.field.node.department.field_phone
+    - field.field.node.department.field_summary
+    - node.type.department
+  module:
+    - user
+id: node.department.default
+targetEntityType: node
+bundle: department
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_body: true
+  field_highlights: true
+  field_image: true
+  field_motif: true
+  field_phone: true
+  field_summary: true
+  search_api_excerpt: true

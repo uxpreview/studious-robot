@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ba0855d1-27fe-4868-bb9d-5027d41f5648
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: story-blue-sand.png
+  uri:
+    -
+      value: 'public://calder/story-blue-sand.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 20295
+  status:
+    -
+      value: true

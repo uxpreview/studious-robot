@@ -1,0 +1,107 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9af0a39d-40fe-4ff5-9a4c-babd8134a521
+  bundle: person
+  default_langcode: en
+  depends:
+    4a09ed4c-4b05-4a7a-bf0c-7a33950be1dc: node
+    c840e3c7-3495-4d20-a89e-eba468b57c32: node
+    58808d28-7cd7-4873-8412-3911d2ffc376: taxonomy_term
+    d089a0d7-423f-4e5e-b783-3cd2878d7aad: taxonomy_term
+    935ffd82-6c45-423a-b291-3d959d4f224c: taxonomy_term
+    bc511c44-7447-4f97-bf38-dc5ed528d0b2: node
+    1b432a6b-8c3e-461f-86f1-93ef31296f14: taxonomy_term
+    1f30579e-5022-4ec2-8c2c-e42ec050e4c6: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Maria Santos'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /people/maria-santos
+      langcode: en
+  field_academic_rank:
+    -
+      value: none
+  field_accepting_new:
+    -
+      value: true
+  field_body:
+    -
+      value: "<p>Maria Santos is a nurse practitioner in the Heart Failure Clinic at the Riverside Outpatient Center. She sees patients between their cardiologist visits to adjust medicines, check lab results, look for early signs of fluid buildup and answer the questions that come up in daily life. Many patients see her within a week of leaving the hospital, when the risk of going back is highest.</p><p>Before becoming a nurse practitioner, she spent 12 years as a cardiac nurse at Calder University Hospital. She earned her Doctor of Nursing Practice at Westmoor University, where her final project focused on helping patients keep track of their daily weight. She now trains new nurses in the clinic and works with Dr. Marcus Reed on the clinic's at-home monitoring program.</p><p>Santos sees patients in English, Spanish and Portuguese. She also leads the Institute's free community heart screenings, where she checks blood pressure and heart rhythm and helps neighbors find follow-up care.</p>"
+      format: content_format
+  field_conditions:
+    -
+      entity: 4a09ed4c-4b05-4a7a-bf0c-7a33950be1dc
+  field_credentials:
+    -
+      value: 'DNP, APRN'
+  field_departments:
+    -
+      entity: c840e3c7-3495-4d20-a89e-eba468b57c32
+  field_education:
+    -
+      value: 'Fellowship|Cardiology Nurse Practitioner Fellowship, Calder University Hospital'
+    -
+      value: 'Board certification|Family Nurse Practitioner'
+  field_first_name:
+    -
+      value: Maria
+  field_job_title:
+    -
+      value: 'Nurse Practitioner, Heart Failure Clinic'
+  field_keywords:
+    -
+      value: 'Maria Santos | Nurse Practitioner, Heart Failure Clinic | DNP, APRN | Cardiology | Heart failure | Congestive heart failure | CHF | HFrEF | HFpEF | Heart & Vascular Institute'
+  field_languages:
+    -
+      entity: 58808d28-7cd7-4873-8412-3911d2ffc376
+    -
+      entity: d089a0d7-423f-4e5e-b783-3cd2878d7aad
+    -
+      entity: 935ffd82-6c45-423a-b291-3d959d4f224c
+  field_last_name:
+    -
+      value: Santos
+  field_locations:
+    -
+      entity: bc511c44-7447-4f97-bf38-dc5ed528d0b2
+  field_pronouns:
+    -
+      value: she/her
+  field_pull_quote:
+    -
+      value: 'Heart failure is managed at home, not in my office. I take the time to make sure each person knows their numbers, their medicines and when to call us.'
+  field_roles:
+    -
+      value: clinician
+  field_specialties:
+    -
+      entity: 1b432a6b-8c3e-461f-86f1-93ef31296f14
+    -
+      entity: 1f30579e-5022-4ec2-8c2c-e42ec050e4c6
+  field_summary:
+    -
+      value: 'Cardiology nurse practitioner who helps people with heart failure manage their medicines, symptoms and daily routines between cardiologist visits.'

@@ -1,0 +1,96 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: fe4889ce-a3c4-4006-8721-778d81f1d0e9
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Visitor information and parking'
+  description:
+    -
+      value: 'Plan a visit to a patient at any Calder University Health location, from visiting hours and parking to food, lodging and interpreter services.'
+  components:
+    -
+      uuid: fd2a47c5-4672-4092-a2e9-0a5d10f4fc5c
+      component_id: sdc.calder.hero
+      inputs:
+        eyebrow: 'Patients & Visitors'
+        mission: care
+        headline: 'Visitor information and parking'
+        intro: 'Plan a visit to a patient at any Calder University Health location, from visiting hours and parking to food, lodging and interpreter services.'
+        illustration: home
+        size: compact
+    -
+      uuid: 64891e0c-f7f4-4a17-9474-88be6da7a7d0
+      component_id: sdc.calder.section
+      inputs:
+        columns: '1'
+        background: paper
+        mission: neutral
+    -
+      parent_uuid: 64891e0c-f7f4-4a17-9474-88be6da7a7d0
+      slot: content
+      uuid: b48ba027-656d-4724-a8d2-354620f9f839
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Visiting hours'
+        text:
+          value: "<p>At Calder University Hospital, visiting hours are 8 a.m. to 9 p.m. every day. Each adult patient may have one support person stay overnight. Some units, such as intensive care, may limit how many visitors can be at the bedside at one time.</p><p>At the Children's Pavilion, parents and guardians are welcome 24 hours a day. Brothers and sisters may visit when they are healthy and with an adult.</p><p>Please do not visit if you have a fever, cough, vomiting or diarrhea. You may be asked to wear a mask during respiratory virus season.</p>"
+          format: canvas_html_block
+    -
+      parent_uuid: 64891e0c-f7f4-4a17-9474-88be6da7a7d0
+      slot: content
+      uuid: 4ff667b1-872c-400b-a4d1-67f8fad674f4
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Parking and getting here'
+        text:
+          value: "<ul><li><strong>Calder University Hospital, 1200 University Avenue:</strong> Park in the Elm Street Garage, connected to the main lobby by a covered walkway. Valet parking is available at the main entrance from 6 a.m. to 8 p.m.</li><li><strong>Riverside Outpatient Center, 45 Millrace Road:</strong> Free parking in the lot in front of the building.</li><li><strong>Children's Pavilion, 1250 University Avenue:</strong> Free parking for families in the Pavilion Garage on Linden Street.</li></ul><p>City bus routes 2 and 9 stop on University Avenue in front of the hospital and the Children's Pavilion. Routes 4 and 11 stop at Riverside. Visitors staying more than three days can buy a discounted weekly parking pass at the information desk.</p>"
+          format: canvas_html_block
+    -
+      parent_uuid: 64891e0c-f7f4-4a17-9474-88be6da7a7d0
+      slot: content
+      uuid: acb83d4e-c7c3-4525-b872-b0e9c2897a85
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Checking in'
+        text:
+          value: '<p>All visitors to Calder University Hospital check in at the information desk at the main entrance and receive a visitor badge. Please wear your badge where staff can see it. After 9 p.m., the main entrance closes and visitors use the emergency department entrance on Elm Street.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 64891e0c-f7f4-4a17-9474-88be6da7a7d0
+      slot: content
+      uuid: 80bc82f4-87df-41c8-9144-4f7547db55f9
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Food, lodging and other services'
+        text:
+          value: '<ul><li><strong>Food:</strong> The lobby cafe at Calder University Hospital is open 6 a.m. to 10 p.m., and vending machines are available around the clock.</li><li><strong>Lodging:</strong> Several hotels near campus offer discounted rates for families of patients. Ask the information desk or a social worker for the current list.</li><li><strong>Wi-Fi:</strong> Free guest Wi-Fi is available in every building. Look for the Calder-Guest network.</li><li><strong>Quiet spaces:</strong> An interfaith chapel and a quiet room are on the first floor of the hospital, and chaplains are available 24 hours a day.</li></ul>'
+          format: canvas_html_block
+    -
+      parent_uuid: 64891e0c-f7f4-4a17-9474-88be6da7a7d0
+      slot: content
+      uuid: 30f6ada4-070d-42a1-bf67-d739a2527858
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Interpreters and accessibility'
+        text:
+          value: '<p>Free interpreter services are available in more than 200 languages, including American Sign Language, in person, by video or by phone. Just ask any staff member. Wheelchairs are available at every entrance, and all of our buildings are fully accessible. If you need another accommodation during your visit, call (555) 555-0100.</p>'
+          format: canvas_html_block
+  path:
+    -
+      alias: /visitor-information
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]"}'

@@ -1,0 +1,14 @@
+calder.settings:
+  type: theme_settings
+  label: "Calder settings"
+  mapping:
+    scheme:
+      type: string
+      label: Color scheme
+      constraints:
+        Choice:
+          # @see calder_form_system_theme_settings_alter()
+          - vanilla-light
+          - vanilla-dark
+          - byte-light
+          - byte-dark

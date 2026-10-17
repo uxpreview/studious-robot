@@ -1,0 +1,210 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 4ef3fd9a-c0a1-47d2-b54d-03217af549de
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'About this demo'
+  description:
+    -
+      value: 'How Calder University Health was designed and built with Drupal CMS and Claude.'
+  components:
+    -
+      uuid: 552a4900-4256-438d-b372-139e288f2bb6
+      component_id: sdc.calder.hero
+      inputs:
+        eyebrow: 'About this demo'
+        mission: neutral
+        headline: 'How this site was built'
+        intro: 'Calder University Health is fictional. It was designed and built with Drupal CMS and Claude to show what a modern academic medical center site can do: content that connects itself, pages editors assemble by drag and drop, and a design system made for clarity.'
+        primary_label: 'Follow one doctor through the site'
+        primary_url: /people/priya-patel
+        secondary_label: 'Try Find a Doctor'
+        secondary_url: '/find-a-doctor?keys=AFib'
+        illustration: home
+        size: large
+    -
+      uuid: 472d8c78-595b-45a7-882d-01ca078ec57a
+      component_id: sdc.calder.section
+      inputs:
+        background: night
+        columns: '4'
+        eyebrow: 'In this demo'
+        heading: 'Small on purpose, connected everywhere'
+        mission: neutral
+    -
+      parent_uuid: 472d8c78-595b-45a7-882d-01ca078ec57a
+      slot: content
+      uuid: 4889b8a7-bffe-4721-8c13-e6d5b80925ff
+      component_id: sdc.calder.stat
+      inputs:
+        value: '9'
+        label: 'content types, from people to clinical trials'
+        mission: care
+    -
+      parent_uuid: 472d8c78-595b-45a7-882d-01ca078ec57a
+      slot: content
+      uuid: 0bd702bc-3b32-4966-9c45-ddbb01b525a3
+      component_id: sdc.calder.stat
+      inputs:
+        value: '9'
+        label: 'listing pages, most with filters'
+        mission: learn
+    -
+      parent_uuid: 472d8c78-595b-45a7-882d-01ca078ec57a
+      slot: content
+      uuid: 7619a040-d144-4815-862a-1f9da0dbff8b
+      component_id: sdc.calder.stat
+      inputs:
+        value: '35'
+        label: 'pieces of sample content, all linked'
+        mission: discover
+    -
+      parent_uuid: 472d8c78-595b-45a7-882d-01ca078ec57a
+      slot: content
+      uuid: 23fdc84a-f9b9-40fa-9cab-837eba801710
+      component_id: sdc.calder.stat
+      inputs:
+        value: '13'
+        label: 'pages that show Dr. Patel, from one profile'
+        mission: care
+    -
+      uuid: 1bc7f25d-1a61-45b3-b515-620bb05ce03e
+      component_id: sdc.calder.section
+      inputs:
+        columns: '2'
+        background: paper
+        mission: neutral
+    -
+      parent_uuid: 1bc7f25d-1a61-45b3-b515-620bb05ce03e
+      slot: content
+      uuid: f00ce455-9c8a-405d-a837-46120effd227
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'The idea: one person, many roles'
+        text:
+          value: '<p>At an academic medical center, the same doctor treats patients, teaches students and leads research. Most websites store that person three or four times, and the copies drift apart.</p><p>Here, each person is entered once. Find a Doctor, the faculty directory, condition pages, clinical trials, programs, events and news all draw from that one profile. Edit it, and every page updates. Each page also shows what connects to it, so a condition guide lists its specialists and studies without anyone maintaining those lists.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 1bc7f25d-1a61-45b3-b515-620bb05ce03e
+      slot: content
+      uuid: a0184643-2f1c-4dda-a3dd-70f6786dce39
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Structured content, flexible pages'
+        text:
+          value: '<p>Doctors, conditions, locations, trials, programs, labs, events and news are structured content types with their own fields. Their pages follow designed templates, so they stay consistent and accessible.</p><p>Landing pages like the homepage are built in <strong>Drupal Canvas</strong>, the visual page builder in Drupal CMS. Editors drag in heroes, sections, cards, statistics and live lists from the Calder component library, and can drop in a <em>Person spotlight</em> for any doctor.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 1bc7f25d-1a61-45b3-b515-620bb05ce03e
+      slot: content
+      uuid: de9e0d5a-f417-46ea-b32f-8001259bfab4
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'A design system with a story'
+        text:
+          value: '<p>The identity comes from Alexander Calder’s mobiles: separate parts held in balance. Red marks patient care, blue marks education and ochre marks research, so color always tells you where you are. The illustrations are generated mobiles that physically balance, and they sway gently unless you have reduced motion turned on.</p><p>Headlines are set in Newsreader. Body text uses Atkinson Hyperlegible Next, designed by the Braille Institute for readers with low vision. Every text color meets WCAG AA contrast.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 1bc7f25d-1a61-45b3-b515-620bb05ce03e
+      slot: content
+      uuid: b3d853a5-d9f5-4f8e-a5ef-2c03813caba7
+      component_id: sdc.calder.prose
+      inputs:
+        heading: 'Built to explore'
+        text:
+          value: '<p>It runs on Drupal CMS 2, with Canvas, Views, editorial workflow, search and the add-on browser. The whole demo, including content, is packaged as a site template, so it can be reset to a clean state in about a minute.</p><p>Things to try: search Find a Doctor for “AFib”, filter by language, open a condition guide, or log in and edit a doctor’s profile to watch the change appear everywhere.</p>'
+          format: canvas_html_block
+    -
+      uuid: 609e1759-77b2-4c4d-9381-e19f8a9fec9f
+      component_id: sdc.calder.section
+      inputs:
+        eyebrow: 'Start here'
+        heading: 'Five-minute walkthrough'
+        columns: '3'
+        background: white
+        mission: neutral
+    -
+      parent_uuid: 609e1759-77b2-4c4d-9381-e19f8a9fec9f
+      slot: content
+      uuid: 2ec4341d-98ca-4556-bf8f-0f1a9117b6a1
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: 'Step 1'
+        title: 'Search Find a Doctor'
+        text: 'Type “AFib” or filter by language and location.'
+        url: '/find-a-doctor?keys=AFib'
+    -
+      parent_uuid: 609e1759-77b2-4c4d-9381-e19f8a9fec9f
+      slot: content
+      uuid: 336e2c4a-516f-4707-a889-5ad3328ca07c
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: 'Step 2'
+        title: 'Open Dr. Patel’s profile'
+        text: 'One profile, with her trials, lab, fellowship and talks attached.'
+        url: /people/priya-patel
+    -
+      parent_uuid: 609e1759-77b2-4c4d-9381-e19f8a9fec9f
+      slot: content
+      uuid: 590b889f-e8a6-44b0-9171-8deb989ea9a0
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: care
+        eyebrow: 'Step 3'
+        title: 'Read a condition guide'
+        text: 'Specialists and trials appear automatically.'
+        url: /conditions/atrial-fibrillation
+    -
+      parent_uuid: 609e1759-77b2-4c4d-9381-e19f8a9fec9f
+      slot: content
+      uuid: 5cb84520-bf48-4896-9548-adfad8c0cdb0
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: discover
+        eyebrow: 'Step 4'
+        title: 'Check a clinical trial'
+        text: 'Plain-language title first, eligibility and contact close by.'
+        url: /clinical-trials
+    -
+      parent_uuid: 609e1759-77b2-4c4d-9381-e19f8a9fec9f
+      slot: content
+      uuid: 2984c347-babf-40ef-a630-b397fe8ab5ab
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: learn
+        eyebrow: 'Step 5'
+        title: 'See the faculty view'
+        text: 'The same people, in an academic directory.'
+        url: /faculty
+    -
+      parent_uuid: 609e1759-77b2-4c4d-9381-e19f8a9fec9f
+      slot: content
+      uuid: 8129b17e-2034-43eb-bff2-e1ba7f50e397
+      component_id: sdc.calder.link-card
+      inputs:
+        mission: neutral
+        eyebrow: 'Step 6'
+        title: 'Edit as an editor'
+        text: 'Log in, change a profile and watch every page update.'
+        url: /user/login
+  path:
+    -
+      alias: /about-this-demo
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]"}'

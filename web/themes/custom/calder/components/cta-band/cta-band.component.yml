@@ -1,0 +1,23 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Call to action band
+description: A bold, full-width invitation with a button and an illustration.
+group: Calder
+status: stable
+props:
+  type: object
+  required: [heading, mission]
+  properties:
+    heading: { type: string, title: Heading, examples: ["Looking for a clinical trial?"] }
+    text:
+      type: string
+      title: Text
+      pattern: "(.|\\r?\\n)*"
+      examples: ["Search studies that are enrolling now."]
+    button_label: { type: string, title: Button label, examples: ["Find a study"] }
+    button_url: { type: string, title: Button link, format: uri-reference, examples: ["/clinical-trials"] }
+    mission:
+      type: string
+      title: Color
+      enum: [care, learn, discover, night]
+      meta:enum: { care: Care (red), learn: Learn (blue), discover: Discover (ochre), night: Night (dark) }
+      examples: [discover]
