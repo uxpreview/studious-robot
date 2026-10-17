@@ -1,0 +1,31 @@
+{
+  "name": "Drupal CMS sandbox",
+  "image": "mcr.microsoft.com/devcontainers/base:debian-12",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest"
+    },
+    "ghcr.io/ddev/ddev/install-ddev:latest": {}
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Drupal site",
+      "onAutoForward": "openBrowser"
+    },
+    "8443": {
+      "label": "Drupal site (https)",
+      "onAutoForward": "ignore"
+    },
+    "8027": {
+      "label": "Test email inbox (Mailpit)",
+      "onAutoForward": "silent"
+    },
+    "3306": {
+      "label": "Database",
+      "onAutoForward": "ignore"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start.sh"
+}

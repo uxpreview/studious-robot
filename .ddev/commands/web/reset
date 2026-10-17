@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+#ddev-silent-no-warn
+
+## Description: Wipe the site and rebuild it fresh from a Drupal CMS site template
+## Usage: reset [template] [--yes]
+## Example: "ddev reset" (rebuild from Byte)\n"ddev reset haven" (switch to the Haven nonprofit template)\n"ddev reset starter --yes" (skip the confirmation)
+
+set -euo pipefail
+
+template="byte"
+confirm=1
+for arg in "$@"; do
+  case "$arg" in
+    -y|--yes) confirm=0 ;;
+    -*) echo "Unknown option: $arg" >&2; exit 1 ;;
+    *) template="$arg" ;;
+  esac
+done
+
+# Most templates are published under their own name; two use a drupal_cms_ prefix.
+case "$template" in
+  starter|blank) template="drupal_cms_${template}" ;;
+esac
+
+if [ "$confirm" = 1 ]; then
+  echo "This deletes everything in the site (pages, content, settings, uploads)"
+  echo "and rebuilds it from the '${template}' template."
+  read -r -p "Continue? [y/N] " answer
+  case "$answer" in
+    y|Y|yes|YES) ;;
+    *) echo "Cancelled."; exit 0 ;;
+  esac
+fi
+
+cd /var/www/html
+
+# Download the template the first time it is used.
+if [ ! -d "recipes/${template}" ]; then
+  echo "Downloading the '${template}' template..."
+  composer require "drupal/${template}" --no-interaction
+fi
+
+# Clear out uploaded files so old images don't pile up between resets.
+if [ -d web/sites/default/files ]; then
+  find web/sites/default/files -mindepth 1 -delete
+fi
+
+password="$(head -c 18 /dev/urandom | base64 | tr -dc 'A-Za-z0-9' | head -c 16)"
+
+echo "Installing Drupal CMS with the '${template}' template. This takes a minute or two..."
+drush site:install "/var/www/html/recipes/${template}" \
+  --account-name=admin \
+  --account-pass="${password}" \
+  --site-name="Drupal CMS Sandbox" \
+  --yes
+
+echo
+echo "Done. Your site is ready."
+echo "  Username: admin"
+echo "  Password: ${password}"
+echo
+echo "Run 'ddev login' any time to open the site already logged in."
