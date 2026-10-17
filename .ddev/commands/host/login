@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#ddev-silent-no-warn
+
+## Description: Open the site already logged in as admin (uses a one-time login link)
+## Usage: login
+## Example: "ddev login"
+
+set -euo pipefail
+
+url="$(ddev drush user:login --name=admin 2>/dev/null | tail -n 1)"
+echo "One-time login link (works once, expires in 24 hours):"
+echo "  ${url}"
+ddev launch "${url}" >/dev/null 2>&1 || true

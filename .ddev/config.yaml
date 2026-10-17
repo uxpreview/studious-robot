@@ -1,21 +1,18 @@
+name: drupal-sandbox
 type: drupal11
 docroot: web
 ddev_version_constraint: '>= 1.25.0'
+web_environment:
+  # Lets Drupal know when it is running inside GitHub Codespaces.
+  # See web/sites/default/settings.php.
+  - CODESPACES
+  - CODESPACE_NAME
+  - GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN
 hooks:
   post-start:
-    # If dependencies have not been installed yet, ensure the document root used by
-    # Composer, AGENTS.md, and `.gitignore` matches DDEV's configuration.
-    - exec: |
-        if [ ! -f composer.lock ]; then
-          FLAGS=(--in-place --regexp-extended)
-
-          sed "${FLAGS[@]}" "s|([^[:alnum:]])web/|\1$DDEV_DOCROOT/|g" AGENTS.md composer.json
-
-          if [ "$DDEV_DOCROOT" = "." ]; then
-            sed "${FLAGS[@]}" "s|^/web/|/|g" .gitignore
-          else
-            sed "${FLAGS[@]}" "s|^/web/|/$DDEV_DOCROOT/|g" .gitignore
-          fi
-        fi
     - composer: install
-    - composer: drupal:recipe-unpack
+    # First start only: if no site is installed yet, build it from the Byte template.
+    - exec: |
+        if ! drush status --field=bootstrap 2>/dev/null | grep -q Successful; then
+          bash /mnt/ddev_config/commands/web/reset --yes
+        fi

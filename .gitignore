@@ -37,3 +37,7 @@ $RECYCLE.BIN/
 # Per https://getcomposer.org/doc/articles/authentication-for-private-packages.md#authentication-in-auth-json-per-project,
 # this should never be under version control.
 /auth.json
+
+# settings.php is committed: it holds no secrets (DDEV supplies the database
+# credentials in settings.ddev.php, which stays ignored).
+!/web/sites/default/settings.php
