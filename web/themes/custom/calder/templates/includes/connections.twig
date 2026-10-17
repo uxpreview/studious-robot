@@ -46,30 +46,46 @@
         </ol>
       </nav>
 
-      {# Small groups (one or two items) share a grid; larger groups get a row each. #}
-      {% set small = groups|filter(g => g.count < 3) %}
-      {% set large = groups|filter(g => g.count >= 3) %}
-      {% if small %}
-        <div class="mt-14 grid items-start gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          {% for group in small %}
-            <div id="connections-{{ group.key }}" class="flex scroll-mt-32 flex-col">
-              <h3 class="flex items-center gap-3 font-sans text-base font-bold tracking-[0.06em] uppercase text-ink-soft">
-                <span class="block size-3 shrink-0 {{ shapes[group.mission] ?? shapes.neutral }}" aria-hidden="true"></span>
-                {{ group.label }}
-              </h3>
-              <div class="mt-4 flex flex-1 flex-col gap-6">{{ group.cards }}</div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-      {% for group in large %}
-        <div id="connections-{{ group.key }}" class="mt-16 scroll-mt-32">
-          <h3 class="flex items-center gap-3 font-sans text-base font-bold tracking-[0.06em] uppercase text-ink-soft">
-            <span class="block size-3 shrink-0 {{ shapes[group.mission] ?? shapes.neutral }}" aria-hidden="true"></span>
-            {{ group.label }}
-          </h3>
-          <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{{ group.cards }}</div>
-        </div>
+      {# Groups keep the strip's order. Neighboring small groups (one or two
+         items) share a grid; a group of three or more gets its own row. #}
+      {% set rows = [] %}
+      {% set packed = [] %}
+      {% for group in groups %}
+        {% if group.count < 3 %}
+          {% set packed = packed|merge([group]) %}
+        {% else %}
+          {% if packed %}
+            {% set rows = rows|merge([{ packed: packed }]) %}
+            {% set packed = [] %}
+          {% endif %}
+          {% set rows = rows|merge([{ full: group }]) %}
+        {% endif %}
+      {% endfor %}
+      {% if packed %}{% set rows = rows|merge([{ packed: packed }]) %}{% endif %}
+
+      {% for row in rows %}
+        {% if row.packed %}
+          <div class="mt-14 grid items-start gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {% for group in row.packed %}
+              <div id="connections-{{ group.key }}" class="flex scroll-mt-32 flex-col">
+                <h3 class="flex items-center gap-3 font-sans text-base font-bold tracking-[0.06em] uppercase text-ink-soft">
+                  <span class="block size-3 shrink-0 {{ shapes[group.mission] ?? shapes.neutral }}" aria-hidden="true"></span>
+                  {{ group.label }}
+                </h3>
+                <div class="mt-4 flex flex-1 flex-col gap-6">{{ group.cards }}</div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          {% set group = row.full %}
+          <div id="connections-{{ group.key }}" class="mt-14 scroll-mt-32">
+            <h3 class="flex items-center gap-3 font-sans text-base font-bold tracking-[0.06em] uppercase text-ink-soft">
+              <span class="block size-3 shrink-0 {{ shapes[group.mission] ?? shapes.neutral }}" aria-hidden="true"></span>
+              {{ group.label }}
+            </h3>
+            <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{{ group.cards }}</div>
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
   </section>
