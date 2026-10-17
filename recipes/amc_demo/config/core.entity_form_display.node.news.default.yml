@@ -15,8 +15,10 @@ dependencies:
     - workflows.workflow.basic_editorial
   module:
     - content_moderation
+    - media_library
     - path
     - tagify_user_list
+    - text
 id: node.news.default
 targetEntityType: node
 bundle: news

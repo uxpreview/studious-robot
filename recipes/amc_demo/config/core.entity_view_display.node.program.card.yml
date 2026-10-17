@@ -14,6 +14,8 @@ dependencies:
     - field.field.node.program.field_program_type
     - field.field.node.program.field_summary
     - node.type.program
+  module:
+    - user
 id: node.program.card
 targetEntityType: node
 bundle: program
@@ -32,3 +34,4 @@ hidden:
   field_program_type: true
   field_summary: true
   links: true
+  search_api_excerpt: true

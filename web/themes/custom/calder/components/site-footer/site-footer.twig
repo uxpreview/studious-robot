@@ -19,7 +19,7 @@
         </dl>
       </div>
       <nav class="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 lg:col-span-7" aria-label="Footer">
-        {% for column in columns %}
+        {% for column in columns|filter(c => c.children) %}
           <div>
             <h2 class="mb-4 font-sans text-sm font-bold tracking-[0.12em] uppercase text-muted-foreground">{{ column.title }}</h2>
             <ul class="m-0 flex list-none flex-col gap-3 p-0">
@@ -32,7 +32,19 @@
       </nav>
     </div>
     <div class="flex flex-col gap-4 pt-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
-      <p class="m-0">© {{ 'now'|date('Y') }} Calder University Health. A fictional institution for demonstration only.</p>
+      <div class="flex flex-col gap-3 md:flex-row md:items-center md:gap-6">
+        <p class="m-0">© {{ 'now'|date('Y') }} Calder University Health. A fictional institution for demonstration only.</p>
+        {# Footer menu items without children (such as the privacy links Drupal
+           CMS adds) are legal links, so they sit down here. #}
+        {% set legal = columns|filter(c => not c.children) %}
+        {% if legal %}
+          <ul class="m-0 flex list-none flex-wrap gap-x-5 gap-y-2 p-0">
+            {% for link in legal %}
+              <li class="m-0"><a href="{{ link.url }}"{% if link.rel %} rel="{{ link.rel }}"{% endif %} class="inline-flex min-h-6 items-center text-paper">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
       <p class="m-0">Built with <a href="https://new.drupal.org/drupal-cms" class="text-paper">Drupal CMS</a> and <a href="https://claude.com/claude-code" class="text-paper">Claude</a>.</p>
     </div>
   </div>

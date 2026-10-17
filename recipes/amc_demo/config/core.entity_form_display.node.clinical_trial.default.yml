@@ -25,6 +25,8 @@ dependencies:
     - content_moderation
     - path
     - tagify_user_list
+    - telephone
+    - text
 id: node.clinical_trial.default
 targetEntityType: node
 bundle: clinical_trial
@@ -141,6 +143,11 @@ content:
   path:
     type: path
     weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

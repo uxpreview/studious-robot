@@ -6,11 +6,20 @@ status: stable
 noUi: true
 libraryOverrides:
   dependencies:
-    - core/drupal
-    - core/once
+  - core/drupal
+  - core/once
 props:
   type: object
   properties:
-    main: { type: array }
-    utility: { type: array }
-    front_url: { type: string }
+    main:
+      type:
+      - array
+      - 'null'
+    utility:
+      type:
+      - array
+      - 'null'
+    front_url:
+      type:
+      - string
+      - 'null'

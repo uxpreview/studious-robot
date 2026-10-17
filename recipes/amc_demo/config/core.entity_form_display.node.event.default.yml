@@ -18,8 +18,10 @@ dependencies:
     - workflows.workflow.basic_editorial
   module:
     - content_moderation
+    - datetime_range
     - path
     - tagify_user_list
+    - text
 id: node.event.default
 targetEntityType: node
 bundle: event

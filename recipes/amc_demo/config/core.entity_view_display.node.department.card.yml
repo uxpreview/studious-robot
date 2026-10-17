@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.department.field_phone
     - field.field.node.department.field_summary
     - node.type.department
+  module:
+    - user
 id: node.department.card
 targetEntityType: node
 bundle: department
@@ -24,3 +26,4 @@ hidden:
   field_phone: true
   field_summary: true
   links: true
+  search_api_excerpt: true

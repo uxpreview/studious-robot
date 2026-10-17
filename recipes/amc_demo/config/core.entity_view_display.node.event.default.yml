@@ -45,3 +45,4 @@ hidden:
   field_speakers: true
   field_summary: true
   field_venue: true
+  search_api_excerpt: true

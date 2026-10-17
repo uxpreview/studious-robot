@@ -4,6 +4,9 @@ _meta:
   uuid: 0e81b7e7-b220-42e8-84bb-5e9fc6890ed3
   default_langcode: en
 default:
+  uid:
+    -
+      target_id: 1
   filename:
     -
       value: child-sand.png

@@ -16,8 +16,10 @@ dependencies:
     - workflows.workflow.basic_editorial
   module:
     - content_moderation
+    - media_library
     - path
     - tagify_user_list
+    - telephone
 id: node.location.default
 targetEntityType: node
 bundle: location

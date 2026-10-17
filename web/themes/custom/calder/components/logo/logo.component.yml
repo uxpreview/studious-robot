@@ -8,15 +8,19 @@ props:
   type: object
   properties:
     tone:
-      type: string
+      type:
+      - string
+      - 'null'
       title: Tone
-      enum: [dark, light]
-      default: dark
+      description: 'One of: dark, light.'
     url:
-      type: string
+      type:
+      - string
+      - 'null'
       title: Link
       format: uri-reference
     mark_only:
-      type: boolean
+      type:
+      - boolean
+      - 'null'
       title: Mark only
-      default: false

@@ -41,3 +41,4 @@ hidden:
   field_how_to_apply: true
   field_program_type: true
   field_summary: true
+  search_api_excerpt: true

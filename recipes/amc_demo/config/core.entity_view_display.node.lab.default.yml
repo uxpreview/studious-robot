@@ -39,3 +39,4 @@ hidden:
   field_recent_work: true
   field_research_focus: true
   field_summary: true
+  search_api_excerpt: true

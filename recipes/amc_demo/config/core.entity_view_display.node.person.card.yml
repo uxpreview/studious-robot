@@ -26,6 +26,8 @@ dependencies:
     - field.field.node.person.field_specialties
     - field.field.node.person.field_summary
     - node.type.person
+  module:
+    - user
 id: node.person.card
 targetEntityType: node
 bundle: person
@@ -56,3 +58,4 @@ hidden:
   field_specialties: true
   field_summary: true
   links: true
+  search_api_excerpt: true

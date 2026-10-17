@@ -13,6 +13,8 @@ dependencies:
     - field.field.node.news.field_story_type
     - field.field.node.news.field_summary
     - node.type.news
+  module:
+    - user
 id: node.news.card
 targetEntityType: node
 bundle: news
@@ -30,3 +32,4 @@ hidden:
   field_story_type: true
   field_summary: true
   links: true
+  search_api_excerpt: true

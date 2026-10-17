@@ -21,6 +21,8 @@ dependencies:
     - field.field.node.clinical_trial.field_trial_status
     - field.field.node.clinical_trial.field_what_to_expect
     - node.type.clinical_trial
+  module:
+    - user
 id: node.clinical_trial.card
 targetEntityType: node
 bundle: clinical_trial
@@ -46,3 +48,4 @@ hidden:
   field_trial_status: true
   field_what_to_expect: true
   links: true
+  search_api_excerpt: true

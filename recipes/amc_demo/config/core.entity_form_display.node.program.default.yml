@@ -18,6 +18,7 @@ dependencies:
     - content_moderation
     - path
     - tagify_user_list
+    - text
 id: node.program.default
 targetEntityType: node
 bundle: program

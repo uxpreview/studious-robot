@@ -4,6 +4,9 @@ _meta:
   uuid: ba0855d1-27fe-4868-bb9d-5027d41f5648
   default_langcode: en
 default:
+  uid:
+    -
+      target_id: 1
   filename:
     -
       value: story-blue-sand.png

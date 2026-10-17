@@ -16,6 +16,8 @@ dependencies:
     - field.field.node.event.field_summary
     - field.field.node.event.field_venue
     - node.type.event
+  module:
+    - user
 id: node.event.card
 targetEntityType: node
 bundle: event
@@ -36,3 +38,4 @@ hidden:
   field_summary: true
   field_venue: true
   links: true
+  search_api_excerpt: true

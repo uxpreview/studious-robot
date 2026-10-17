@@ -1,6 +1,7 @@
 "$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
 name: Avatar
-description: A person's photo or monogram, with one small shape per role (care, learn, discover) hanging at the edge, like a mobile.
+description: A person's photo or monogram, with one small shape per role (care, learn, discover) hanging at the edge, like
+  a mobile.
 group: Calder
 status: stable
 noUi: true
@@ -8,14 +9,21 @@ props:
   type: object
   properties:
     initials:
-      type: string
+      type:
+      - string
+      - 'null'
     roles:
-      type: array
+      type:
+      - array
+      - 'null'
       items:
         type: string
     photo:
-      type: object
+      type:
+      - object
+      - 'null'
     size:
-      type: string
-      enum: [sm, md, lg]
-      default: md
+      type:
+      - string
+      - 'null'
+      description: 'One of: sm, md, lg.'

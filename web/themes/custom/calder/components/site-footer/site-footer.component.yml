@@ -7,4 +7,7 @@ noUi: true
 props:
   type: object
   properties:
-    columns: { type: array }
+    columns:
+      type:
+      - array
+      - 'null'

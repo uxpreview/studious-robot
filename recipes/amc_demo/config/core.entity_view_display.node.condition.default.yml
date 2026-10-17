@@ -37,3 +37,4 @@ hidden:
   field_summary: true
   field_symptoms: true
   field_treatment: true
+  search_api_excerpt: true

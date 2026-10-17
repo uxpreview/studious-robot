@@ -8,22 +8,63 @@ props:
   type: object
   properties:
     variant:
-      type: string
-      enum: [grid, row]
-      default: grid
-    display_name: { type: string }
-    url: { type: string }
-    job_title: { type: string }
-    academic_title: { type: string }
-    initials: { type: string }
-    roles: { type: array }
-    photo: { type: object }
-    specialties: { type: array }
-    locations: { type: array }
-    languages: { type: array }
-    accepting: { type: [boolean, "null"] }
-    phone: { type: string }
-    summary: { type: string }
+      type:
+      - string
+      - 'null'
+      description: 'One of: grid, row.'
+    display_name:
+      type:
+      - string
+      - 'null'
+    url:
+      type:
+      - string
+      - 'null'
+    job_title:
+      type:
+      - string
+      - 'null'
+    academic_title:
+      type:
+      - string
+      - 'null'
+    initials:
+      type:
+      - string
+      - 'null'
+    roles:
+      type:
+      - array
+      - 'null'
+    photo:
+      type:
+      - object
+      - 'null'
+    specialties:
+      type:
+      - array
+      - 'null'
+    locations:
+      type:
+      - array
+      - 'null'
+    languages:
+      type:
+      - array
+      - 'null'
+    accepting:
+      type:
+      - boolean
+      - 'null'
+    phone:
+      type:
+      - string
+      - 'null'
+    summary:
+      type:
+      - string
+      - 'null'
     heading_level:
-      type: integer
-      default: 3
+      type:
+      - integer
+      - 'null'

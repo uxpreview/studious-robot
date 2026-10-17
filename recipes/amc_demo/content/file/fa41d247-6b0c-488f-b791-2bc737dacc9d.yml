@@ -4,6 +4,9 @@ _meta:
   uuid: fa41d247-6b0c-488f-b791-2bc737dacc9d
   default_langcode: en
 default:
+  uid:
+    -
+      target_id: 1
   filename:
     -
       value: heart-sand.png

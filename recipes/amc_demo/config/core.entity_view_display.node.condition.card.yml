@@ -12,6 +12,8 @@ dependencies:
     - field.field.node.condition.field_symptoms
     - field.field.node.condition.field_treatment
     - node.type.condition
+  module:
+    - user
 id: node.condition.card
 targetEntityType: node
 bundle: condition
@@ -28,3 +30,4 @@ hidden:
   field_symptoms: true
   field_treatment: true
   links: true
+  search_api_excerpt: true

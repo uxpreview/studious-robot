@@ -14,6 +14,8 @@ dependencies:
     - field.field.node.location.field_services
     - field.field.node.location.field_summary
     - node.type.location
+  module:
+    - user
 id: node.location.card
 targetEntityType: node
 bundle: location
@@ -32,3 +34,4 @@ hidden:
   field_services: true
   field_summary: true
   links: true
+  search_api_excerpt: true

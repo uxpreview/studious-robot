@@ -581,6 +581,9 @@ final class CalderHooks {
         $items[] = [
           'title' => $element->link->getTitle(),
           'url' => $element->link->getUrlObject()->toString(),
+          // Some links depend on it, such as "My privacy settings", which
+          // opens the cookie consent dialog via rel="open-consent-manager".
+          'rel' => $element->link->getOptions()['attributes']['rel'] ?? NULL,
           'active' => $element->inActiveTrail,
           'children' => $element->subtree ? $build($element->subtree) : [],
         ];

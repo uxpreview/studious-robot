@@ -8,25 +8,50 @@ props:
   type: object
   properties:
     variant:
-      type: string
-      enum: [grid, row]
-      default: grid
-    mission: { type: string }
-    eyebrow: { type: string }
-    title: { type: string }
-    url: { type: string }
-    text: { type: string }
+      type:
+      - string
+      - 'null'
+      description: 'One of: grid, row.'
+    mission:
+      type:
+      - string
+      - 'null'
+    eyebrow:
+      type:
+      - string
+      - 'null'
+    title:
+      type:
+      - string
+      - 'null'
+    url:
+      type:
+      - string
+      - 'null'
+    text:
+      type:
+      - string
+      - 'null'
     meta:
-      type: array
+      type:
+      - array
+      - 'null'
       description: '[{icon, text}]'
     status:
-      type: object
+      type:
+      - object
+      - 'null'
       description: '{label, tone}'
     date:
-      type: object
+      type:
+      - object
+      - 'null'
       description: '{month, day, weekday, time, is_past}'
     image:
-      type: object
+      type:
+      - object
+      - 'null'
     heading_level:
-      type: integer
-      default: 3
+      type:
+      - integer
+      - 'null'
