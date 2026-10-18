@@ -52,6 +52,17 @@ Then:
 
 The site lives at https://drupal-sandbox.ddev.site while it's running.
 
+### Mac older than macOS 14 Sonoma
+
+OrbStack needs Sonoma or newer, so use [Colima](https://colima.run) in its place. It's free and DDEV supports it. Check your version under Apple menu > About This Mac.
+
+One-time setup, replacing step 1 above:
+1. In Terminal: `brew install colima docker docker-buildx`. On older macOS, Homebrew may build some of these from source, which can take a while.
+2. Start Colima: `colima start --cpu 4 --memory 6 --disk 60 --vm-type=vz --mount-type=virtiofs --dns=1.1.1.1`. Later starts remember these settings, so plain `colima start` is enough.
+3. Carry on with steps 2 and 3 above. `mkcert -install` asks for your Mac password.
+
+Colima doesn't start on its own after a restart. Run `colima start` before `ddev start`, or run `brew services start colima` once to have it start when you log in.
+
 ## Everyday commands
 
 Type these in the terminal (Codespaces or Mac).
